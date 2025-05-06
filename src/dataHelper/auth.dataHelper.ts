@@ -1,9 +1,9 @@
 export type UserRegister = {
   username: string;
+  name: string;
   email: string;
   phone: string;
   password: string;
-  confirmPassword: string;
 };
 
 export type UserData = {

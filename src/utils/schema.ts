@@ -22,6 +22,7 @@ export const registerSchema = (t: (key: string) => string) => z.object({
       .min(3, t("validation.username.min"))
       .max(50, t("validation.username.max"))
       .regex(regexUsername, t("validation.username.regex")),
+    name: z.string().min(2, t("validation.required")),
     email: z.string()
       .regex(regexEmail, t("validation.invalid-email")),
     phone: z.string()

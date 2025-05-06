@@ -30,6 +30,7 @@ export const Register: React.FC = () => {
     resolver: zodResolver(registerSchema(t)),
     defaultValues: {
       username: "",
+      name: "",
       email: "",
       password: "",
       confirmPassword: "",
@@ -43,16 +44,17 @@ export const Register: React.FC = () => {
       toast.success(t("register.success"));
       navigate(ROUTERS.LOGIN);
     },
-    onError: () => {
-      toast.error(t("register.failed"));
+    onError: (error: any) => {
+      toast.error(error.response.data.message);
     },
   });
 
   function onSubmit(values: RegisterFormData) {
-    if (!values.username || !values.password || !values.email || !values.phone) {
+    if (!values.username || !values.password || !values.email || !values.phone || !values.name) {
       return;
     }
-    mutation.mutate(values);
+    const { username, name, email, phone, password, confirmPassword } = values;
+    mutation.mutate({ username, name, email, phone, password, confirmPassword });
   }
 
   return (
@@ -60,7 +62,7 @@ export const Register: React.FC = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="w-full max-w-md space-y-6 rounded-xl bg-white backdrop-blur-sm p-8 shadow-2xl shadow-black/50"
+          className="w-full max-w-md space-y-4 rounded-xl bg-white backdrop-blur-sm py-8 px-4 shadow-2xl shadow-black/50"
         >
           <h2 className="text-center text-2xl font-bold text-primary-30">
             JFIX - {t("register.register")}
@@ -86,7 +88,6 @@ export const Register: React.FC = () => {
                 </FormItem>
               )}
             />
-
             <FormField
               control={form.control}
               name="phone"
@@ -110,6 +111,26 @@ export const Register: React.FC = () => {
 
           <FormField
             control={form.control}
+            name="name"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>{t("register.name")}</FormLabel>
+                <FormControl>
+                  <Input
+                    type="text"
+                    {...field}
+                    className={
+                      form.formState.errors.name ? "border-red-500" : ""
+                    }
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
             name="email"
             render={({ field }) => (
               <FormItem>
@@ -128,45 +149,47 @@ export const Register: React.FC = () => {
             )}
           />
 
-          <FormField
-            control={form.control}
-            name="password"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t("register.password")}</FormLabel>
-                <FormControl>
-                  <Input
-                    type="password"
-                    {...field}
-                    className={
-                      form.formState.errors.password ? "border-red-500" : ""
-                    }
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          <div className="grid grid-cols-2 gap-4">
+            <FormField
+              control={form.control}
+              name="password"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t("register.password")}</FormLabel>
+                  <FormControl>
+                    <Input
+                      type="password"
+                      {...field}
+                      className={
+                        form.formState.errors.password ? "border-red-500" : ""
+                      }
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-          <FormField
-            control={form.control}
-            name="confirmPassword"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t("register.confirmPassword")}</FormLabel>
-                <FormControl>
-                  <Input
-                    type="password"
-                    {...field}
-                    className={
-                      form.formState.errors.confirmPassword ? "border-red-500" : ""
-                    }
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+            <FormField
+              control={form.control}
+              name="confirmPassword"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t("register.confirmPassword")}</FormLabel>
+                  <FormControl>
+                    <Input
+                      type="password"
+                      {...field}
+                      className={
+                        form.formState.errors.confirmPassword ? "border-red-500" : ""
+                      }
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
 
           <Button
             type="submit"

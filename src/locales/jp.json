@@ -22,6 +22,7 @@
     "phone": "電話番号",
     "password": "パスワード",
     "confirmPassword": "パスワード確認",
+    "name": "名前",
     "sign-up": "新規登録",
     "submitting": "新規登録中...",
     "have-account": "アカウントをお持ちですか？",

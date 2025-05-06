@@ -10,7 +10,7 @@ export const authApi = {
   logout: (refreshToken: string): Promise<LogoutResponse> =>
     axiosClient.post("/auth/logout", { refreshToken }),
 
-  register: (data: UserRegister): Promise<UserData> =>
+  register: (data: UserRegister): Promise<ApiResponse<UserData>> =>
     axiosClient.post("/auth/register", data),
 
   changePassword: (data: ChangePassword): Promise<ChangePasswordResponse> =>
