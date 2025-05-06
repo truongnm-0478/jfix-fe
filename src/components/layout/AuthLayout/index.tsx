@@ -1,4 +1,3 @@
-import { Toaster } from "@/components/ui/sonner";
 import { Outlet } from "react-router";
 import { LanguageSwitcher } from "./components";
 
@@ -9,7 +8,6 @@ export const AuthLayout = () => {
         <Outlet />
         <LanguageSwitcher className="absolute top-6 right-16" />
       </div>
-      <Toaster richColors position="bottom-right" />
     </div>
   );
 };

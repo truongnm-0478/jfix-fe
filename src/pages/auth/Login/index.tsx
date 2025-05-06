@@ -39,19 +39,22 @@ export const Login: React.FC = () => {
   const mutation = useMutation({
     mutationFn: (values: LoginFormData) => authApi.login(values),
     onSuccess: (response) => {
+      const data = response.data;
       const user = {
-        username: response.username,
-        role: response.role,
-        name: response.name,
-        email: response.email,
-        phone: response.phone,
-        avatar: response.avatar,
-        accessToken: response.accessToken,
-        refreshToken: response.refreshToken,
+        username: data?.username ?? null,
+        role: data?.role ?? null,
+        name: data?.name ?? null,
+        email: data?.email ?? null,
+        phone: data?.phone ?? null,
+        avatar: data?.avatar ?? null,
       };
-      login(user, response.accessToken, response.refreshToken);
+      login(user, data?.accessToken ?? null, data?.refreshToken ?? null);
       toast.success(t("login.success"));
-      navigate(ROUTERS.HOME);
+      if (user.role === "ADMIN") {
+        navigate(ROUTERS.ADMIN_DASHBOARD);
+      } else {
+        navigate(ROUTERS.HOME);
+      }
     },
     onError: () => {
       toast.error(t("login.failed"));

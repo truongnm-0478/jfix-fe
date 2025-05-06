@@ -24,9 +24,9 @@ export const enum ROUTERS {
 }
 
 export const enum STORAGE_VAR {
-  User = "goline-ams-user",
-  AccessToken = "goline-ams-access-token",
-  RefreshToken = "goline-ams-refresh-token",
+  User = "jfix-user",
+  AccessToken = "jfix-access-token",
+  RefreshToken = "jfix-refresh-token",
 }
 
 export const enum ROLE {

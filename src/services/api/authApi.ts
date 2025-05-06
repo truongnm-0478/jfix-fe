@@ -1,52 +1,10 @@
 import { User } from "@/components/type";
+import { ChangePassword, ChangePasswordByToken, ChangePasswordResponse, LogoutResponse, UserData, UserRegister } from "@/dataHelper/auth.dataHelper";
 import axiosClient from "./axiosClient";
-
-export type UserRegister = {
-  username: string;
-  email: string;
-  phone: string;
-  password: string;
-  confirmPassword: string;
-};
-
-type UserData = {
-  username: string;
-  email: string;
-  phone: string;
-  role: string;
-  accessToken: string;
-  refreshToken: string;
-  name: string;
-  avatar?: string;
-};
-
-type ChangePassword = {
-  email: string;
-  old_password: string;
-  new_password: string;
-  new_password_confirmation: string;
-};
-
-type ChangePasswordByToken = {
-  token: string;
-  password: string;
-  password_confirmation: string;
-};
-
-type ChangePasswordResponse = {
-  status: string;
-  message: string | null;
-  data: boolean;
-};
-
-type LogoutResponse = {
-  status: string;
-  message: string | null;
-  data: boolean;
-};
+import { ApiResponse } from "./type";
 
 export const authApi = {
-  login: (data: User): Promise<UserData> =>
+  login: (data: User): Promise<ApiResponse<UserData>> =>
     axiosClient.post("/auth/login", data),
 
   register: (data: UserRegister): Promise<UserData> =>
@@ -63,5 +21,5 @@ export const authApi = {
   forgotPassword: (data: { email: string }): Promise<ChangePasswordResponse> =>
     axiosClient.post("/crew/send-mail-forgot-password", data),
 
-  logout: (): Promise<LogoutResponse> => axiosClient.post("/logout"),
+  logout: (): Promise<LogoutResponse> => axiosClient.post("/auth/logout"),
 };

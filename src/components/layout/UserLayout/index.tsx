@@ -1,4 +1,3 @@
-import { Toaster } from "@/components/ui/sonner";
 import { Outlet } from "react-router";
 import { Sidebar } from "../Sidebar";
 
@@ -11,7 +10,6 @@ export const UserLayout = () => {
           <Outlet />
         </main>
       </div>
-      <Toaster richColors position="bottom-right" />
     </div>
   );
 };

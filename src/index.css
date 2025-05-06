@@ -138,7 +138,6 @@ a {
 }
 
 a:hover {
-    font-family: "Inter";
     font-weight: 400;
     opacity: 0.7;
     text-decoration: none;

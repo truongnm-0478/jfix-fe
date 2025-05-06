@@ -1,4 +1,3 @@
-import { Toaster } from "@/components/ui/sonner";
 import { Outlet } from "react-router";
 import { Footer } from "../Footer";
 import { Header } from "../Header";
@@ -13,7 +12,6 @@ export const DefaultLayout = () => {
         </div>
       </main>
       <Footer />
-      <Toaster richColors position="bottom-right" />
     </div>
   );
 };

@@ -15,7 +15,7 @@ interface User {
 interface UserStore {
   user: User;
   isAuthenticated: boolean;
-  login: (user: User, accessToken: string, refreshToken: string) => void;
+  login: (user: User, accessToken: string | null, refreshToken: string | null) => void;
   logout: () => void;
 }
 
@@ -32,7 +32,7 @@ export const useUserStore = create<UserStore>()(
       },
       isAuthenticated: !!getAccessToken(),
 
-      login: (user: User, accessToken: string, refreshToken: string) => {
+      login: (user: User, accessToken: string | null, refreshToken: string | null) => {
         set({
           user: { ...user },
           isAuthenticated: true,

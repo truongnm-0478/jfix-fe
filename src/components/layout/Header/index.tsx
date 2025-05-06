@@ -1,15 +1,15 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
-    Menubar,
-    MenubarContent,
-    MenubarItem,
-    MenubarMenu,
-    MenubarSeparator,
-    MenubarSub,
-    MenubarSubContent,
-    MenubarSubTrigger,
-    MenubarTrigger,
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarSeparator,
+  MenubarSub,
+  MenubarSubContent,
+  MenubarSubTrigger,
+  MenubarTrigger,
 } from "@/components/ui/menubar";
 import { toast } from "@/components/ui/sonner";
 import { ROUTERS } from "@/constant";
@@ -29,8 +29,7 @@ export const Header = () => {
   const { t } = useTranslation();
   const { lang, setLanguage } = useLanguage();
   const { i18n } = useTranslation();
-  const { logout } = useUserStore();
-  const isAuthenticated = true;
+  const { logout, isAuthenticated } = useUserStore();
 
   const user = {
     username: "jfix",
@@ -233,11 +232,11 @@ export const Header = () => {
               </Menubar>
             </div>
           ) : (
-            <div>
+            <Link to={ROUTERS.LOGIN} className="rounded-full">
                 <Button className="rounded-full">
-                    {t("header.login")}
+                  {t("header.login")}
                 </Button>
-            </div>
+            </Link>
           )}
         </div>
       </div>
