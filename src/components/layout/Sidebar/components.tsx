@@ -1,7 +1,12 @@
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { toast } from "@/components/ui/sonner";
 import { ROUTERS } from "@/constant";
 import { cn } from "@/lib/utils";
+import { authApi } from "@/services/api/authApi";
 import useLanguage from "@/store/useLanguage";
+import { useUserStore } from "@/store/useUserStore";
+import { getRefreshToken } from "@/utils/storage";
+import { useMutation } from "@tanstack/react-query";
 import { Download, LogOut, Settings } from "lucide-react";
 import { forwardRef, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -44,6 +49,7 @@ export const SettingsMenu = forwardRef<HTMLButtonElement>((props, ref) => {
   const navigate = useNavigate();
   const { lang, setLanguage } = useLanguage();
   const [open, setOpen] = useState(false);
+  const { logout } = useUserStore();
 
   useEffect(() => {
     const handleResize = () => {
@@ -56,9 +62,20 @@ export const SettingsMenu = forwardRef<HTMLButtonElement>((props, ref) => {
     return () => window.removeEventListener("resize", handleResize);
   }, [open]);
 
+  const mutation = useMutation({
+    mutationFn: (refreshToken: string) => authApi.logout(refreshToken),
+    onSuccess: () => {
+      logout();
+      navigate(ROUTERS.LOGIN);
+      toast.success(t("header.logout.success"));
+    },
+    onError: (error) => {
+      toast.error(error.message);
+    },
+  });
+
   const handleLogout = () => {
-    // Handle logout logic here
-    navigate(ROUTERS.LOGIN);
+    mutation.mutate(getRefreshToken() ?? "");
   };
 
   const handleCheckUpdate = () => {

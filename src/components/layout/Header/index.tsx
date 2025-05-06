@@ -13,8 +13,11 @@ import {
 } from "@/components/ui/menubar";
 import { toast } from "@/components/ui/sonner";
 import { ROUTERS } from "@/constant";
+import { authApi } from "@/services/api/authApi";
 import useLanguage from "@/store/useLanguage";
 import { useUserStore } from "@/store/useUserStore";
+import { getRefreshToken } from "@/utils/storage";
+import { useMutation } from "@tanstack/react-query";
 import { Bell } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
@@ -31,6 +34,7 @@ export const Header = () => {
   const { i18n } = useTranslation();
   const { logout, isAuthenticated } = useUserStore();
 
+
   const user = {
     username: "jfix",
     email: "jfix@example.com",
@@ -45,10 +49,20 @@ export const Header = () => {
     i18n.changeLanguage(language);
   };
 
+  const mutation = useMutation({
+    mutationFn: (refreshToken: string) => authApi.logout(refreshToken),
+    onSuccess: () => {
+      logout();
+      navigate(ROUTERS.LOGIN);
+      toast.success(t("header.logout.success"));
+    },
+    onError: (error) => {
+      toast.error(error.message);
+    },
+  });
+
   const handleLogout = () => {
-    logout();
-    navigate(ROUTERS.LOGIN);
-    toast.success(t("header.logout.success"));
+    mutation.mutate(getRefreshToken() ?? "");
   };
 
   // Updated notifications with user avatars and better formatting

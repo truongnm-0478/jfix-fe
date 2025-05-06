@@ -39,6 +39,6 @@ export type ChangePasswordResponse = {
 
 export type LogoutResponse = {
   status: string;
-  message: string | null;
-  data: boolean;
+  message: string;
+  data: null;
 };
