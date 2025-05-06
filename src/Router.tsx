@@ -8,16 +8,16 @@ import Login from "@/pages/auth/Login";
 import Register from "@/pages/auth/Register";
 import Home from "@/pages/Home";
 import { Navigate, Route, Routes } from "react-router-dom";
+import NotFoundPage from "./pages/NotFound";
+import { useUserStore } from "./store/useUserStore";
 
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
-  // const { user } = useUserStore();
-  const user = true;
+  const { user } = useUserStore();
   return user ? <>{children}</> : <Navigate to={ROUTERS.LOGIN} />;
 };
 
 const AdminRoute = ({ children }: { children: React.ReactNode }) => {
-  // const { user } = useUserStore();
-  const user = { role: "ADMIN" };
+  const { user } = useUserStore();
   return user?.role === "ADMIN" ? (
     <>{children}</>
   ) : (
@@ -68,8 +68,11 @@ const Router = () => {
         />
       </Route>
 
-      {/* Redirect to home if route not found */}
-      <Route path="*" element={<Navigate to={ROUTERS.HOME} />} />
+      {/* 404 Routes */}
+      <Route path={ROUTERS.NOT_FOUND} element={<NotFoundPage />} />
+      <Route path="*" element={<NotFoundPage />} />
+
+
     </Routes>
   );
 };

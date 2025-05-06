@@ -4,6 +4,7 @@ export const enum ROUTERS {
   ABOUT = "/about",
   CONTACT = "/contact",
   HOME = "/",
+  NOT_FOUND = "/404",
 
   // Auth
   LOGIN = "/login",

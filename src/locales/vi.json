@@ -62,7 +62,11 @@
   },
   "common": {
     "logout": "Đăng xuất",
-    "login": "Đăng nhập"
+    "login": "Đăng nhập",
+    "back": "Quay lại",
+    "backToHome": "Quay về trang chủ",
+    "pageNotFound": "Trang không tồn tại",
+    "pageNotFoundDescription": "Trang bạn đang tìm kiếm không tồn tại hoặc đã bị xóa."
   },
   "header": {
     "language": "Ngôn ngữ",

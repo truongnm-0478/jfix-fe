@@ -62,7 +62,11 @@
   },
   "common": {
     "logout": "ログアウト",
-    "login": "ログイン"
+    "login": "ログイン",
+    "back": "戻る",
+    "backToHome": "ホームに戻る",
+    "pageNotFound": "ページが見つかりません",
+    "pageNotFoundDescription": "お探しのページは存在しないか、削除されています。"
   },
   "header": {
     "language": "言語",
