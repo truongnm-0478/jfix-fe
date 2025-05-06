@@ -1,15 +1,6 @@
+import { getLanguageStorage, setLanguageStorage } from "@/utils/storage";
 import { create } from "zustand";
-import Cookies from "js-cookie";
 
-export const getLanguageStorage = () => {
-  return Cookies.get("asuka-cruise-lang")
-    ? Cookies.get("asuka-cruise-lang")!
-    : "vi";
-};
-
-const setLanguageStorage = (lang: string) => {
-  Cookies.set("asuka-cruise-lang", lang, { expires: 7 });
-};
 
 export type RootState = {
   lang: string;
@@ -21,7 +12,7 @@ type Actions = {
 };
 
 const useLanguage = create<RootState & Actions>((set) => ({
-  lang: getLanguageStorage(),
+  lang: getLanguageStorage() ?? "vi",
   setLanguage: (lang) => {
     set(() => ({ lang: lang }));
     setLanguageStorage(lang);

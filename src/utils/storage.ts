@@ -50,3 +50,11 @@ export const getCurrentUser = () => {
 export const removeCurrentUser = () => {
   localStorage.removeItem(STORAGE_VAR.User);
 };
+
+export const getLanguageStorage = () => {
+  return localStorage.getItem(STORAGE_VAR.Language);
+};
+
+export const setLanguageStorage = (lang: string) => {
+  localStorage.setItem(STORAGE_VAR.Language, lang);
+};

@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { authApi } from "@/services/api/authApi";
 import useLanguage from "@/store/useLanguage";
 import { useUserStore } from "@/store/useUserStore";
-import { getRefreshToken } from "@/utils/storage";
+import { getRefreshToken, setLanguageStorage } from "@/utils/storage";
 import { useMutation } from "@tanstack/react-query";
 import { Download, LogOut, Settings } from "lucide-react";
 import { forwardRef, useEffect, useState } from "react";
@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 
 const languageOptions = [
   { value: "en", label: "English", flag: "/app/images/front/flag-en.svg" },
-  { value: "jp", label: "日本語", flag: "/app/images/front/flag-jp.svg" },
+  { value: "ja", label: "日本語", flag: "/app/images/front/flag-jp.svg" },
   { value: "vi", label: "Tiếng Việt", flag: "/app/images/front/flag-vi.svg" },
 ];
 
@@ -87,6 +87,7 @@ export const SettingsMenu = forwardRef<HTMLButtonElement>((props, ref) => {
     setLanguage(newLang);
     i18n.changeLanguage(newLang);
     setOpen(false);
+    setLanguageStorage(newLang);
   };
 
   return (

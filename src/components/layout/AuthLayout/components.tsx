@@ -4,6 +4,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { setLanguageStorage } from "@/utils/storage";
 import { Check } from "lucide-react";
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -22,7 +23,7 @@ interface LanguageSwitcherProps {
 export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
   options = [
     { value: "en", label: "English", flag: "/app/images/front/flag-en.svg" },
-    { value: "jp", label: "日本語", flag: "/app/images/front/flag-jp.svg" },
+    { value: "ja", label: "日本語", flag: "/app/images/front/flag-jp.svg" },
     { value: "vi", label: "Tiếng Việt", flag: "/app/images/front/flag-vi.svg" },
   ],
   className = ""
@@ -33,6 +34,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
   const handleLanguageChange = (language: string) => {
     setCurrentLang(language);
     i18n.changeLanguage(language);
+    setLanguageStorage(language);
   };
 
   const getCurrentFlag = () => {

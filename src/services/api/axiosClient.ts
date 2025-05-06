@@ -1,4 +1,4 @@
-import { getAccessToken, setAccessToken } from "@/utils/storage";
+import { getAccessToken, getLanguageStorage, setAccessToken } from "@/utils/storage";
 import axios, { AxiosError, AxiosResponse } from "axios";
 import { toast } from "sonner";
 
@@ -6,6 +6,7 @@ const axiosClient = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
   headers: {
     "Content-Type": "application/json",
+    "Accept-Language": getLanguageStorage() ?? "vi",
   },
 });
 

@@ -1,7 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import { getLanguageStorage } from "@/store/useLanguage";
+import { getLanguageStorage } from "@/utils/storage";
 import enTranslation from "../locales/en.json";
 import jpTranslation from "../locales/jp.json";
 import viTranslation from "../locales/vi.json";
@@ -13,14 +13,14 @@ i18n
       en: {
         translation: enTranslation,
       },
-      jp: {
+      ja: {
         translation: jpTranslation,
       },
       vi: {
         translation: viTranslation,
       },
     },
-    lng: getLanguageStorage(),
+    lng: getLanguageStorage() ?? "vi",
     fallbackLng: "vi",
     interpolation: {
       escapeValue: false,

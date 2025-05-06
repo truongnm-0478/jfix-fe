@@ -27,6 +27,7 @@ export const enum STORAGE_VAR {
   User = "jfix-user",
   AccessToken = "jfix-access-token",
   RefreshToken = "jfix-refresh-token",
+  Language = "jfix-language",
 }
 
 export const enum ROLE {
