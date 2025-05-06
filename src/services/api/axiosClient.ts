@@ -1,4 +1,4 @@
-import { getAccessToken, getLanguageStorage, setAccessToken } from "@/utils/storage";
+import { getAccessToken, getLanguageStorage, getRefreshToken, setAccessToken, setRefreshToken } from "@/utils/storage";
 import axios, { AxiosError, AxiosResponse } from "axios";
 import { toast } from "sonner";
 
@@ -29,18 +29,16 @@ axiosClient.interceptors.response.use(
       const accessToken = getAccessToken();
       if (accessToken) {
         try {
-          const refreshResponse = await axios.get(
-            `${import.meta.env.VITE_URL}/refresh`,
-            {
-              headers: {
-                Authorization: `Bearer ${accessToken}`,
-              },
-            }
+          const refreshToken = getRefreshToken();
+          const refreshResponse = await axios.post(
+            `${import.meta.env.VITE_API_URL}/auth/refresh-token`,
+            { refreshToken }
           );
-          const newAccessToken = refreshResponse.data.data.access_token;
+          const newAccessToken = refreshResponse.data.data.accessToken;
+          const newRefreshToken = refreshResponse.data.data.refreshToken;
           if (newAccessToken) {
             setAccessToken(newAccessToken);
-
+            setRefreshToken(newRefreshToken);
             response.config.headers.Authorization = `Bearer ${newAccessToken}`;
             try {
               const newResponse = await axios(response.config);
