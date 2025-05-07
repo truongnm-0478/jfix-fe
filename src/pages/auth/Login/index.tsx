@@ -10,7 +10,9 @@ import {
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/sonner";
 import { ROUTERS } from "@/constant";
+import { User } from "@/dataHelper/auth.dataHelper";
 import { authApi } from "@/services/api/authApi";
+import { learningGoalApi } from "@/services/api/learningGoalApi";
 import { useUserStore } from "@/store/useUserStore";
 import { loginSchema } from "@/utils/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -18,12 +20,12 @@ import { useMutation } from "@tanstack/react-query";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { Link, useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router-dom";
 import { z } from "zod";
 
 type LoginFormData = z.infer<ReturnType<typeof loginSchema>>;
 
-export const Login: React.FC = () => {
+const Login: React.FC = () => {
   const { t } = useTranslation();
   const { login } = useUserStore();
   const navigate = useNavigate();
@@ -36,11 +38,15 @@ export const Login: React.FC = () => {
     },
   });
 
-  const mutation = useMutation({
-    mutationFn: (values: LoginFormData) => authApi.login(values),
-    onSuccess: (response) => {
-      const data = response.data;
-      const user = {
+  const checkGoalMutation = useMutation({
+    mutationFn: learningGoalApi.checkLearningGoal,
+    onError: () => navigate(ROUTERS.LEARNING_GOAL),
+  });
+
+  const loginMutation = useMutation({
+    mutationFn: authApi.login,
+    onSuccess: async ({ data }) => {
+      const user: User = {
         username: data?.username ?? null,
         role: data?.role ?? null,
         name: data?.name ?? null,
@@ -48,31 +54,33 @@ export const Login: React.FC = () => {
         phone: data?.phone ?? null,
         avatar: data?.avatar ?? null,
       };
+
       login(user, data?.accessToken ?? null, data?.refreshToken ?? null);
       toast.success(t("login.success"));
+
       if (user.role === "ADMIN") {
         navigate(ROUTERS.ADMIN_DASHBOARD);
-      } else {
-        navigate(ROUTERS.HOME);
+        return;
       }
+
+      const { data: hasGoal } = await checkGoalMutation.mutateAsync();
+      navigate(hasGoal ? ROUTERS.LEARN : ROUTERS.LEARNING_GOAL);
     },
     onError: () => {
       toast.error(t("login.failed"));
     },
   });
 
-  function onSubmit(values: LoginFormData) {
-    if (!values.username || !values.password) {
-      return;
-    }
-    mutation.mutate(values);
-  }
+  const handleSubmit = (values: LoginFormData) => {
+    if (!values.username || !values.password) return;
+    loginMutation.mutate(values);
+  };
 
   return (
-    <div className="flex min-h-screen items-center justify-center p-4 bg-[url('/app/images/bg/bg_meow.png')] bg-white items-center justify-center bg-gray-100 p-4 bg-cover bg-center bg-no-repeat">
+    <div className="flex min-h-screen items-center justify-center p-4 bg-[url('/app/images/bg/bg_meow.png')] bg-white bg-gray-100 bg-cover bg-center bg-no-repeat">
       <Form {...form}>
         <form
-          onSubmit={form.handleSubmit(onSubmit)}
+          onSubmit={form.handleSubmit(handleSubmit)}
           className="w-full max-w-md space-y-6 rounded-xl bg-white backdrop-blur-sm px-6 py-14 shadow-2xl shadow-black/50"
         >
           <h2 className="text-center text-2xl font-bold text-primary-30">
@@ -127,10 +135,10 @@ export const Login: React.FC = () => {
           </div>
           <Button
             type="submit"
-            disabled={mutation.isPending}
+            disabled={loginMutation.isPending}
             className="w-full rounded-md"
           >
-            {mutation.isPending ? t("login.submitting") : t("login.sign-in")}
+            {loginMutation.isPending ? t("login.submitting") : t("login.sign-in")}
           </Button>
           <div className="mt-4 text-center">
             <span className="text-sm">{t("login.register-text")} </span>

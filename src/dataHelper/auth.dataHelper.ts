@@ -42,3 +42,12 @@ export type LogoutResponse = {
   message: string;
   data: null;
 };
+
+export interface User {
+  username: string | null;
+  role: string | null;
+  name: string | null;
+  email: string | null;
+  phone: string | null;
+  avatar: string | null;
+}

@@ -62,7 +62,7 @@ export const Register: React.FC = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="w-full max-w-md space-y-4 rounded-xl bg-white backdrop-blur-sm py-8 px-4 shadow-2xl shadow-black/50"
+          className="w-full max-w-md space-y-4 rounded-xl bg-white backdrop-blur-sm py-8 px-8 shadow-2xl shadow-black/50"
         >
           <h2 className="text-center text-2xl font-bold text-primary-30">
             JFIX - {t("register.register")}

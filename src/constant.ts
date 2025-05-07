@@ -21,6 +21,12 @@ export const enum ROUTERS {
   ADMIN_SETTINGS = "/admin/settings",
   BLANK_PAGE = "admin/blank_page",
   UNAUTHORIZED = "admin/403_unauthorized",
+
+  // Learning
+  LEARN = "/learn",
+
+  // Learning Goal
+  LEARNING_GOAL = "/learning-goal",
 }
 
 export const enum STORAGE_VAR {
@@ -43,3 +49,8 @@ export const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 export const regexUsername = /^[a-zA-Z0-9_]+$/;
 export const regexPhone = /^\d{10}$/;
 export const regexPassword = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+
+export const LEVELS = ["N1", "N2", "N3", "N4", "N5", "FREE"] as const;
+
+export const TOTAL_VOCAB = 800;
+export const MIN_DAYS = 20;

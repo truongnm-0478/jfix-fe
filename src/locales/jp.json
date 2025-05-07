@@ -73,7 +73,7 @@
     "language": "言語",
     "languages": {
       "en": "英語",
-      "jp": "日本語",
+      "ja": "日本語",
       "vi": "ベトナム語"
     },
     "guestUser": "ゲストユーザー",
@@ -108,5 +108,21 @@
     "adminSettings": "管理設定",
     "notifications": "通知",
     "home": "ホーム"
+  },
+  "learningGoalForm": {
+    "title": "学習目標を入力",
+    "formAria": "学習目標フォーム",
+    "targetLevel": "目標レベル",
+    "selectLevel": "目標レベルを選択",
+    "description": "目標の説明",
+    "targetDate": "目標完了日",
+    "dailyVocabTarget": "毎日の単語数目標",
+    "dailyMinutes": "毎日の学習時間目標",
+    "save": "学習目標を保存",
+    "saving": "保存中...",
+    "success": "学習目標が作成されました！",
+    "error": "エラーが発生しました。もう一度お試しください。",
+    "targetDateMin": "目標日は今日から少なくとも20日後である必要があります",
+    "motivation": "今日の学習目標を設定して、日本語を習得しよう！適切なレベルを選択し、学習の旅を始めましょう。"
   }
 }

@@ -1,4 +1,6 @@
 import {
+  LEVELS,
+  MIN_DAYS,
   regexEmail,
   regexPassword,
   regexPhone,
@@ -38,3 +40,22 @@ export const registerSchema = (t: (key: string) => string) => z.object({
     message: t("validation.password.match"),
     path: ["confirmPassword"],
 });
+
+export const learningGoalSchema = (t: (key: string) => string) =>
+  z.object({
+    targetLevel: z.enum(LEVELS, {
+      errorMap: () => ({ message: t("validation.required") }),
+    }),
+    description: z.string().nonempty(t("validation.required")),
+    targetDate: z.string().optional(),
+  }).refine(
+    (data) => {
+      if (data.targetLevel === "FREE") return true;
+      if (!data.targetDate) return false;
+      const today = new Date();
+      const target = new Date(data.targetDate);
+      const diff = Math.ceil((target.getTime() - today.setHours(0,0,0,0)) / (1000 * 60 * 60 * 24));
+      return diff >= MIN_DAYS;
+    },
+    { message: t("learningGoalForm.targetDateMin"), path: ["targetDate"] }
+  );

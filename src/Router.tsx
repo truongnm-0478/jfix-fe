@@ -7,10 +7,11 @@ import AdminDashboard from "@/pages/admin/Dashboard";
 import Login from "@/pages/auth/Login";
 import Register from "@/pages/auth/Register";
 import Home from "@/pages/Home";
+import Learn from "@/pages/Learn";
+import AddLearningGoal from "@/pages/user/AddLearningGoal";
 import { Navigate, Route, Routes } from "react-router-dom";
 import NotFoundPage from "./pages/NotFound";
 import { useUserStore } from "./store/useUserStore";
-
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
   const { user } = useUserStore();
   return user ? <>{children}</> : <Navigate to={ROUTERS.LOGIN} />;
@@ -55,8 +56,7 @@ const Router = () => {
       {/* User routes */}
       <Route element={<UserLayout />}>
         {/* Public route */}
-        
-        
+        <Route path={ROUTERS.LEARN} element={<Learn />} />
         {/* Protected user routes */}
         <Route
           element={
@@ -67,6 +67,8 @@ const Router = () => {
           }
         />
       </Route>
+
+      <Route path={ROUTERS.LEARNING_GOAL} element={<AddLearningGoal />} />
 
       {/* 404 Routes */}
       <Route path={ROUTERS.NOT_FOUND} element={<NotFoundPage />} />

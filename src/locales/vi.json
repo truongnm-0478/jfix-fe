@@ -73,7 +73,7 @@
     "language": "Ngôn ngữ",
     "languages": {
       "en": "Tiếng Anh",
-      "jp": "Tiếng Nhật",
+      "ja": "Tiếng Nhật",
       "vi": "Tiếng Việt"
     },
     "guestUser": "Khách",
@@ -108,5 +108,21 @@
     "adminSettings": "Cài đặt quản trị",
     "notifications": "Thông báo",
     "home": "Trang chủ"
+  },
+  "learningGoalForm": {
+    "title": "Nhập mục tiêu học tập",
+    "formAria": "Form mục tiêu học tập",
+    "targetLevel": "Trình độ mục tiêu",
+    "selectLevel": "Chọn trình độ mục tiêu",
+    "description": "Mô tả mục tiêu",
+    "targetDate": "Ngày hoàn thành mục tiêu",
+    "dailyVocabTarget": "Số từ vựng mỗi ngày (tự động tính)",
+    "dailyMinutes": "Số phút học mỗi ngày (tự động tính)",
+    "save": "Lưu mục tiêu học tập",
+    "saving": "Đang lưu...",
+    "success": "Tạo mục tiêu học tập thành công!",
+    "error": "Có lỗi xảy ra, vui lòng thử lại!",
+    "targetDateMin": "Ngày hoàn thành phải cách hiện tại ít nhất 20 ngày",
+    "motivation": "Đặt mục tiêu hôm nay để chinh phục tiếng Nhật! Hãy chọn trình độ phù hợp và bắt đầu hành trình học tập của bạn."
   }
 }

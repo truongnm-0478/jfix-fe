@@ -73,7 +73,7 @@
     "language": "Language",
     "languages": {
       "en": "English",
-      "jp": "Japanese",
+      "ja": "Japanese",
       "vi": "Vietnamese"
     },
     "guestUser": "Guest User",
@@ -108,5 +108,21 @@
     "adminSettings": "Admin Settings",
     "notifications": "Notifications",
     "home": "Home"
+  },
+  "learningGoalForm": {
+    "title": "Enter your learning goal",
+    "formAria": "Learning goal form",
+    "targetLevel": "Target level",
+    "selectLevel": "Select target level",
+    "description": "Goal description",
+    "targetDate": "Target completion date",
+    "dailyVocabTarget": "Daily vocabulary target (auto-calculated)",
+    "dailyMinutes": "Daily study minutes (auto-calculated)",
+    "save": "Save learning goal",
+    "saving": "Saving...",
+    "success": "Learning goal created successfully!",
+    "error": "An error occurred, please try again!",
+    "targetDateMin": "Target date must be at least 20 days from today",
+    "motivation": "Set a learning goal for today to conquer Japanese! Choose the appropriate level and start your learning journey."
   }
 }
