@@ -1,4 +1,5 @@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { ROUTERS } from "@/constant";
 import { cn } from "@/lib/utils";
 import { useUserStore } from "@/store/useUserStore";
 import { Bell, Book, BookOpen, Home, ListTodo, LucideIcon, Settings, SquareKanban, User2, Users } from "lucide-react";
@@ -73,7 +74,7 @@ export const Sidebar = () => {
   const menuItems: MenuItem[] = [
     { icon: Home, label: t("sidebar.home"), path: "/" },
     { icon: Bell, label: t("sidebar.notifications"), path: "/notifications" },
-    { icon: Book, label: t("sidebar.study"), path: "/study" },
+    { icon: Book, label: t("sidebar.study"), path: ROUTERS.LEARN },
     { icon: ListTodo, label: t("sidebar.progress"), path: "/progress" },
     { icon: User2, label: t("sidebar.profile"), path: "/profile" },
     {
@@ -104,7 +105,7 @@ export const Sidebar = () => {
 
   return (
     <TooltipProvider>
-      <>
+      <div className="border-r border-gray-100">
         {/* Desktop Sidebar */}
         <aside
           className={cn(
@@ -189,7 +190,7 @@ export const Sidebar = () => {
             })}
           </div>
         </nav>
-      </>
+      </div>
     </TooltipProvider>
   );
 };

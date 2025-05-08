@@ -67,7 +67,14 @@
     "back": "Back",
     "backToHome": "Back to Home",
     "pageNotFound": "Page Not Found",
-    "pageNotFoundDescription": "The page you are looking for does not exist or has been removed."
+    "pageNotFoundDescription": "The page you are looking for does not exist or has been removed.",
+    "loading": "Loading...",
+    "vocab": "Vocabulary",
+    "grammar": "Grammar",
+    "pronunciation": "Pronunciation",
+    "question": "Question",
+    "communication": "Communication",
+    "listening": "Listening"
   },
   "header": {
     "language": "Language",
@@ -124,5 +131,38 @@
     "error": "An error occurred, please try again!",
     "targetDateMin": "Target date must be at least 20 days from today",
     "motivation": "Set a learning goal for today to conquer Japanese! Choose the appropriate level and start your learning journey."
+  },
+  "learn": {
+    "title": "Today's card",
+    "motivation": "Conquer your daily Japanese learning goals with diverse skills!",
+    "vocab": "Vocabulary",
+    "grammar": "Grammar",
+    "pronunciation": "Pronunciation",
+    "question": "Question",
+    "communication": "Communication",
+    "listening": "Listening",
+    "welcomeBack": "Welcome back!",
+    "stats": {
+      "title": "Track progress",
+      "vocab": "Vocabulary learned",
+      "grammar": "Grammar learned",
+      "listening": "Listening learned",
+      "pronunciation": "Pronunciation learned",
+      "question": "Question answered",
+      "communication": "Communication practiced"
+    },
+    "cardDescription": {
+      "vocab": "Review and expand your Japanese vocabulary daily",
+      "grammar": "Master important grammar structures",
+      "listening": "Practice listening through real conversations",
+      "pronunciation": "Improve pronunciation to match native speakers",
+      "question": "Practice responding to common questions",
+      "communication": "Practice diverse communication scenarios"
+    },
+    "learningGoal": {
+      "title": "Learning goal",
+      "targetLevel": "Target level",
+      "targetDate": "Target completion date"
+    }
   }
 }

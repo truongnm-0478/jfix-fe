@@ -67,7 +67,14 @@
     "back": "戻る",
     "backToHome": "ホームに戻る",
     "pageNotFound": "ページが見つかりません",
-    "pageNotFoundDescription": "お探しのページは存在しないか、削除されています。"
+    "pageNotFoundDescription": "お探しのページは存在しないか、削除されています。",
+    "loading": "読み込み中...",
+    "vocab": "単語",
+    "grammar": "文法",
+    "pronunciation": "発音",
+    "question": "質問",
+    "communication": "コミュニケーション",
+    "listening": "聞き取り"
   },
   "header": {
     "language": "言語",
@@ -124,5 +131,38 @@
     "error": "エラーが発生しました。もう一度お試しください。",
     "targetDateMin": "目標日は今日から少なくとも20日後である必要があります",
     "motivation": "今日の学習目標を設定して、日本語を習得しよう！適切なレベルを選択し、学習の旅を始めましょう。"
+  },
+  "learn": {
+    "title": "今日のカード",
+    "motivation": "毎日の学習目標を達成し、多岐に渡る技能を習得しよう！",
+    "vocab": "単語",
+    "grammar": "文法",
+    "pronunciation": "発音",
+    "question": "質問",
+    "communication": "コミュニケーション",
+    "listening": "聞き取り",
+    "welcomeBack": "ようこそ！",
+    "stats": {
+      "title": "過程を追う",
+      "vocab": "単語を学ぶ",
+      "grammar": "文法を学ぶ",
+      "listening": "聞き取りを学ぶ",
+      "pronunciation": "発音を学ぶ",
+      "question": "質問を学ぶ",
+      "communication": "コミュニケーションを学ぶ"
+    },
+    "cardDescription": {
+      "vocab": "毎日の単語を復習し、新しい単語を追加する",
+      "grammar": "重要な文法構造を習得する",
+      "listening": "実際の会話を通じて聞き取り能力を鍛える",
+      "pronunciation": "日本人のような正確な発音を身につける",
+      "question": "よくある質問に対する反応を鍛える",
+      "communication": "多岐に渡るコミュニケーションシナリオを練習する"
+    },
+    "learningGoal": {
+      "title": "学習目標",
+      "targetLevel": "目標レベル",
+      "targetDate": "目標完了日"
+    }
   }
 }

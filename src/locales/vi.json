@@ -67,7 +67,14 @@
     "back": "Quay lại",
     "backToHome": "Quay về trang chủ",
     "pageNotFound": "Trang không tồn tại",
-    "pageNotFoundDescription": "Trang bạn đang tìm kiếm không tồn tại hoặc đã bị xóa."
+    "pageNotFoundDescription": "Trang bạn đang tìm kiếm không tồn tại hoặc đã bị xóa.",
+    "loading": "Đang tải...",
+    "vocab": "Từ vựng",
+    "grammar": "Ngữ pháp",
+    "pronunciation": "Phát âm",
+    "question": "Câu hỏi",
+    "communication": "Giao tiếp",
+    "listening": "Nghe hiểu"
   },
   "header": {
     "language": "Ngôn ngữ",
@@ -124,5 +131,38 @@
     "error": "Có lỗi xảy ra, vui lòng thử lại!",
     "targetDateMin": "Ngày hoàn thành phải cách hiện tại ít nhất 20 ngày",
     "motivation": "Đặt mục tiêu hôm nay để chinh phục tiếng Nhật! Hãy chọn trình độ phù hợp và bắt đầu hành trình học tập của bạn."
+  },
+  "learn": {
+    "title": "Bộ thẻ hôm nay",
+    "motivation": "Chinh phục mục tiêu tiếng Nhật mỗi ngày với các kĩ năng đa dạng!",
+    "vocab": "Từ vựng",
+    "grammar": "Ngữ pháp",
+    "pronunciation": "Phát âm",
+    "question": "Câu hỏi",
+    "communication": "Giao tiếp",
+    "listening": "Nghe hiểu",
+    "welcomeBack": "Chào mừng trở lại!",
+    "stats": {
+      "title": "Theo dõi quá trình",
+      "vocab": "Từ vựng đã học",
+      "grammar": "Ngữ pháp đã học",
+      "listening": "Nghe hiểu đã học",
+      "pronunciation": "Phát âm đã học",
+      "question": "Câu hỏi đã trả lời",
+      "communication": "Giao tiếp đã thực hiện"
+    },
+    "cardDescription": {
+      "vocab": "Ôn tập và mở rộng vốn từ vựng tiếng Nhật mỗi ngày",
+      "grammar": "Nắm vững các cấu trúc ngữ pháp quan trọng",
+      "listening": "Luyện kỹ năng nghe hiểu qua các đoạn hội thoại thực tế",
+      "pronunciation": "Cải thiện phát âm chuẩn như người bản xứ",
+      "question": "Rèn luyện phản xạ trả lời các câu hỏi thường gặp",
+      "communication": "Thực hành hội thoại với các tình huống giao tiếp đa dạng"
+    },
+    "learningGoal": {
+      "title": "Mục tiêu học tập",
+      "targetLevel": "Trình độ mục tiêu",
+      "targetDate": "Ngày hoàn thành"
+    }
   }
 }

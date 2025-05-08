@@ -8,4 +8,7 @@ export const learningGoalApi = {
   
   createLearningGoal: (data: LearningGoal): Promise<ApiResponse<LearningGoalResponse>> =>
     axiosClient.post("/learning-goals", data),
+
+  getLearningGoal: (): Promise<ApiResponse<LearningGoalResponse>> =>
+    axiosClient.get("/learning-goals"),
 };
