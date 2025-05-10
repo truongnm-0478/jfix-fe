@@ -78,7 +78,10 @@
     "day": "ngày",
     "streak": "Chuỗi học tập",
     "keep_streak": "Duy trì chuỗi học tập của bạn mỗi ngày!",
-    "learn_now": "Học ngay"
+    "learn_now": "Học ngay",
+    "continue": "Tiếp tục",
+    "cards_completed": "Thẻ đã hoàn thành",
+    "cards": "thẻ"
   },
   "header": {
     "language": "Ngôn ngữ",

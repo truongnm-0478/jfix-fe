@@ -78,7 +78,10 @@
     "day": "day",
     "streak": "Streak",
     "keep_streak": "Keep your streak every day!",
-    "learn_now": "Learn now"
+    "learn_now": "Learn now",
+    "continue": "Continue",
+    "cards_completed": "Cards completed",
+    "cards": "cards"
   },
   "header": {
     "language": "Language",

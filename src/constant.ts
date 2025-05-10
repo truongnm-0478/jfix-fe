@@ -24,9 +24,19 @@ export const enum ROUTERS {
 
   // Learning
   LEARN = "/learn",
+  LEARN_VOCABULARY = "/learn/vocabulary",
+  LEARN_GRAMMAR = "/learn/grammar",
+  LEARN_COMMUNICATION = "/learn/communication",
+  LEARN_LISTENING = "/learn/listening",
+  LEARN_PRONUNCIATION = "/learn/pronunciation",
+  LEARN_QUESTION = "/learn/question",
 
   // Learning Goal
   LEARNING_GOAL = "/learning-goal",
+
+  // Achievement
+  ACHIEVEMENT = "/achievement",
+  STREAK_DAY = "/streak-day",
 }
 
 export const enum STORAGE_VAR {

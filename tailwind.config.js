@@ -119,6 +119,27 @@ module.exports = {
         // Text error
         "text-error": "hsl(348, 79%, 56%)",
       },
+      keyframes: {
+        'ping-scale': {
+          '0%': { transform: 'scale(0.5)', opacity: '1' },
+          '100%': { transform: 'scale(2)', opacity: '0' },
+        },
+        'fly-up': {
+          '0%': { transform: 'translateY(0)', opacity: '1' },
+          '100%': { transform: 'translateY(-20px)', opacity: '0' },
+        },
+        'bounce-once': {
+          '0%': { transform: 'translateX(-50%) scale(1)' },
+          '30%': { transform: 'translateX(-50%) scale(1.2) translateY(-5px)' },
+          '60%': { transform: 'translateX(-50%) scale(1.15) translateY(-3px)' },
+          '100%': { transform: 'translateX(-50%) scale(1)' },
+        },
+      },
+      animation: {
+        'ping-scale': 'ping-scale 0.8s ease-out forwards',
+        'fly-up': 'fly-up 1s ease-out forwards',
+        'bounce-once': 'bounce-once 0.7s ease-out',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

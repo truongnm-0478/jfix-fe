@@ -78,7 +78,10 @@
     "day": "日",
     "streak": "学習連続",
     "keep_streak": "毎日の学習を継続して、日本語を習得しよう！",
-    "learn_now": "今すぐ学ぶ"
+    "learn_now": "今すぐ学ぶ",
+    "continue": "続ける",
+    "cards_completed": "カードを完了",
+    "cards": "カード"
   },
   "header": {
     "language": "言語",
