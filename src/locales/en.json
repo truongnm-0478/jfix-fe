@@ -190,5 +190,8 @@
   },
   "learn_question": {
     "title": "Today's question"
+  },
+  "learn_pronunciation": {
+    "title": "Today's pronunciation"
   }
 }

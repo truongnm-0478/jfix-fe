@@ -53,18 +53,14 @@ export const Header = () => {
   const mutation = useMutation({
     mutationFn: (refreshToken: string) => authApi.logout(refreshToken),
     onSuccess: () => {
-      logout();
-      navigate(ROUTERS.LOGIN);
       toast.success(t("header.logout.success"));
-    },
-    onError: () => {
-      logout();
-      navigate(ROUTERS.LOGIN);
     },
   });
 
   const handleLogout = () => {
     mutation.mutate(getRefreshToken() ?? "");
+    logout();
+    navigate(ROUTERS.LOGIN);
   };
 
   // Updated notifications with user avatars and better formatting

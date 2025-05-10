@@ -188,5 +188,8 @@
   },
   "learn_question": {
     "title": "Bộ câu hỏi hôm nay"
+  },
+  "learn_pronunciation": {
+    "title": "Bộ thẻ phát âm hôm nay"
   }
 }

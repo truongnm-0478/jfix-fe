@@ -8,4 +8,6 @@ export const studyApi = {
     axiosClient.get(`/study/grammar?date=${date}`),
   getStudyQuestion: (date: string): Promise<StudyContentData[]> =>
     axiosClient.get(`/study/speaking-question?date=${date}`),
+  getSentence: (date: string): Promise<StudyContentData[]> =>
+    axiosClient.get(`/study/sentence?date=${date}`),
 };
