@@ -19,8 +19,6 @@ const LearnNowCard: React.FC<LearnButtonProps> = ({ onLearn }) => {
   const streakDay = achievements?.find((achievement) => achievement.achievementType === "STREAK_DAYS");
   const streakDayValue = streakDay?.achievementValue;
 
-  console.log(streakDayValue);
-
   return (
     <Card className="p-4 flex flex-col gap-4 justify-center items-center">
       {streakDayValue && streakDayValue > 0 && (

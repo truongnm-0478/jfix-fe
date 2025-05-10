@@ -1,7 +1,9 @@
-import { StudyVocabularyData } from "@/dataHelper/study.dataHelper";
+import { StudyContentData } from "@/dataHelper/study.dataHelper";
 import axiosClient from "./axiosClient";
 
 export const studyApi = {  
-  getStudyVocabulary: (date: string): Promise<StudyVocabularyData[]> => 
+  getStudyVocabulary: (date: string): Promise<StudyContentData[]> => 
     axiosClient.get(`/study/vocabulary?date=${date}`),
+  getStudyGrammar: (date: string): Promise<StudyContentData[]> =>
+    axiosClient.get(`/study/grammar?date=${date}`),
 };

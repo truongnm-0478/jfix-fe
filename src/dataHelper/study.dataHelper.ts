@@ -1,11 +1,11 @@
-export interface StudyVocabularyData {
+export interface StudyContentData {
   type: string;
   skill: string | null;
   deckName: string;
-  cards: Vocabulary[];
+  cards: Content[];
 }
 
-export interface Vocabulary {
+export interface Content {
   id: number;
   cardId: number;
   type: string;

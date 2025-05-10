@@ -182,5 +182,10 @@
   "learn_vocabulary": {
     "title": "Today's vocabulary",
     "description": "Review and expand your Japanese vocabulary daily"
+  },
+  "learn_grammar": {
+    "title": "Today's grammar",
+    "description": "Master important grammar structures",
+    "usage": "Usage"
   }
 }

@@ -182,5 +182,10 @@
   "learn_vocabulary": {
     "title": "今日の単語",
     "description": "毎日の単語を復習し、新しい単語を追加する"
+  },
+  "learn_grammar": {
+    "title": "今日の文法",
+    "description": "重要な文法構造を習得する",
+    "usage": "使用方法"
   }
 }

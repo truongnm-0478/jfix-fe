@@ -182,5 +182,10 @@
   "learn_vocabulary": {
     "title": "Bộ từ vựng hôm nay",
     "description": "Ôn tập và mở rộng vốn từ vựng tiếng Nhật mỗi ngày"
+  },
+  "learn_grammar": {
+    "title": "Bộ ngữ pháp hôm nay",
+    "description": "Nắm vững các cấu trúc ngữ pháp quan trọng",
+    "usage": "Cách sử dụng"
   }
 }
