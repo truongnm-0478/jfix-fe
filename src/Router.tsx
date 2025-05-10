@@ -11,9 +11,11 @@ import AddLearningGoal from "@/pages/user/AddLearningGoal";
 import Learn from "@/pages/user/Learn";
 import { Navigate, Route, Routes } from "react-router-dom";
 import NotFoundPage from "./pages/NotFound";
+import LearnGrammar from "./pages/user/LearnGrammar";
 import LearnVocabulary from "./pages/user/LearnVocabulary";
 import { StreakDay } from "./pages/user/StreakDay";
 import { useUserStore } from "./store/useUserStore";
+
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
   const { user } = useUserStore();
   return user ? <>{children}</> : <Navigate to={ROUTERS.LOGIN} />;
@@ -60,7 +62,7 @@ const Router = () => {
         {/* Public route */}
         <Route path={ROUTERS.LEARN} element={<Learn />} />
         <Route path={ROUTERS.LEARN_VOCABULARY} element={<LearnVocabulary />} />
-        <Route path={ROUTERS.LEARN_GRAMMAR} element={<>learn grammar</>} />
+        <Route path={ROUTERS.LEARN_GRAMMAR} element={<LearnGrammar />} />
         <Route path={ROUTERS.LEARN_COMMUNICATION} element={<>learn communication</>} />
         <Route path={ROUTERS.LEARN_LISTENING} element={<>learn listening</>} />
         <Route path={ROUTERS.LEARN_PRONUNCIATION} element={<>learn pronunciation</>} />

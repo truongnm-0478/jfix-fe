@@ -9,7 +9,7 @@ interface LearnButtonProps {
   onLearn: () => void;
 }
 
-const LearnButton: React.FC<LearnButtonProps> = ({ onLearn }) => {
+const LearnNowCard: React.FC<LearnButtonProps> = ({ onLearn }) => {
   const { t } = useTranslation();
   const { data: achievements } = useQuery({
     queryKey: ["achievements"],
@@ -40,4 +40,4 @@ const LearnButton: React.FC<LearnButtonProps> = ({ onLearn }) => {
   );
 };
 
-export default LearnButton;
+export default LearnNowCard;

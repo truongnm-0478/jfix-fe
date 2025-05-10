@@ -22,7 +22,7 @@ interface StudyStatsProps {
   cards: Content[];
 }
 
-const StudyStats: React.FC<StudyStatsProps> = ({ cards }) => {
+const StudyStatsCard: React.FC<StudyStatsProps> = ({ cards }) => {
   const { t } = useTranslation();
 
   const statsData = useMemo(() => {
@@ -197,4 +197,4 @@ const StudyStats: React.FC<StudyStatsProps> = ({ cards }) => {
   );
 };
 
-export default StudyStats;
+export default StudyStatsCard;
