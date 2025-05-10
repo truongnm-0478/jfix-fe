@@ -4,12 +4,12 @@ import { achievementApi } from "@/services/api/achievementApi";
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
 interface LearnButtonProps {
-  title: string;
   onLearn: () => void;
 }
 
-const LearnButton: React.FC<LearnButtonProps> = ({ title, onLearn }) => {
+const LearnButton: React.FC<LearnButtonProps> = ({ onLearn }) => {
   const { t } = useTranslation();
   const { data: achievements } = useQuery({
     queryKey: ["achievements"],
