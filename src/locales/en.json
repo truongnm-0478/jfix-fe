@@ -187,5 +187,8 @@
     "title": "Today's grammar",
     "description": "Master important grammar structures",
     "usage": "Usage"
+  },
+  "learn_question": {
+    "title": "Today's question"
   }
 }

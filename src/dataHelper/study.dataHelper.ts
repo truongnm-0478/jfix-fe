@@ -35,4 +35,6 @@ export interface Content {
   vietnameseText: string | null;
   japaneseText: string | null;
   mistakeHistory: string | null;
+  sampleAnswerJapaneseFurigana: string | null;
+  japaneseTextFurigana: string | null;
 }

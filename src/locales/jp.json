@@ -174,18 +174,18 @@
   },
   "study_stats": {
     "title": "カード統計",
-    "description": "復習済みと未復習のカード",
     "total_cards": "総カード数",
     "reviewed_cards": "復習済みカード",
     "new_cards": "未復習カード"
   },
   "learn_vocabulary": {
-    "title": "今日の単語",
-    "description": "毎日の単語を復習し、新しい単語を追加する"
+    "title": "今日の単語"
   },
   "learn_grammar": {
     "title": "今日の文法",
-    "description": "重要な文法構造を習得する",
     "usage": "使用方法"
+  },
+  "learn_question": {
+    "title": "今日の質問"
   }
 }

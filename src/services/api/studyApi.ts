@@ -6,4 +6,6 @@ export const studyApi = {
     axiosClient.get(`/study/vocabulary?date=${date}`),
   getStudyGrammar: (date: string): Promise<StudyContentData[]> =>
     axiosClient.get(`/study/grammar?date=${date}`),
+  getStudyQuestion: (date: string): Promise<StudyContentData[]> =>
+    axiosClient.get(`/study/speaking-question?date=${date}`),
 };

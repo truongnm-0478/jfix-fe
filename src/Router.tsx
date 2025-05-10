@@ -12,6 +12,7 @@ import Learn from "@/pages/user/Learn";
 import { Navigate, Route, Routes } from "react-router-dom";
 import NotFoundPage from "./pages/NotFound";
 import LearnGrammar from "./pages/user/LearnGrammar";
+import LearnQuestion from "./pages/user/LearnQuestion";
 import LearnVocabulary from "./pages/user/LearnVocabulary";
 import { StreakDay } from "./pages/user/StreakDay";
 import { useUserStore } from "./store/useUserStore";
@@ -66,7 +67,7 @@ const Router = () => {
         <Route path={ROUTERS.LEARN_COMMUNICATION} element={<>learn communication</>} />
         <Route path={ROUTERS.LEARN_LISTENING} element={<>learn listening</>} />
         <Route path={ROUTERS.LEARN_PRONUNCIATION} element={<>learn pronunciation</>} />
-        <Route path={ROUTERS.LEARN_QUESTION} element={<>learn question</>} />
+        <Route path={ROUTERS.LEARN_QUESTION} element={<LearnQuestion />} />
 
         <Route path={ROUTERS.ACHIEVEMENT} element={<>achievement</>} />
 
