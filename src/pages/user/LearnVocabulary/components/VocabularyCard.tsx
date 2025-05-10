@@ -1,28 +1,18 @@
-import { Vocabulary } from "@/dataHelper/study.dataHelper";
+import { Content } from "@/dataHelper/study.dataHelper";
+import { handlePlayAudioUrl } from "@/utils/audioUtils";
 import { Volume2 } from "lucide-react";
 import React, { useRef } from "react";
 
 type VocabularyCardProps = {
-  vocabulary: Vocabulary;
+  content: Content;
   onToggleFavorite?: () => void;
   onPlayAudio?: () => void;
 };
 
 const VocabularyCard: React.FC<VocabularyCardProps> = ({
-  vocabulary,
-  onPlayAudio,
+  content,
 }) => {
   const audioRef = useRef<HTMLAudioElement>(null);
-
-  const handlePlayAudio = () => {
-    if (onPlayAudio) {
-      onPlayAudio();
-    } else if (vocabulary.audioUrl && audioRef.current) {
-      audioRef.current.play().catch(error => {
-        console.error("Không thể phát audio:", error);
-      });
-    }
-  };
 
   const formatDialogueExample = (text: string) => {
     if (!text) return null;
@@ -45,13 +35,13 @@ const VocabularyCard: React.FC<VocabularyCardProps> = ({
     <div className="flex flex-col md:flex-row items-stretch bg-white rounded-xl border border-gray-200 border-b-4 mb-5 overflow-hidden shadow-sm hover:shadow transition-shadow duration-300">
       {/* Left section: Word, Reading, Example */}
       <div className="flex-1 flex flex-col justify-center p-5 bg-slate-50 border-b md:border-b-0 md:border-r border-gray-100">
-        {vocabulary.reading && (
-          <div className="text-sm text-indigo-600 font-medium mb-1">{vocabulary.reading}</div>
+        {content.reading && (
+          <div className="text-sm text-indigo-600 font-medium mb-1">{content.reading}</div>
         )}
-        <div className="text-xl md:text-2xl font-semibold text-gray-900">{vocabulary.word}</div>
-        {vocabulary.example && (
+        <div className="text-xl md:text-2xl font-semibold text-gray-900">{content.word}</div>
+        {content.example && (
           <div className="mt-3 text-sm text-gray-700 border-l-2 border-indigo-200 pl-3">
-            {vocabulary.example}
+            {content.example}
           </div>
         )}
       </div>
@@ -60,17 +50,17 @@ const VocabularyCard: React.FC<VocabularyCardProps> = ({
       <div className="flex-1 flex flex-col p-5">
         <div className="flex justify-between items-start">
           <div className="flex-1">
-            <div className="font-medium text-gray-800 md:text-2xl">{vocabulary.meaning}</div>
-            {vocabulary.exampleMeaning && (
+            <div className="font-medium text-gray-800 md:text-2xl">{content.meaning}</div>
+            {content.exampleMeaning && (
               <div className="mt-3 text-sm text-gray-600 border-l-2 border-gray-200 pl-3 italic">
-                {formatDialogueExample(vocabulary.exampleMeaning)}
+                {formatDialogueExample(content.exampleMeaning)}
               </div>
             )}
           </div>
           
           <button
             type="button"
-            onClick={handlePlayAudio}
+            onClick={() => handlePlayAudioUrl(content.audioUrl, audioRef)}
             tabIndex={0}
             className="flex-shrink-0 p-2 rounded-full bg-indigo-50 hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-colors duration-200"
           >
@@ -78,8 +68,8 @@ const VocabularyCard: React.FC<VocabularyCardProps> = ({
           </button>
         </div>
         
-        {vocabulary.audioUrl && (
-          <audio ref={audioRef} src={vocabulary.audioUrl} preload="none" />
+        {content.audioUrl && (
+          <audio ref={audioRef} src={content.audioUrl} preload="none" />
         )}
       </div>
     </div>

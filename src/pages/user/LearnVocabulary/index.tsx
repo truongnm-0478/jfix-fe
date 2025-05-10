@@ -12,7 +12,8 @@ const LearnVocabulary = () => {
 
   const { data: vocabularyData, isLoading: vocabularyLoading } = useQuery({
     queryKey: ["vocabulary"],
-    queryFn: () => studyApi.getStudyVocabulary(formatToDateYMD(new Date().toISOString())),
+    queryFn: () =>
+      studyApi.getStudyVocabulary(formatToDateYMD(new Date().toISOString())),
   });
 
   const allCards = vocabularyData?.flatMap((item) => item.cards) ?? [];
@@ -20,20 +21,20 @@ const LearnVocabulary = () => {
   if (vocabularyLoading) return <Loading />;
 
   return (
-    <div className="min-h-screen py-8 px-2">
-      <div className="px-5 grid grid-cols-1 lg:grid-cols-12 gap-8">
-        <div className="lg:col-span-4 order-1 lg:order-2 pb-10 flex flex-col gap-4">
-        <StudyStats cards={allCards} />
+    <div className="min-h-screen xl:py-8 py-4 xl:px-2 px-0">
+      <div className="xl:px-5 px-0 grid grid-cols-1 xl:grid-cols-12 gap-8">
+        <div className="xl:col-span-4 order-1 xl:order-2 pb-10 flex flex-col gap-4">
+          <StudyStats cards={allCards} />
 
-        <LearnButton onLearn={() => {}}/>
+          <LearnButton onLearn={() => {}} />
         </div>
-        <div className="lg:col-span-8 order-2 lg:order-1">
+        <div className="xl:col-span-8 order-2 xl:order-1 pb-8 md:pb-0">
           <h2 className="font-extrabold text-2xl mb-6 text-center lg:text-left">
             {t("learn_vocabulary.title")}
           </h2>
           <div className="grid grid-cols-1 gap-4">
-            {allCards.map((vocabulary) => (
-              <VocabularyCard key={vocabulary.id} vocabulary={vocabulary} />
+            {allCards.map((content) => (
+              <VocabularyCard key={content.id} content={content} />
             ))}
           </div>
         </div>

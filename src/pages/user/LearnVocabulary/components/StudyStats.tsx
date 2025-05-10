@@ -13,13 +13,13 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { Vocabulary } from "@/dataHelper/study.dataHelper";
+import { Content } from "@/dataHelper/study.dataHelper";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Label, PolarRadiusAxis, RadialBar, RadialBarChart } from "recharts";
 
 interface StudyStatsProps {
-  cards: Vocabulary[];
+  cards: Content[];
 }
 
 const StudyStats: React.FC<StudyStatsProps> = ({ cards }) => {
