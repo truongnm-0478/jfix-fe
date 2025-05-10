@@ -74,7 +74,11 @@
     "pronunciation": "Pronunciation",
     "question": "Question",
     "communication": "Communication",
-    "listening": "Listening"
+    "listening": "Listening",
+    "day": "day",
+    "streak": "Streak",
+    "keep_streak": "Keep your streak every day!",
+    "learn_now": "Learn now"
   },
   "header": {
     "language": "Language",
@@ -164,5 +168,16 @@
       "targetLevel": "Target level",
       "targetDate": "Target completion date"
     }
+  },
+  "study_stats": {
+    "title": "Card statistics",
+    "description": "Cards reviewed and not reviewed",
+    "total_cards": "Total cards",
+    "reviewed_cards": "Reviewed cards",
+    "new_cards": "New cards"
+  },
+  "learn_vocabulary": {
+    "title": "Today's vocabulary",
+    "description": "Review and expand your Japanese vocabulary daily"
   }
 }

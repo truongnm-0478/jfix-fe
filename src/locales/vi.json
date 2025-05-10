@@ -74,7 +74,11 @@
     "pronunciation": "Phát âm",
     "question": "Câu hỏi",
     "communication": "Giao tiếp",
-    "listening": "Nghe hiểu"
+    "listening": "Nghe hiểu",
+    "day": "ngày",
+    "streak": "Chuỗi học tập",
+    "keep_streak": "Duy trì chuỗi học tập của bạn mỗi ngày!",
+    "learn_now": "Học ngay"
   },
   "header": {
     "language": "Ngôn ngữ",
@@ -164,5 +168,16 @@
       "targetLevel": "Trình độ mục tiêu",
       "targetDate": "Ngày hoàn thành"
     }
+  },
+  "study_stats": {
+    "title": "Biểu đồ thống kê thẻ",
+    "description": "Thẻ đã ôn tập và chưa học",
+    "total_cards": "Tổng số thẻ",
+    "reviewed_cards": "Thẻ ôn tập",
+    "new_cards": "Thẻ chưa học"
+  },
+  "learn_vocabulary": {
+    "title": "Bộ từ vựng hôm nay",
+    "description": "Ôn tập và mở rộng vốn từ vựng tiếng Nhật mỗi ngày"
   }
 }
