@@ -193,5 +193,9 @@
   },
   "learn_pronunciation": {
     "title": "Today's pronunciation"
+  },
+  "learn_listening": {
+    "title": "Today's listening",
+    "script": "Script"
   }
 }

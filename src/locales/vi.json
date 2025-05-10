@@ -195,5 +195,9 @@
   "learn_communication": {
     "title": "Bộ thẻ trò chuyện hôm nay",
     "topic": "Chủ đề trò chuyện"
+  },
+  "learn_listening": {
+    "title": "Bộ thẻ nghe hiểu hôm nay",
+    "script": "Nội dung bài viết"
   }
 }

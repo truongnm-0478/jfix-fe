@@ -190,5 +190,9 @@
   },
   "learn_pronunciation": {
     "title": "今日の発音"
+  },
+  "learn_listening": {
+    "title": "今日の聞き取り",
+    "script": "スクリプト"
   }
 }
