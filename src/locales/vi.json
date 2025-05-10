@@ -191,5 +191,9 @@
   },
   "learn_pronunciation": {
     "title": "Bộ thẻ phát âm hôm nay"
+  },
+  "learn_communication": {
+    "title": "Bộ thẻ trò chuyện hôm nay",
+    "topic": "Chủ đề trò chuyện"
   }
 }
