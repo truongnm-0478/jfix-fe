@@ -190,7 +190,11 @@
   },
   "learn_grammar": {
     "title": "Bộ ngữ pháp hôm nay",
-    "usage": "Cách sử dụng"
+    "usage": "Cách sử dụng",
+    "example": "Ví dụ",
+    "meaning": "Ý nghĩa",
+    "complete": "Hoàn thành xuất sắc!",
+    "complete_description": "Bộ thẻ đã xong! Tiếp tục cày bộ khác hoặc đứng dậy nhảy múa ăn mừng đi!"
   },
   "learn_question": {
     "title": "Bộ câu hỏi hôm nay"

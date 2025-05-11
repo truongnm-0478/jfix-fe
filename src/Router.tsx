@@ -13,12 +13,13 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import NotFoundPage from "./pages/NotFound";
 import LearnCommunication from "./pages/user/LearnCommunication";
 import LearnGrammar from "./pages/user/LearnGrammar";
+import LearnGrammarCard from "./pages/user/LearnGrammarCard";
 import LearnListening from "./pages/user/LearnListening";
 import LearnPronunciation from "./pages/user/LearnPronunciation";
 import LearnQuestion from "./pages/user/LearnQuestion";
 import LearnVocabulary from "./pages/user/LearnVocabulary";
-import { LearnVocabularyCard } from "./pages/user/LearnVocabularyCard";
-import { StreakDay } from "./pages/user/StreakDay";
+import LearnVocabularyCard from "./pages/user/LearnVocabularyCard";
+import StreakDay from "./pages/user/StreakDay";
 import { useUserStore } from "./store/useUserStore";
 
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
@@ -73,6 +74,7 @@ const Router = () => {
         <Route path={ROUTERS.LEARN_PRONUNCIATION} element={<LearnPronunciation />} />
         <Route path={ROUTERS.LEARN_QUESTION} element={<LearnQuestion />} />
         <Route path={ROUTERS.VOCABULARY_FLASHCARD} element={<LearnVocabularyCard />} />
+        <Route path={ROUTERS.GRAMMAR_FLASHCARD} element={<LearnGrammarCard />} />
         <Route path={ROUTERS.ACHIEVEMENT} element={<>achievement</>} />
 
         {/* Protected user routes */}

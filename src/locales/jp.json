@@ -189,7 +189,11 @@
   },
   "learn_grammar": {
     "title": "今日の文法",
-    "usage": "使用方法"
+    "usage": "使用方法",
+    "example": "例",
+    "meaning": "意味",
+    "complete": "素晴らしい完成！",
+    "complete_description": "セットは完了！別のセットに挑戦するか、立ち上がって踊りを楽しもう！"
   },
   "learn_question": {
     "title": "今日の質問"

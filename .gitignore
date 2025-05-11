@@ -27,3 +27,7 @@ yarn.lock
 
 # Environment variables
 .env
+
+# build
+tsconfig.app.tsbuildinfo
+tsconfig.node.tsbuildinfo

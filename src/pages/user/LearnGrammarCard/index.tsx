@@ -3,26 +3,27 @@ import { DifficultyButtons } from "@/components/learn/DifficultyButtons";
 import { ROUTERS } from "@/constant";
 import { Content } from "@/dataHelper/study.dataHelper";
 import { useCalculateAchievement } from "@/hooks/useAchievement";
-import { useVocabulary } from "@/hooks/useVocabulary";
+import { useGrammar } from "@/hooks/useGrammar";
 import { studyApi } from "@/services/api/studyApi";
 import { useMutation } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Card from "./components/Card";
 
-const LearnVocabularyCard = () => {
+const LearnGrammarCard = () => {
   const navigate = useNavigate();
   const [currentCard, setCurrentCard] = useState<Content | null>(null);
   const [cardIndex, setCardIndex] = useState(0);
 
-  const { data: vocabularyData, isLoading: vocabularyLoading } = useVocabulary();
-  const allCards = useMemo(() => vocabularyData?.flatMap((item) => item.cards) ?? [], [vocabularyData]);
+  const { data: grammarData, isLoading: grammarLoading } = useGrammar();
+  const allCards = useMemo(() => grammarData?.flatMap((item) => item.cards) ?? [], [grammarData]);
   const { mutate: calculateAchievements } = useCalculateAchievement();
 
-  const { mutate: reviewVocabulary } = useMutation({
+  const { mutate: reviewGrammar } = useMutation({
     mutationFn: (data: { id: number; performance: number }) =>
-      studyApi.reviewVocabulary(data),
+      studyApi.reviewGrammar(data),
     onSuccess: (response) => {
+      console.log("response", response);
       const newCards: Content[] = response?.flatMap((item: any) => item.cards) ?? [];
       if (newCards.length > 0) {
         setCurrentCard(newCards[0]);
@@ -40,10 +41,10 @@ const LearnVocabularyCard = () => {
   }, [allCards, cardIndex]);
 
   useEffect(() => {
-    if (allCards.length === 0 && !vocabularyLoading) {
+    if (allCards.length === 0 && !grammarLoading) {
       navigate(ROUTERS.STREAK_DAY);
     }
-  }, [allCards, vocabularyLoading, navigate]);
+  }, [allCards, grammarLoading, navigate]);
 
   useEffect(() => {
     return () => {
@@ -53,10 +54,10 @@ const LearnVocabularyCard = () => {
 
   const handleReview = (difficulty: number) => {
     if (!currentCard) return;
-    reviewVocabulary({ id: currentCard.id, performance: difficulty });
+    reviewGrammar({ id: currentCard.id, performance: difficulty });
   };
 
-  if (vocabularyLoading) return <Loading />
+  if (grammarLoading) return <Loading />
 
   return (
     <div className="xl:py-8 py-4 xl:px-2 px-0">
@@ -72,4 +73,4 @@ const LearnVocabularyCard = () => {
   );
 }
 
-export default LearnVocabularyCard;
+export default LearnGrammarCard;

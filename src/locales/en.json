@@ -190,7 +190,11 @@
   },
   "learn_grammar": {
     "title": "Today's grammar",
-    "usage": "Usage"
+    "usage": "Usage",
+    "example": "Example",
+    "meaning": "Meaning",
+    "complete": "Excellent completion!",
+    "complete_description": "The set is complete! Continue with another set or stand up and dance to celebrate!"
   },
   "learn_question": {
     "title": "Today's question"

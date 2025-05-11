@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { achievementApi } from "@/services/api/achievementApi";
-import { useQuery } from "@tanstack/react-query";
+import { useAchievement } from "@/hooks/useAchievement";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -11,10 +10,7 @@ interface LearnButtonProps {
 
 const LearnNowCard: React.FC<LearnButtonProps> = ({ onLearn }) => {
   const { t } = useTranslation();
-  const { data: achievements } = useQuery({
-    queryKey: ["achievements"],
-    queryFn: () => achievementApi.getAchievement(),
-  });
+  const { data: achievements } = useAchievement();
 
   const streakDay = achievements?.find((achievement) => achievement.achievementType === "STREAK_DAYS");
   const streakDayValue = streakDay?.achievementValue;
