@@ -10,7 +10,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Card from "./components/Card";
 
-export default function FlashcardDemo() {
+const LearnVocabularyCard = () => {
   const navigate = useNavigate();
   const [currentCard, setCurrentCard] = useState<Content | null>(null);
   const [cardIndex, setCardIndex] = useState(0);
@@ -70,3 +70,5 @@ export default function FlashcardDemo() {
     </div>
   );
 }
+
+export default LearnVocabularyCard;

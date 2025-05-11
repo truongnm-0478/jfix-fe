@@ -17,7 +17,7 @@ import LearnListening from "./pages/user/LearnListening";
 import LearnPronunciation from "./pages/user/LearnPronunciation";
 import LearnQuestion from "./pages/user/LearnQuestion";
 import LearnVocabulary from "./pages/user/LearnVocabulary";
-import LearnVocabularyCard from "./pages/user/LearnVocabularyCard";
+import { LearnVocabularyCard } from "./pages/user/LearnVocabularyCard";
 import { StreakDay } from "./pages/user/StreakDay";
 import { useUserStore } from "./store/useUserStore";
 
