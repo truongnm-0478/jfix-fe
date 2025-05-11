@@ -138,7 +138,7 @@ export const FlameAnimation = ({ oldStreak, newStreak, cardCount }: FlameAnimati
           }
         `}
       </style>
-      <div className="bg-white flex flex-col items-center justify-center px-4 pb-4 rounded-lg">
+      <div className=" flex flex-col items-center justify-center px-4 pb-4 rounded-lg">
       <div
         className="relative cursor-pointer outline-none"
         tabIndex={0}
@@ -183,14 +183,14 @@ export const FlameAnimation = ({ oldStreak, newStreak, cardCount }: FlameAnimati
       <div className="mt-12 text-center">
         {showText && (
           <div className="flex flex-col items-center justify-center">
-            <p className="font-bold text-2xl text-orange-500 fly-in">{t('common.keep_streak')}</p>
+            <p className="font-bold text-2xl text-white fly-in">{t('common.keep_streak')}</p>
             <p className="font-bold text-xl zoom-in mt-4 text-slate-600">
               {t('common.cards_completed')}:{' '}
               <span>{cardCount}</span>{' '}
               <span>{t('common.cards')}</span>
             </p>
             <button
-              className="mt-8 py-4 px-20 bg-orange-500 text-white font-semibold rounded-full shadow-lg hover:bg-[#FECA00] hover:text-white transition-colors zoom-in"
+              className="mt-8 py-4 px-20 bg-white text-orange-500 font-semibold rounded-full shadow-lg hover:bg-[#FECA00] hover:text-white transition-colors zoom-in"
               onClick={handleNextPage}
             >
               <span className="text-xl">{capitalizeAll(t('common.continue'))}</span>

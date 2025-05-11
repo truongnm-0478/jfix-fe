@@ -81,7 +81,11 @@
     "learn_now": "Học ngay",
     "continue": "Tiếp tục",
     "cards_completed": "Thẻ đã hoàn thành",
-    "cards": "thẻ"
+    "cards": "thẻ",
+    "easy": "Dễ",
+    "good": "Tốt",
+    "hard": "Khó",
+    "again": "Lại"
   },
   "header": {
     "language": "Ngôn ngữ",
@@ -180,7 +184,9 @@
     "new_cards": "Thẻ chưa học"
   },
   "learn_vocabulary": {
-    "title": "Bộ từ vựng hôm nay"
+    "title": "Bộ từ vựng hôm nay",
+    "complete": "Hoàn thành xuất sắc!",
+    "complete_description": "Bộ thẻ đã xong! Tiếp tục cày bộ khác hoặc đứng dậy nhảy múa ăn mừng đi!"
   },
   "learn_grammar": {
     "title": "Bộ ngữ pháp hôm nay",

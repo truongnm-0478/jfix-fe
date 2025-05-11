@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export interface StudyContentData {
   type: string;
   skill: string | null;
@@ -37,4 +39,26 @@ export interface Content {
   mistakeHistory: string | null;
   sampleAnswerJapaneseFurigana: string | null;
   japaneseTextFurigana: string | null;
+}
+
+export type DifficultyLevel = 'again' | 'hard' | 'good' | 'easy';
+
+export interface ReviewInfo {
+  cardId: number | string;
+  difficulty: DifficultyLevel;
+}
+
+export interface CardFaceProps {
+  children: ReactNode;
+  className?: string;
+}
+
+export interface FlashcardProps {
+  id: number | string;
+  frontContent?: ReactNode;
+  backContent?: ReactNode;
+  children?: ReactNode;
+  onFlip?: (isFlipped: boolean) => void;
+  isFlipped?: boolean;
+  className?: string;
 }

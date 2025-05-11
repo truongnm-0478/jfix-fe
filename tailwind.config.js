@@ -140,7 +140,34 @@ module.exports = {
         'fly-up': 'fly-up 1s ease-out forwards',
         'bounce-once': 'bounce-once 0.7s ease-out',
       },
+      perspective: {
+        "1000": "1000px",
+      },
+      rotate: {
+        "y-180": "rotateY(180deg)",
+      },
+      transformOrigin: {
+        "center": "center",
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }) {
+      addUtilities({
+        '.transform-style-preserve-3d': {
+          transformStyle: 'preserve-3d',
+        },
+        '.backface-hidden': {
+          backfaceVisibility: 'hidden',
+        },
+        '.rotate-y-180': {
+          transform: 'rotateY(180deg)',
+        },
+        '.rotate-x-180': {
+          transform: 'rotateX(180deg)',
+        }
+      });
+    }
+  ],
 };

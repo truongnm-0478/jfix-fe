@@ -81,7 +81,11 @@
     "learn_now": "今すぐ学ぶ",
     "continue": "続ける",
     "cards_completed": "カードを完了",
-    "cards": "カード"
+    "cards": "カード",
+    "easy": "簡単",
+    "good": "良い",
+    "hard": "難しい",
+    "again": "もう一度"
   },
   "header": {
     "language": "言語",
@@ -179,7 +183,9 @@
     "new_cards": "未復習カード"
   },
   "learn_vocabulary": {
-    "title": "今日の単語"
+    "title": "今日の単語",
+    "complete": "素晴らしい完成！",
+    "complete_description": "セットは完了！別のセットに挑戦するか、立ち上がって踊りを楽しもう！"
   },
   "learn_grammar": {
     "title": "今日の文法",

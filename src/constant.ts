@@ -37,6 +37,14 @@ export const enum ROUTERS {
   // Achievement
   ACHIEVEMENT = "/achievement",
   STREAK_DAY = "/streak-day",
+
+  // Flashcard
+  VOCABULARY_FLASHCARD = "/learn/vocabulary/flashcard",
+  GRAMMAR_FLASHCARD = "/learn/grammar/flashcard",
+  COMMUNICATION_FLASHCARD = "/learn/communication/flashcard",
+  LISTENING_FLASHCARD = "/learn/listening/flashcard",
+  PRONUNCIATION_FLASHCARD = "/learn/pronunciation/flashcard",
+  QUESTION_FLASHCARD = "/learn/question/flashcard",
 }
 
 export const enum STORAGE_VAR {

@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Card,
   CardContent,
@@ -159,7 +157,7 @@ const StudyStatsCard: React.FC<StudyStatsProps> = ({ cards }) => {
                 <span className="text-sm text-muted-foreground">
                   (
                   {Math.round(
-                    (statsData.reviewedCards / statsData.totalCards) * 100
+                    (statsData.reviewedCards / statsData.totalCards) * 100 || 0
                   )}
                   %)
                 </span>
@@ -184,7 +182,7 @@ const StudyStatsCard: React.FC<StudyStatsProps> = ({ cards }) => {
                 <span className="text-sm text-muted-foreground">
                   (
                   {Math.round(
-                    (statsData.newCards / statsData.totalCards) * 100
+                    (statsData.newCards / statsData.totalCards) * 100 || 0
                   )}
                   %)
                 </span>

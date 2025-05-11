@@ -1,10 +1,9 @@
-import { User } from "@/components/type";
-import { ChangePassword, ChangePasswordByToken, ChangePasswordResponse, LogoutResponse, UserData, UserRegister } from "@/dataHelper/auth.dataHelper";
+import { ChangePassword, ChangePasswordByToken, ChangePasswordResponse, LogoutResponse, UserData, UserLogin, UserRegister } from "@/dataHelper/auth.dataHelper";
 import axiosClient from "./axiosClient";
 import { ApiResponse } from "./type";
 
 export const authApi = {
-  login: (data: User): Promise<ApiResponse<UserData>> =>
+  login: (data: UserLogin): Promise<ApiResponse<UserData>> =>
     axiosClient.post("/auth/login", data),
 
   logout: (refreshToken: string): Promise<LogoutResponse> =>

@@ -14,4 +14,6 @@ export const studyApi = {
     axiosClient.get(`/study/free-talk-topic?date=${date}`),
   getParagraph: (date: string): Promise<StudyContentData[]> =>
     axiosClient.get(`/study/paragraph?date=${date}`),
+  reviewVocabulary: (data: { id: number, performance: number }): Promise<StudyContentData[]> =>
+    axiosClient.put('/study/vocabulary', data),
 };

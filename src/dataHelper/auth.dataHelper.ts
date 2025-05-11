@@ -51,3 +51,8 @@ export interface User {
   phone: string | null;
   avatar: string | null;
 }
+
+export type UserLogin = {
+  username: string;
+  password: string;
+};

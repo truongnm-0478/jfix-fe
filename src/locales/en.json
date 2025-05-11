@@ -81,7 +81,11 @@
     "learn_now": "Learn now",
     "continue": "Continue",
     "cards_completed": "Cards completed",
-    "cards": "cards"
+    "cards": "cards",
+    "easy": "Easy",
+    "good": "Good",
+    "hard": "Hard",
+    "again": "Again"
   },
   "header": {
     "language": "Language",
@@ -181,11 +185,11 @@
   },
   "learn_vocabulary": {
     "title": "Today's vocabulary",
-    "description": "Review and expand your Japanese vocabulary daily"
+    "complete": "Excellent completion!",
+    "complete_description": "The set is complete! Continue with another set or stand up and dance to celebrate!"
   },
   "learn_grammar": {
     "title": "Today's grammar",
-    "description": "Master important grammar structures",
     "usage": "Usage"
   },
   "learn_question": {
