@@ -4,6 +4,7 @@ import { Content } from "@/dataHelper/study.dataHelper";
 import { handlePlayAudioUrl } from "@/utils/audioUtils";
 import { Volume2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface CardProps {
   currentCard: Content;
@@ -11,6 +12,7 @@ interface CardProps {
 
 export default function Card({ currentCard }: CardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
+  const { t } = useTranslation();
 
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -45,6 +47,7 @@ export default function Card({ currentCard }: CardProps) {
         <Back>
           <div className="position-relative text-center">
             <div className="text-black">
+              <div className="flex flex-col gap-2">
               {currentCard?.reading && (
                 <div className="text-sm text-indigo-600 font-medium mb-1">
                   {currentCard.reading}
@@ -53,6 +56,11 @@ export default function Card({ currentCard }: CardProps) {
               <h1 className="md:text-5xl text-3xl font-bold mb-2">
                 {currentCard?.word}
               </h1>
+              <h1 className="md:text-2xl text-xl font-bold mb-2">
+                <span className="text-indigo-600">{t("common.meaning")}: </span>
+                {currentCard?.meaning}
+              </h1>
+              </div>
               <div
                 className="mt-3 text-base md:text-lg text-gray-700 pl-3"
                 dangerouslySetInnerHTML={{

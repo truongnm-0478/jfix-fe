@@ -1,4 +1,4 @@
-import { StudyContentData } from "@/dataHelper/study.dataHelper";
+import { SpeechToTextRequest, SpeechToTextResponse, StudyContentData, StudyRequest } from "@/dataHelper/study.dataHelper";
 import axiosClient from "./axiosClient";
 
 export const studyApi = {  
@@ -18,4 +18,8 @@ export const studyApi = {
     axiosClient.put('/study/vocabulary', data),
   reviewGrammar: (data: { id: number, performance: number }): Promise<StudyContentData[]> =>
     axiosClient.put('/study/grammar', data),
+  speechToText: (data: SpeechToTextRequest): Promise<SpeechToTextResponse> =>
+    axiosClient.post('/study/speech-to-text', data),
+  reviewPronunciation: (data: StudyRequest): Promise<StudyContentData[]> =>
+    axiosClient.put('/study/sentence', data),
 };

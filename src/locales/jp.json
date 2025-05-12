@@ -85,7 +85,8 @@
     "easy": "簡単",
     "good": "良い",
     "hard": "難しい",
-    "again": "もう一度"
+    "again": "もう一度",
+    "meaning": "意味"
   },
   "header": {
     "language": "言語",
@@ -199,7 +200,29 @@
     "title": "今日の質問"
   },
   "learn_pronunciation": {
-    "title": "今日の発音"
+    "title": "今日の発音",
+    "sending": "音声を送信しています...",
+    "hide_furigana": "フリガナを非表示にする",
+    "show_furigana": "フリガナを表示する",
+    "hide_meaning": "意味を非表示にする",
+    "show_meaning": "意味を表示する",
+    "next_card": "次のカード",
+    "complete": "素晴らしい完成！",
+    "complete_description": "セットは完了！別のセットに挑戦するか、立ち上がって踊りを楽しもう！",
+    "browser_not_support": "ブラウザが音声をサポートしていません。",
+    "no_audio_data": "音声データがありません。もう一度録音してください。",
+    "cannot_access_microphone": "マイクにアクセスできません。アクセス許可を確認してください。",
+    "start_recording": "録音を開始する",
+    "stop_recording": "録音を停止する",
+    "retry_recording": "録音を再試行する",
+    "send_recording": "送信",
+    "result": "結果",
+    "correct": "正しい",
+    "incorrect": "間違っている",
+    "accuracy": "精度",
+    "your_sentence": "あなたの文",
+    "furigana_pronunciation": "フリガナの発音",
+    "error_list": "エラーリスト"
   },
   "learn_listening": {
     "title": "今日の聞き取り",

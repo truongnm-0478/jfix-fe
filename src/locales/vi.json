@@ -85,7 +85,8 @@
     "easy": "Dễ",
     "good": "Tốt",
     "hard": "Khó",
-    "again": "Lại"
+    "again": "Lại",
+    "meaning": "Nghĩa"
   },
   "header": {
     "language": "Ngôn ngữ",
@@ -200,7 +201,29 @@
     "title": "Bộ câu hỏi hôm nay"
   },
   "learn_pronunciation": {
-    "title": "Bộ thẻ phát âm hôm nay"
+    "title": "Bộ thẻ phát âm hôm nay",
+    "sending": "Đang gửi và xử lý âm thanh...",
+    "hide_furigana": "Ẩn Furigana",
+    "show_furigana": "Hiện Furigana",
+    "hide_meaning": "Ẩn Nghĩa",
+    "show_meaning": "Hiện Nghĩa",
+    "next_card": "Thẻ tiếp theo",
+    "complete": "Hoàn thành xuất sắc!",
+    "complete_description": "Bộ thẻ đã xong! Tiếp tục cày bộ khác hoặc đứng dậy nhảy múa ăn mừng đi!",
+    "browser_not_support": "Trình duyệt của bạn không hỗ trợ phát âm thanh.",
+    "no_audio_data": "Không có dữ liệu âm thanh. Hãy thử ghi âm lại.",
+    "cannot_access_microphone": "Không thể truy cập micro. Vui lòng kiểm tra quyền truy cập.",
+    "start_recording": "Bắt đầu ghi âm",
+    "stop_recording": "Dừng ghi âm",
+    "retry_recording": "Ghi âm lại",
+    "send_recording": "Gửi",
+    "result": "Kết quả nhận dạng",
+    "correct": "Chính xác",
+    "incorrect": "Không chính xác",
+    "accuracy": "Độ chính xác",
+    "your_sentence": "Câu bạn nói",
+    "furigana_pronunciation": "Phiên âm furigana",
+    "error_list": "Danh sách lỗi"
   },
   "learn_communication": {
     "title": "Bộ thẻ trò chuyện hôm nay",

@@ -85,7 +85,8 @@
     "easy": "Easy",
     "good": "Good",
     "hard": "Hard",
-    "again": "Again"
+    "again": "Again",
+    "meaning": "Meaning"
   },
   "header": {
     "language": "Language",
@@ -200,7 +201,29 @@
     "title": "Today's question"
   },
   "learn_pronunciation": {
-    "title": "Today's pronunciation"
+    "title": "Today's pronunciation",
+    "sending": "Sending audio...",
+    "hide_furigana": "Hide Furigana",
+    "show_furigana": "Show Furigana",
+    "hide_meaning": "Hide Meaning",
+    "show_meaning": "Show Meaning",
+    "next_card": "Next Card",
+    "complete": "Excellent completion!",
+    "complete_description": "The set is complete! Continue with another set or stand up and dance to celebrate!",
+    "browser_not_support": "Your browser does not support audio.",
+    "no_audio_data": "No audio data. Please try again.",
+    "cannot_access_microphone": "Cannot access microphone. Please check your permissions.",
+    "start_recording": "Start recording",
+    "stop_recording": "Stop recording",
+    "retry_recording": "Retry recording",
+    "send_recording": "Send",
+    "result": "Result",
+    "correct": "Correct",
+    "incorrect": "Incorrect",
+    "accuracy": "Accuracy",
+    "your_sentence": "Your sentence",
+    "furigana_pronunciation": "Furigana pronunciation",
+    "error_list": "Error list"
   },
   "learn_listening": {
     "title": "Today's listening",

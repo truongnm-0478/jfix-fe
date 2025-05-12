@@ -39,6 +39,7 @@ export interface Content {
   mistakeHistory: string | null;
   sampleAnswerJapaneseFurigana: string | null;
   japaneseTextFurigana: string | null;
+  japaneseTextRomaji: string | null;
 }
 
 export type DifficultyLevel = 'again' | 'hard' | 'good' | 'easy';
@@ -61,4 +62,37 @@ export interface FlashcardProps {
   onFlip?: (isFlipped: boolean) => void;
   isFlipped?: boolean;
   className?: string;
+}
+
+export interface SpeechToTextResponse {
+  hiraApi: string;
+  match: boolean;
+  accuracy: number;
+  text: string;
+  hiraUser: string;
+  status: string;
+  wrongJapanese?: WrongJapanese[] | null;
+}
+
+export interface WrongJapanese {
+  apiEnd: number;
+  userStart: number;
+  apiStart: number;
+  userEnd: number;
+  api: string;
+  user: string;
+}
+
+export interface SpeechToTextRequest {
+  audio_data: string;
+  user_romaji: string;
+  language: string;
+}
+
+export interface StudyRequest {
+  id: number;
+  performance: number;
+  userInput: string;
+  correctAnswer: string;
+  feedbackProvided: string;
 }
