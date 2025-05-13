@@ -58,3 +58,15 @@ export const getLanguageStorage = () => {
 export const setLanguageStorage = (lang: string) => {
   localStorage.setItem(STORAGE_VAR.Language, lang);
 };
+
+export const getJapaneseListeningExerciseState = () => {
+  return localStorage.getItem(STORAGE_VAR.JapaneseListeningExerciseState);
+};
+
+export const setJapaneseListeningExerciseState = (state: string) => {
+  localStorage.setItem(STORAGE_VAR.JapaneseListeningExerciseState, state);
+};
+
+export const removeJapaneseListeningExerciseState = () => {
+  localStorage.removeItem(STORAGE_VAR.JapaneseListeningExerciseState);
+};

@@ -231,6 +231,31 @@
   },
   "learn_listening": {
     "title": "Bộ thẻ nghe hiểu hôm nay",
-    "script": "Nội dung bài viết"
+    "script": "Nội dung bài viết",
+    "complete": "Hoàn thành xuất sắc!",
+    "complete_description": "Bộ thẻ đã xong! Tiếp tục cày bộ khác hoặc đứng dậy nhảy múa ăn mừng đi!"
+  },
+  "audioPlayer": {
+    "speed": "Tốc độ",
+    "play": "Phát",
+    "pause": "Tạm dừng",
+    "restart": "Làm lại",
+    "next": "Tiếp theo"
+  },
+  "learnListeningCard": {
+    "title": "Luyện nghe tiếng Nhật",
+    "topic": "Chủ đề",
+    "level": "Cấp độ",
+    "listenAndFillInTheBlank": "Nghe và điền vào chỗ trống",
+    "fillInTheBlank": "Điền vào chỗ trống",
+    "checkAnswers": "Kiểm tra",
+    "resetExercise": "Làm lại",
+    "hideAnswers": "Ẩn đáp án",
+    "showAnswers": "Hiện đáp án",
+    "excellent": "Xuất sắc! Bạn đã trả lời đúng tất cả!",
+    "youHaveAnsweredCorrectly": "Bạn đã trả lời đúng ",
+    "questions": "câu.",
+    "next": "Tiếp theo",
+    "clickShowAnswersToSeeCorrectAnswers": "Bấm 'Hiện đáp án' để xem đáp án đúng."
   }
 }

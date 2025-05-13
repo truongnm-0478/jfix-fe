@@ -15,6 +15,7 @@ import LearnCommunication from "./pages/user/LearnCommunication";
 import LearnGrammar from "./pages/user/LearnGrammar";
 import LearnGrammarCard from "./pages/user/LearnGrammarCard";
 import LearnListening from "./pages/user/LearnListening";
+import LearnListeningCard from "./pages/user/LearnListeningCard";
 import LearnPronunciation from "./pages/user/LearnPronunciation";
 import LearnPronunciationCard from "./pages/user/LearnPronunciationCard";
 import LearnQuestion from "./pages/user/LearnQuestion";
@@ -77,6 +78,7 @@ const Router = () => {
         <Route path={ROUTERS.VOCABULARY_FLASHCARD} element={<LearnVocabularyCard />} />
         <Route path={ROUTERS.GRAMMAR_FLASHCARD} element={<LearnGrammarCard />} />
         <Route path={ROUTERS.PRONUNCIATION_FLASHCARD} element={<LearnPronunciationCard />} />
+        <Route path={ROUTERS.LISTENING_FLASHCARD} element={<LearnListeningCard />} />
         <Route path={ROUTERS.ACHIEVEMENT} element={<>achievement</>} />
 
         {/* Protected user routes */}

@@ -227,6 +227,31 @@
   },
   "learn_listening": {
     "title": "Today's listening",
-    "script": "Script"
+    "script": "Script",
+    "complete": "Excellent completion!",
+    "complete_description": "The set is complete! Continue with another set or stand up and dance to celebrate!"
+  },
+  "audioPlayer": {
+    "speed": "Speed",
+    "play": "Play",
+    "pause": "Pause",
+    "restart": "Restart",
+    "next": "Next"
+  },
+  "learnListeningCard": {
+    "title": "Today's listening",
+    "topic": "Topic",
+    "level": "Level",
+    "listenAndFillInTheBlank": "Listen and fill in the blank",
+    "fillInTheBlank": "Fill in the blank",
+    "checkAnswers": "Check answers",
+    "resetExercise": "Reset exercise",
+    "hideAnswers": "Hide answers",
+    "showAnswers": "Show answers",
+    "excellent": "Excellent! You answered all correctly!",
+    "youHaveAnsweredCorrectly": "You answered correctly ",
+    "questions": "questions.",
+    "next": "Next",
+    "clickShowAnswersToSeeCorrectAnswers": "Click 'Show answers' to see the correct answers."
   }
 }

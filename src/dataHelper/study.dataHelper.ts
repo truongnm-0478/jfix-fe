@@ -96,3 +96,11 @@ export interface StudyRequest {
   correctAnswer: string;
   feedbackProvided: string;
 }
+
+export interface ExerciseListeningData {
+  audioUrl: string;
+  japaneseTextFurigana: string;
+  vietnameseText: string;
+  topic: string;
+  level: string;
+}

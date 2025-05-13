@@ -22,4 +22,6 @@ export const studyApi = {
     axiosClient.post('/study/speech-to-text', data),
   reviewPronunciation: (data: StudyRequest): Promise<StudyContentData[]> =>
     axiosClient.put('/study/sentence', data),
+  reviewListening: (data: StudyRequest): Promise<StudyContentData[]> =>
+    axiosClient.put('/study/paragraph', data),
 };

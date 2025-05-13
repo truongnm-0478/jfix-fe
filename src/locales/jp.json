@@ -226,6 +226,31 @@
   },
   "learn_listening": {
     "title": "今日の聞き取り",
-    "script": "スクリプト"
+    "script": "スクリプト",
+    "complete": "素晴らしい完成！",
+    "complete_description": "セットは完了！別のセットに挑戦するか、立ち上がって踊りを楽しもう！"
+  },
+  "audioPlayer": {
+    "speed": "速度",
+    "play": "再生",
+    "pause": "一時停止",
+    "restart": "再開",
+    "next": "次のカード"
+  },
+  "learnListeningCard": {
+    "title": "日本語の聞き取り練習",
+    "topic": "トピック",
+    "level": "レベル",
+    "listenAndFillInTheBlank": "聞いて空欄を埋める",
+    "fillInTheBlank": "空欄を埋める",
+    "checkAnswers": "答えを確認する",
+    "resetExercise": "練習をリセットする",
+    "hideAnswers": "答えを非表示にする",
+    "showAnswers": "答えを表示する",
+    "excellent": "素晴らしい！あなたはすべて正しい答えを出しました！",
+    "youHaveAnsweredCorrectly": "あなたは正しい答えを出しました",
+    "questions": "問題。",
+    "next": "次のカード",
+    "clickShowAnswersToSeeCorrectAnswers": "答えを表示するには、'答えを表示する'をクリックしてください。"
   }
 }
