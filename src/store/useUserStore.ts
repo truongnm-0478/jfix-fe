@@ -4,6 +4,7 @@ import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 
 interface User {
+  id: number | string | null;
   username: string | null;
   role: string | null;
   name: string | null;
@@ -23,6 +24,7 @@ export const useUserStore = create<UserStore>()(
   persist(
     (set) => ({
       user: getCurrentUser() || {
+        id: null,
         username: null,
         role: null,
         name: null,
@@ -45,6 +47,7 @@ export const useUserStore = create<UserStore>()(
       logout: () => {
         set({
           user: {
+            id: null,
             username: null,
             role: null,
             name: null,

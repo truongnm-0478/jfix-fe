@@ -50,6 +50,7 @@ export interface User {
   email: string | null;
   phone: string | null;
   avatar: string | null;
+  id: number | string | null;
 }
 
 export type UserLogin = {

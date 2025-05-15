@@ -53,6 +53,7 @@ const Login: React.FC = () => {
         email: data?.email ?? null,
         phone: data?.phone ?? null,
         avatar: data?.avatar ?? null,
+        id: data?.id ?? null,
       };
 
       login(user, data?.accessToken ?? null, data?.refreshToken ?? null);

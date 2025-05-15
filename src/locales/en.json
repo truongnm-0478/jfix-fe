@@ -225,6 +225,26 @@
     "furigana_pronunciation": "Furigana pronunciation",
     "error_list": "Error list"
   },
+  "learn_communication": {
+    "title": "Today's communication card",
+    "topic": "Communication topic",
+    "communication_error": "Communication error",
+    "learn_communication_title": "Learn Japanese communication",
+    "conversation_completed": "Conversation completed!",
+    "conversation_completed_description": "You did very well, keep trying!",
+    "input": "Enter message...",
+    "loading": "Converting audio...",
+    "end_conversation": "End conversation",
+    "correction": "Correction",
+    "new_vocabulary": "New vocabulary",
+    "hide_vocabulary": "Hide new vocabulary",
+    "show_vocabulary": "Show new vocabulary",
+    "learn_communication_topic": "Topic",
+    "show_message": "Show message",
+    "next_conversation": "Next conversation",
+    "complete": "Excellent completion!",
+    "complete_description": "The set is complete! Continue with another set or stand up and dance to celebrate!"
+  },
   "learn_listening": {
     "title": "Today's listening",
     "script": "Script",

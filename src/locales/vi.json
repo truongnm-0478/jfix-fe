@@ -227,7 +227,23 @@
   },
   "learn_communication": {
     "title": "Bộ thẻ trò chuyện hôm nay",
-    "topic": "Chủ đề trò chuyện"
+    "topic": "Chủ đề trò chuyện",
+    "communication_error": "Lỗi trong quá trình trò chuyện",
+    "learn_communication_title": "Học giao tiếp tiếng Nhật",
+    "conversation_completed": "Kết thúc hội thoại!",
+    "conversation_completed_description": "Bạn đã làm rất tốt, hãy tiếp tục cố gắng nhé!",
+    "input": "Nhập tin nhắn...",
+    "loading": "Đang chuyển đổi âm thanh...",
+    "end_conversation": "Kết thúc cuộc trò chuyện",
+    "correction": "Sửa lỗi",
+    "new_vocabulary": "Từ mới",
+    "hide_vocabulary": "Ẩn từ mới",
+    "show_vocabulary": "Hiện từ mới",
+    "learn_communication_topic": "Chủ đề",
+    "show_message": "Hiện tin nhắn",
+    "next_conversation": "Cuộc trò chuyện tiếp theo",
+    "complete": "Hoàn thành xuất sắc!",
+    "complete_description": "Bộ thẻ đã xong! Tiếp tục cày bộ khác hoặc đứng dậy nhảy múa ăn mừng đi!"
   },
   "learn_listening": {
     "title": "Bộ thẻ nghe hiểu hôm nay",

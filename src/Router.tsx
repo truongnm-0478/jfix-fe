@@ -12,6 +12,7 @@ import Learn from "@/pages/user/Learn";
 import { Navigate, Route, Routes } from "react-router-dom";
 import NotFoundPage from "./pages/NotFound";
 import LearnCommunication from "./pages/user/LearnCommunication";
+import LearnCommunicationCard from "./pages/user/LearnCommunicationCard";
 import LearnGrammar from "./pages/user/LearnGrammar";
 import LearnGrammarCard from "./pages/user/LearnGrammarCard";
 import LearnListening from "./pages/user/LearnListening";
@@ -79,6 +80,7 @@ const Router = () => {
         <Route path={ROUTERS.GRAMMAR_FLASHCARD} element={<LearnGrammarCard />} />
         <Route path={ROUTERS.PRONUNCIATION_FLASHCARD} element={<LearnPronunciationCard />} />
         <Route path={ROUTERS.LISTENING_FLASHCARD} element={<LearnListeningCard />} />
+        <Route path={ROUTERS.COMMUNICATION_FLASHCARD} element={<LearnCommunicationCard />} />
         <Route path={ROUTERS.ACHIEVEMENT} element={<>achievement</>} />
 
         {/* Protected user routes */}

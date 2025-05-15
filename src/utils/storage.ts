@@ -1,4 +1,5 @@
 import { STORAGE_VAR } from "@/constant";
+import { MessageProps } from "@/dataHelper/communication.dateHelper";
 
 interface User {
   username: string | null;
@@ -69,4 +70,28 @@ export const setJapaneseListeningExerciseState = (state: string) => {
 
 export const removeJapaneseListeningExerciseState = () => {
   localStorage.removeItem(STORAGE_VAR.JapaneseListeningExerciseState);
+};
+
+export const setChatTopic = (topic: { japaneseText: string; level: string } | null) => {
+  localStorage.setItem(STORAGE_VAR.JapaneseChatTopic, JSON.stringify(topic));
+};
+
+export const getChatTopic = () => {
+  return localStorage.getItem(STORAGE_VAR.JapaneseChatTopic);
+};
+
+export const removeChatTopic = () => {
+  localStorage.removeItem(STORAGE_VAR.JapaneseChatTopic);
+};
+
+export const setChatMessages = (messages: MessageProps['message'][]) => {
+  localStorage.setItem(STORAGE_VAR.JapaneseChatMessages, JSON.stringify(messages));
+};
+
+export const getChatMessages = () => {
+  return localStorage.getItem(STORAGE_VAR.JapaneseChatMessages);
+};
+
+export const removeChatMessages = () => {
+  localStorage.removeItem(STORAGE_VAR.JapaneseChatMessages);
 };

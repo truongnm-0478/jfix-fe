@@ -45,6 +45,9 @@ export const enum ROUTERS {
   LISTENING_FLASHCARD = "/learn/listening/flashcard",
   PRONUNCIATION_FLASHCARD = "/learn/pronunciation/flashcard",
   QUESTION_FLASHCARD = "/learn/question/flashcard",
+
+  // Japanese Chat
+  JAPANESE_CHAT = "/learn/communication/chat",
 }
 
 export const enum STORAGE_VAR {
@@ -52,6 +55,9 @@ export const enum STORAGE_VAR {
   AccessToken = "jfix-access-token",
   RefreshToken = "jfix-refresh-token",
   Language = "jfix-language",
+  JapaneseListeningExerciseState = "japanese-listening-exercise-state",
+  JapaneseChatMessages = "japanese_chat_messages",
+  JapaneseChatTopic = "japanese_chat_topic",
 }
 
 export const enum ROLE {
@@ -61,7 +67,6 @@ export const enum ROLE {
 export const MAX_FILE_SIZE = 1024 * 1024; // 1MB
 export const ALLOWED_TYPES = ["text/csv"];
 
-export const MAX_LENGTH_INPUT = 255;
 
 export const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 export const regexUsername = /^[a-zA-Z0-9_]+$/;
@@ -72,3 +77,4 @@ export const LEVELS = ["N1", "N2", "N3", "N4", "N5", "FREE"] as const;
 
 export const TOTAL_VOCAB = 800;
 export const MIN_DAYS = 20;
+export const MAX_MESSAGES = 5;

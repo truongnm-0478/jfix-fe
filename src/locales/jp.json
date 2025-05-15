@@ -224,6 +224,26 @@
     "furigana_pronunciation": "フリガナの発音",
     "error_list": "エラーリスト"
   },
+  "learn_communication": {
+    "title": "今日のトピック",
+    "topic": "トピック",
+    "communication_error": "トピックのエラー",
+    "learn_communication_title": "日本語のコミュニケーションを学ぶ",
+    "conversation_completed": "会話を終了しました！",
+    "conversation_completed_description": "あなたは非常に良くできました。引き続き頑張ってください！",
+    "input": "メッセージを入力...",
+    "loading": "音声を変換中...",
+    "end_conversation": "会話を終了する",
+    "correction": "修正",
+    "new_vocabulary": "新しい単語",
+    "hide_vocabulary": "新しい単語を非表示にする",
+    "show_vocabulary": "新しい単語を表示する",
+    "learn_communication_topic": "トピック",
+    "show_message": "メッセージを表示する",
+    "next_conversation": "次の会話",
+    "complete": "素晴らしい完成！",
+    "complete_description": "セットは完了！別のセットに挑戦するか、立ち上がって踊りを楽しもう！"
+  },
   "learn_listening": {
     "title": "今日の聞き取り",
     "script": "スクリプト",
