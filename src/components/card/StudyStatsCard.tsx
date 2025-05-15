@@ -71,7 +71,7 @@ const StudyStatsCard: React.FC<StudyStatsProps> = ({ cards }) => {
         <CardContent className="flex flex-col gap-8">
           <ChartContainer
             config={chartConfig}
-            className="h-[230px] justify-center items-center"
+            className="h-[230px] w-full justify-center items-center"
           >
             <RadialBarChart
               data={statsData.chartData}

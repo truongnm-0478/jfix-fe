@@ -92,9 +92,9 @@ export interface SpeechToTextRequest {
 export interface StudyRequest {
   id: number;
   performance: number;
-  userInput: string;
-  correctAnswer: string;
-  feedbackProvided: string;
+  userInput: string | undefined;
+  correctAnswer: string | undefined;
+  feedbackProvided: string | undefined;
 }
 
 export interface ExerciseListeningData {

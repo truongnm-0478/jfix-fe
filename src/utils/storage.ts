@@ -1,5 +1,6 @@
 import { STORAGE_VAR } from "@/constant";
 import { MessageProps } from "@/dataHelper/communication.dateHelper";
+import { StudyMode } from "@/pages/user/LearnQuestionCard/constant";
 
 interface User {
   username: string | null;
@@ -94,4 +95,16 @@ export const getChatMessages = () => {
 
 export const removeChatMessages = () => {
   localStorage.removeItem(STORAGE_VAR.JapaneseChatMessages);
+};
+
+export const getStudyMode = () => {
+  return localStorage.getItem(STORAGE_VAR.StudyMode);
+};
+
+export const setStudyMode = (mode: StudyMode) => {
+  localStorage.setItem(STORAGE_VAR.StudyMode, mode);
+};
+
+export const removeStudyMode = () => {
+  localStorage.removeItem(STORAGE_VAR.StudyMode);
 };

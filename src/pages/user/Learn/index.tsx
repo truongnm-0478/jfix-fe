@@ -9,7 +9,7 @@ import { FeatureCard } from "./components/FeatureCard";
 import LearningGoalCard from "./components/LearningGoalCard";
 import { StatsCard } from "./components/StatsCard";
 import WelcomeBackCard from "./components/WelcomeBackCard";
-import { LEARN_CARDS } from "./contant";
+import { LEARN_CARDS } from "./constant";
 
 const Learn = () => {
   const { t } = useTranslation();

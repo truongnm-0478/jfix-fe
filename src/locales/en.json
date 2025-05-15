@@ -198,7 +198,34 @@
     "complete_description": "The set is complete! Continue with another set or stand up and dance to celebrate!"
   },
   "learn_question": {
-    "title": "Today's question"
+    "title": "Today's question",
+    "complete": "Excellent completion!",
+    "complete_description": "The set is complete! Continue with another set or stand up and dance to celebrate!",
+    "arrange": "Arrange",
+    "reset": "Reset",
+    "input": "Enter Japanese answer",
+    "hint": "Hint",
+    "voice": "Voice",
+    "complete_voice": "Voice recording completed!",
+    "recording": "Recording...",
+    "record": "Click to record",
+    "question": "Question",
+    "speech_result": "Speech recognition result",
+    "arrange_mode": "Arrange",
+    "input_mode": "Input",
+    "record_mode": "Record",
+    "level": "Level",
+    "record_description": "Record your answer",
+    "input_description": "Enter Japanese answer",
+    "arrange_description": "Arrange your answer",
+    "title_learning": "Learn Japanese questions",
+    "check": "Check",
+    "evaluate": "Evaluate",
+    "correct": "Correct!",
+    "incorrect": "Incorrect. The answer is: ",
+    "processing": "Processing speech...",
+    "error_microphone": "Cannot convert speech to text",
+    "access_denied_microphone": "Cannot access microphone. Please check your permissions."
   },
   "learn_pronunciation": {
     "title": "Today's pronunciation",
@@ -257,6 +284,12 @@
     "pause": "Pause",
     "restart": "Restart",
     "next": "Next"
+  },
+  "record": {
+    "processing": "Processing...",
+    "record": "Record",
+    "recording": "Recording...",
+    "stop_recording": "Stop recording"
   },
   "learnListeningCard": {
     "title": "Today's listening",

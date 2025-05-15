@@ -197,7 +197,34 @@
     "complete_description": "セットは完了！別のセットに挑戦するか、立ち上がって踊りを楽しもう！"
   },
   "learn_question": {
-    "title": "今日の質問"
+    "title": "今日の質問",
+    "complete": "素晴らしい完成！",
+    "complete_description": "セットは完了！別のセットに挑戦するか、立ち上がって踊りを楽しもう！",
+    "arrange": "並べ替え",
+    "reset": "リセット",
+    "input": "日本語の回答を入力",
+    "hint": "ヒント",
+    "voice": "回答を録音",
+    "complete_voice": "録音が完了しました！",
+    "recording": "録音中...",
+    "record": "録音する",
+    "question": "質問",
+    "speech_result": "音声認識結果",
+    "arrange_mode": "並べ替え",
+    "input_mode": "入力",
+    "record_mode": "録音",
+    "level": "レベル",
+    "record_description": "回答を録音",
+    "input_description": "日本語の回答を入力",
+    "arrange_description": "並べ替え",
+    "title_learning": "日本語の質問を学ぶ",
+    "check": "チェック",
+    "evaluate": "評価",
+    "correct": "正しい！",
+    "incorrect": "間違っています。答えは：",
+    "processing": "音声をテキストに変換中...",
+    "error_microphone": "音声をテキストに変換できませんでした。",
+    "access_denied_microphone": "マイクにアクセスできません。アクセス許可を確認してください。"
   },
   "learn_pronunciation": {
     "title": "今日の発音",
@@ -256,6 +283,12 @@
     "pause": "一時停止",
     "restart": "再開",
     "next": "次のカード"
+  },
+  "record": {
+    "processing": "処理中...",
+    "record": "録音",
+    "recording": "録音中...",
+    "stop_recording": "録音を停止"
   },
   "learnListeningCard": {
     "title": "日本語の聞き取り練習",

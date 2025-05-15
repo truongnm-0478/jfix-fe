@@ -58,6 +58,7 @@ export const enum STORAGE_VAR {
   JapaneseListeningExerciseState = "japanese-listening-exercise-state",
   JapaneseChatMessages = "japanese_chat_messages",
   JapaneseChatTopic = "japanese_chat_topic",
+  StudyMode = "jfix_study_mode",
 }
 
 export const enum ROLE {

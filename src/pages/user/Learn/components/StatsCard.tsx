@@ -2,7 +2,7 @@ import { Progress } from "@/components/ui/progress";
 import { UserStats } from "@/dataHelper/user.dataHelper";
 import { BarChart3 } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { STATS } from "../contant";
+import { STATS } from "../constant";
 
 export const StatsCard = ({ userStats }: { userStats: UserStats | null }) => {
   const { t } = useTranslation();

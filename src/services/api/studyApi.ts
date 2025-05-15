@@ -26,4 +26,6 @@ export const studyApi = {
     axiosClient.put('/study/paragraph', data),
   reviewCommunication: (data: { id: number, performance: number}): Promise<StudyContentData[]> =>
     axiosClient.put('/study/free-talk-topic', data),
+  reviewQuestion: (data: StudyRequest): Promise<StudyContentData[]> =>
+    axiosClient.put('/study/speaking-question', data),
 };

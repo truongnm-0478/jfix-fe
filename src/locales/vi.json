@@ -198,7 +198,34 @@
     "complete_description": "Bộ thẻ đã xong! Tiếp tục cày bộ khác hoặc đứng dậy nhảy múa ăn mừng đi!"
   },
   "learn_question": {
-    "title": "Bộ câu hỏi hôm nay"
+    "title": "Bộ câu hỏi hôm nay",
+    "complete": "Hoàn thành xuất sắc!",
+    "complete_description": "Bộ thẻ đã xong! Tiếp tục cày bộ khác hoặc đứng dậy nhảy múa ăn mừng đi!",
+    "arrange": "Sắp xếp câu trả lời",
+    "reset": "Làm lại",
+    "input": "Nhập câu trả lời tiếng Nhật",
+    "hint": "Gợi ý",
+    "voice": "Ghi âm câu trả lời",
+    "complete_voice": "Đã ghi âm xong!",
+    "recording": "Đang ghi âm...",
+    "record": "Nhấn để ghi âm",
+    "question": "Câu hỏi",
+    "speech_result": "Kết quả nhận dạng",
+    "arrange_mode": "Sắp xếp",
+    "input_mode": "Nhập câu",
+    "record_mode": "Ghi âm",
+    "level": "Cấp độ",
+    "record_description": "Ghi âm câu trả lời",
+    "input_description": "Nhập câu trả lời tiếng Nhật",
+    "arrange_description": "Sắp xếp câu trả lời",
+    "title_learning": "Học câu hỏi tiếng Nhật",
+    "check": "Kiểm tra",
+    "evaluate": "Đánh giá",
+    "correct": "Chính xác!",
+    "incorrect": "Sai rồi. Đáp án: ",
+    "processing": "Đang xử lý giọng nói...",
+    "error_microphone": "Không thể chuyển đổi giọng nói thành văn bản",
+    "access_denied_microphone": "Không thể truy cập micro. Vui lòng kiểm tra quyền truy cập."
   },
   "learn_pronunciation": {
     "title": "Bộ thẻ phát âm hôm nay",
@@ -257,6 +284,12 @@
     "pause": "Tạm dừng",
     "restart": "Làm lại",
     "next": "Tiếp theo"
+  },
+  "record": {
+    "processing": "Đang xử lý...",
+    "record": "Ghi âm",
+    "recording": "Đang ghi âm...",
+    "stop_recording": "Dừng ghi âm"
   },
   "learnListeningCard": {
     "title": "Luyện nghe tiếng Nhật",
