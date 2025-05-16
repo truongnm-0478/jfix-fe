@@ -60,7 +60,7 @@ const LearnGrammarCard = () => {
   if (grammarLoading) return <Loading />
 
   return (
-    <div className="xl:py-8 py-4 xl:px-2 px-0">
+    <div className="xl:py-8 py-4 xl:px-2 px-4">
       <div className="xl:px-5 px-0 grid grid-cols-1 gap-8">
         <div className="pb-8 md:pb-0">
           {currentCard && <Card currentCard={currentCard} />}

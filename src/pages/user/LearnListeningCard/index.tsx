@@ -72,7 +72,7 @@ const LearnListeningCard = () => {
   if (paragraphLoading) return <Loading />
 
   return (
-    <div className="xl:py-8 py-4 xl:px-2 px-0 mb-20 md:mb-0">
+    <div className="xl:py-8 py-4 xl:px-2 px-4 mb-20 md:mb-0">
       <div className="xl:px-5 px-0 grid grid-cols-1 gap-8">
           {currentCard && 
             <JapaneseListeningExercise 

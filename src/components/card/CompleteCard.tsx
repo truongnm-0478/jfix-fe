@@ -32,7 +32,7 @@ export default function CompleteCard({ loop = true, autoplay = true, title, desc
     <Card className="w-full relative">
       <CardContent className="flex flex-col gap-8">
         <div ref={containerRef} className="w-full h-[500px]"></div>
-        <div className="absolute bottom-9 left-0 right-0 text-center">
+        <div className="absolute bottom-9 left-0 right-0 text-center px-4">
           <h6 className="text-xl font-bold text-primary">{title}</h6>
           <p className="text-md italic font-light text-gray-500">{description}</p>
           <Button className="mt-4" onClick={() => navigate(ROUTERS.LEARN)}>{t("common.continue")}</Button>

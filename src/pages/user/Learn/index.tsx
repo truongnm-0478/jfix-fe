@@ -31,7 +31,7 @@ const Learn = () => {
   if (userStatsLoading || learningGoalLoading) return <Loading />;
 
   return (
-    <div className="min-h-screen xl:py-8 py-4 xl:px-2 px-0">
+    <div className="min-h-screen py-8 xl:px-2 px-4">
       <div className="xl:px-5 px-0 grid grid-cols-1 xl:grid-cols-12 gap-8">
         <div className="xl:col-span-4 order-1 xl:order-2 flex flex-col gap-4">
           <StatsCard userStats={userStats} />

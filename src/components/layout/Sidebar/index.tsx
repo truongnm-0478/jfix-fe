@@ -40,7 +40,7 @@ const MenuLink = forwardRef<HTMLAnchorElement, { item: MenuItem; isActive: boole
 });
 
 const MenuItem = ({ item }: { item: MenuItem }) => {
-  const isActive = useLocation().pathname === item.path;
+  const isActive = useLocation().pathname.startsWith(item.path);
   const { user } = useUserStore();
 
   // If item has roles and user's role is not in the allowed roles, don't render
@@ -72,7 +72,7 @@ export const Sidebar = () => {
   const { user } = useUserStore();
 
   const menuItems: MenuItem[] = [
-    { icon: Home, label: t("sidebar.home"), path: "/" },
+    { icon: Home, label: t("sidebar.home"), path: "/home" },
     { icon: Bell, label: t("sidebar.notifications"), path: "/notifications" },
     { icon: Book, label: t("sidebar.study"), path: ROUTERS.LEARN },
     { icon: ListTodo, label: t("sidebar.progress"), path: "/progress" },
@@ -163,7 +163,7 @@ export const Sidebar = () => {
           <div className="flex h-[72px] items-center justify-around">
             {menuItems.map((item) => {
               const Icon = item.icon;
-              const isActive = useLocation().pathname === item.path;
+              const isActive = useLocation().pathname.startsWith(item.path);
               
               // Skip admin items in mobile view
               if (item.roles && !item.roles.includes(user.role || '')) {
