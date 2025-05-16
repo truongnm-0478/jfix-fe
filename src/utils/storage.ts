@@ -108,3 +108,15 @@ export const setStudyMode = (mode: StudyMode) => {
 export const removeStudyMode = () => {
   localStorage.removeItem(STORAGE_VAR.StudyMode);
 };
+
+export const setTablePageSize = (size: number) => {
+  localStorage.setItem(STORAGE_VAR.TablePageSize, size.toString());
+};
+
+export const getTablePageSize = () => {
+  return localStorage.getItem(STORAGE_VAR.TablePageSize);
+};
+
+export const removeTablePageSize = () => {
+  localStorage.removeItem(STORAGE_VAR.TablePageSize);
+};

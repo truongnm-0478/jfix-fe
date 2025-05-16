@@ -24,3 +24,15 @@ export type UserStats = {
     totalCount: number;
   };
 };
+
+export type UserDetail = {
+  id: number;
+  username: string;
+  role: string;
+  name?: string;
+  email?: string;
+  phone?: string;
+  avatar?: string | null;
+  refreshToken?: string | null;
+  accessToken?: string | null;
+};

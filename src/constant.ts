@@ -5,6 +5,7 @@ export const enum ROUTERS {
   CONTACT = "/contact",
   HOME = "/",
   NOT_FOUND = "/404",
+  NOTIFICATIONS = "/notifications",
 
   // Auth
   LOGIN = "/login",
@@ -17,10 +18,13 @@ export const enum ROUTERS {
 
   // Admin
   ADMIN_DASHBOARD = "/admin/dashboard",
-  ADMIN_USERS = "/admin/users",
   ADMIN_SETTINGS = "/admin/settings",
   BLANK_PAGE = "admin/blank_page",
   UNAUTHORIZED = "admin/403_unauthorized",
+  ADMIN_LESSONS = "/admin/lessons",
+
+  ADMIN_USERS = "/admin/users",
+  ADMIN_USER_DETAILS = "/admin/users/:id",
 
   // Learning
   LEARN = "/learn",
@@ -60,6 +64,7 @@ export const enum STORAGE_VAR {
   JapaneseChatMessages = "japanese_chat_messages",
   JapaneseChatTopic = "japanese_chat_topic",
   StudyMode = "jfix_study_mode",
+  TablePageSize = "jfix_table_page_size",
 }
 
 export const enum ROLE {

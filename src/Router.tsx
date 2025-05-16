@@ -4,6 +4,7 @@ import { DefaultLayout } from "@/components/layout/DefaultLayout";
 import { UserLayout } from "@/components/layout/UserLayout";
 import { ROUTERS } from "@/constant";
 import AdminDashboard from "@/pages/admin/Dashboard";
+import AdminUsers from "@/pages/admin/Users";
 import Login from "@/pages/auth/Login";
 import Register from "@/pages/auth/Register";
 import Home from "@/pages/Home";
@@ -66,6 +67,7 @@ const Router = () => {
         }
       >
         <Route path={ROUTERS.ADMIN_DASHBOARD} element={<AdminDashboard />} />
+        <Route path={ROUTERS.ADMIN_USERS} element={<AdminUsers />} />
       </Route>
 
       {/* User routes */}

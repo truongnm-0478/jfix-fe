@@ -43,8 +43,8 @@ const MenuItem = ({ item }: { item: MenuItem }) => {
   const isActive = useLocation().pathname.startsWith(item.path);
   const { user } = useUserStore();
 
-  // If item has roles and user's role is not in the allowed roles, don't render
-  if (item.roles && !item.roles.includes(user.role || '')) {
+  // Nếu item có roles và vai trò của người dùng không nằm trong roles, không hiển thị
+  if (item.roles && user?.role && !item.roles.includes(user.role)) {
     return null;
   }
 
@@ -71,37 +71,45 @@ export const Sidebar = () => {
   const { t } = useTranslation();
   const { user } = useUserStore();
 
+  // Kiểm tra vai trò người dùng, chuyển thành chữ hoa để so sánh
+  const userRole = user?.role?.toUpperCase() || "";
+  const isAdmin = userRole === "ADMIN";
+
   const menuItems: MenuItem[] = [
-    { icon: Home, label: t("sidebar.home"), path: "/home" },
-    { icon: Bell, label: t("sidebar.notifications"), path: "/notifications" },
+    { icon: Home, label: t("sidebar.home"), path: ROUTERS.HOME },
+    { icon: Bell, label: t("sidebar.notifications"), path: ROUTERS.NOTIFICATIONS },
     { icon: Book, label: t("sidebar.study"), path: ROUTERS.LEARN },
-    { icon: ListTodo, label: t("sidebar.progress"), path: "/progress" },
-    { icon: User2, label: t("sidebar.profile"), path: "/profile" },
+    { icon: ListTodo, label: t("sidebar.progress"), path: ROUTERS.PROGRESS },
+    { icon: User2, label: t("sidebar.profile"), path: ROUTERS.USER_PROFILE },
     {
       icon: SquareKanban,
       label: t("sidebar.dashboard"),
-      path: "/dashboard",
-      roles: ["admin"]
+      path: ROUTERS.ADMIN_DASHBOARD,
+      roles: ["ADMIN"]
     },
     {
       icon: Users,
       label: t("sidebar.userManagement"),
-      path: "/admin/users",
-      roles: ["admin"]
+      path: ROUTERS.ADMIN_USERS,
+      roles: ["ADMIN"]
     },
     {
       icon: Settings,
       label: t("sidebar.adminSettings"),
-      path: "/admin/settings",
-      roles: ["admin"]
+      path: ROUTERS.ADMIN_SETTINGS,
+      roles: ["ADMIN"]
     },
     {
       icon: BookOpen,
       label: t("sidebar.lessonManagement"),
-      path: "/admin/lessons",
-      roles: ["admin"]
+      path: ROUTERS.ADMIN_LESSONS,
+      roles: ["ADMIN"]
     }
   ];
+
+  const filteredMenuItems = isAdmin
+    ? menuItems.filter(item => item.roles && item.roles.includes("ADMIN"))
+    : menuItems.filter(item => !item.roles);
 
   return (
     <TooltipProvider>
@@ -132,7 +140,7 @@ export const Sidebar = () => {
           {/* Navigation Menu */}
           <nav className="flex flex-1 flex-col justify-between py-6">
             <div className="space-y-1 px-3">
-              {menuItems.map((item) => (
+              {filteredMenuItems.map((item) => (
                 <MenuItem key={item.path} item={item} />
               ))}
             </div>
@@ -161,14 +169,9 @@ export const Sidebar = () => {
         {/* Mobile Bottom Navigation */}
         <nav className="fixed bottom-0 left-0 right-0 z-40 border-t border-gray-100 bg-white shadow-sm md:hidden">
           <div className="flex h-[72px] items-center justify-around">
-            {menuItems.map((item) => {
+            {filteredMenuItems.map((item) => {
               const Icon = item.icon;
               const isActive = useLocation().pathname.startsWith(item.path);
-              
-              // Skip admin items in mobile view
-              if (item.roles && !item.roles.includes(user.role || '')) {
-                return null;
-              }
               
               return (
                 <Link

@@ -1,3 +1,7 @@
-export const Users = () => {
-  return <div>Users</div>;
+import UserManagement from "./components/UserManagement";
+
+const AdminUsers = () => {
+  return <UserManagement />;
 };
+
+export default AdminUsers;
