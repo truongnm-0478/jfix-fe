@@ -69,8 +69,9 @@ export const SettingsMenu = forwardRef<HTMLButtonElement>((props, ref) => {
       navigate(ROUTERS.LOGIN);
       toast.success(t("header.logout.success"));
     },
-    onError: (error) => {
-      toast.error(error.message);
+    onError: () => {
+      logout();
+      navigate(ROUTERS.LOGIN);
     },
   });
 
