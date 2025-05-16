@@ -306,5 +306,27 @@
     "questions": "câu.",
     "next": "Tiếp theo",
     "clickShowAnswersToSeeCorrectAnswers": "Bấm 'Hiện đáp án' để xem đáp án đúng."
+  },
+  "userProgress": {
+    "error": "Không thể tải dữ liệu. Vui lòng thử lại sau.",
+    "totalCards": "Số thẻ đã học",
+    "completed": "Hoàn thành",
+    "streakDays": "Chuỗi ngày học",
+    "accuracy": "Độ chính xác",
+    "correct": "Đúng",
+    "incorrect": "Sai",
+    "learningPerformanceChartTitle": "Thống kê học tập theo thời gian",
+    "learningPerformanceChartDescription": "Theo dõi tiến độ học tập và cải thiện lỗi qua từng ngày",
+    "errors": "lỗi",
+    "date": "Ngày",
+    "cards": "thẻ",
+    "learningPerformanceChartTooltip": "Ngày: {{date}}",
+    "heatmapTitle": "Heatmap học tập",
+    "heatmapDescription": "Cường độ học tập theo ngày",
+    "lessThan": "Ít hơn",
+    "moreThan": "Nhiều hơn",
+    "total": "Tổng số",
+    "distributionPieChartTitle": "Phân bố thẻ học tập",
+    "distributionPieChartDescription": "Tỷ lệ thẻ theo độ khó"
   }
 }

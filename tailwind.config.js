@@ -166,6 +166,12 @@ module.exports = {
         },
         '.rotate-x-180': {
           transform: 'rotateX(180deg)',
+        },
+        '.scrollbar-hide': {
+          'scrollbar-width': 'none',
+          '&::-webkit-scrollbar': {
+            display: 'none'
+          }
         }
       });
     }

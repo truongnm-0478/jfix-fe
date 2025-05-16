@@ -1,9 +1,7 @@
 import Loading from "@/components/common/Loading";
 import { LearningGoalResponse } from "@/dataHelper/learningGoal.dataHelper";
 import { UserStats } from "@/dataHelper/user.dataHelper";
-import { learningGoalApi } from "@/services/api/learningGoalApi";
-import { userApi } from "@/services/api/userApi";
-import { useQuery } from "@tanstack/react-query";
+import { useLearningGoal, useUserStats } from "@/hooks/useAchievement";
 import { useTranslation } from "react-i18next";
 import { FeatureCard } from "./components/FeatureCard";
 import LearningGoalCard from "./components/LearningGoalCard";
@@ -14,15 +12,8 @@ import { LEARN_CARDS } from "./constant";
 const Learn = () => {
   const { t } = useTranslation();
 
-  const { data: userStatsData, isLoading: userStatsLoading } = useQuery({
-    queryKey: ["userStats"],
-    queryFn: () => userApi.getUserStats(),
-  });
-
-  const { data: learningGoalData, isLoading: learningGoalLoading } = useQuery({
-    queryKey: ["learningGoal"],
-    queryFn: () => learningGoalApi.getLearningGoal(),
-  });
+  const { data: userStatsData, isLoading: userStatsLoading } = useUserStats();
+  const { data: learningGoalData, isLoading: learningGoalLoading } = useLearningGoal();
 
   const userStats: UserStats | null = userStatsData?.data ?? null;
   const learningGoal: LearningGoalResponse | null =

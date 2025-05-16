@@ -37,6 +37,7 @@ export const enum ROUTERS {
   // Achievement
   ACHIEVEMENT = "/achievement",
   STREAK_DAY = "/streak-day",
+  PROGRESS = "/progress",
 
   // Flashcard
   VOCABULARY_FLASHCARD = "/learn/vocabulary/flashcard",

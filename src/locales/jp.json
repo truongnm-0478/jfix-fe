@@ -305,5 +305,27 @@
     "questions": "問題。",
     "next": "次のカード",
     "clickShowAnswersToSeeCorrectAnswers": "答えを表示するには、'答えを表示する'をクリックしてください。"
+  },
+  "userProgress": {
+    "error": "データを読み込めませんでした。もう一度お試しください。",
+    "totalCards": "学習済みカード数",
+    "completed": "完了",
+    "streakDays": "学習連続日数",
+    "accuracy": "精度",
+    "correct": "正しい",
+    "incorrect": "間違っている",
+    "learningPerformanceChartTitle": "学習進捗の時間ごとの統計",
+    "learningPerformanceChartDescription": "学習進捗を時間ごとに追うとともに、誤りを改善します。",
+    "errors": "誤り",
+    "date": "日",
+    "cards": "カード",
+    "learningPerformanceChartTooltip": "日: {{date}}",
+    "heatmapTitle": "学習進捗のヒートマップ",
+    "heatmapDescription": "日ごとの学習進捗",
+    "lessThan": "少ない",
+    "moreThan": "多い",
+    "total": "合計",
+    "distributionPieChartTitle": "学習カードの分布",
+    "distributionPieChartDescription": "難易度ごとのカードの割合"
   }
 }

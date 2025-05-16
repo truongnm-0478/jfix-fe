@@ -24,6 +24,7 @@ import LearnQuestionCard from "./pages/user/LearnQuestionCard";
 import LearnVocabulary from "./pages/user/LearnVocabulary";
 import LearnVocabularyCard from "./pages/user/LearnVocabularyCard";
 import StreakDay from "./pages/user/StreakDay";
+import UserProgress from "./pages/user/UserProgress";
 import { useUserStore } from "./store/useUserStore";
 
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
@@ -84,6 +85,7 @@ const Router = () => {
         <Route path={ROUTERS.COMMUNICATION_FLASHCARD} element={<LearnCommunicationCard />} />
         <Route path={ROUTERS.QUESTION_FLASHCARD} element={<LearnQuestionCard />} />
         <Route path={ROUTERS.ACHIEVEMENT} element={<>achievement</>} />
+        <Route path={ROUTERS.PROGRESS} element={<UserProgress />} />
 
         {/* Protected user routes */}
         <Route

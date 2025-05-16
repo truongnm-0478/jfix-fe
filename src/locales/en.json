@@ -306,5 +306,27 @@
     "questions": "questions.",
     "next": "Next",
     "clickShowAnswersToSeeCorrectAnswers": "Click 'Show answers' to see the correct answers."
+  },
+  "userProgress": {
+    "error": "Cannot load data. Please try again later.",
+    "totalCards": "Total cards learned",
+    "completed": "Completed",
+    "streakDays": "Streak days",
+    "accuracy": "Accuracy",
+    "correct": "Correct",
+    "incorrect": "Incorrect",
+    "learningPerformanceChartTitle": "Learning progress by time",
+    "learningPerformanceChartDescription": "Track your learning progress and improve errors through each day",
+    "errors": "errors",
+    "date": "Date",
+    "cards": "cards",
+    "learningPerformanceChartTooltip": "Date: {{date}}",
+    "heatmapTitle": "Learning progress heatmap",
+    "heatmapDescription": "Learning progress by day",
+    "lessThan": "Less than",
+    "moreThan": "More than",
+    "total": "Total",
+    "distributionPieChartTitle": "Learning card distribution",
+    "distributionPieChartDescription": "The ratio of cards by difficulty"
   }
 }
