@@ -34,6 +34,22 @@ export const enum ROUTERS {
   ADMIN_GRAMMAR_DETAIL = "/admin/grammar/:id",
   ADMIN_GRAMMAR_EDIT = "/admin/grammar/edit/:id",
 
+  ADMIN_FREE_TOPICS = "/admin/free-topics",
+  ADMIN_FREE_TOPICS_DETAIL = "/admin/free-topics/:id",
+  ADMIN_FREE_TOPICS_EDIT = "/admin/free-topics/edit/:id",
+
+  ADMIN_QUESTIONS = "/admin/questions",
+  ADMIN_QUESTIONS_DETAIL = "/admin/questions/:id",
+  ADMIN_QUESTIONS_EDIT = "/admin/questions/edit/:id",
+
+  ADMIN_SENTENCES = "/admin/sentences",
+  ADMIN_SENTENCES_DETAIL = "/admin/sentences/:id",
+  ADMIN_SENTENCES_EDIT = "/admin/sentences/edit/:id",
+
+  ADMIN_PARAGRAPHS = "/admin/paragraphs",
+  ADMIN_PARAGRAPHS_DETAIL = "/admin/paragraphs/:id",
+  ADMIN_PARAGRAPHS_EDIT = "/admin/paragraphs/edit/:id",
+
   // Learning
   LEARN = "/learn",
   LEARN_VOCABULARY = "/learn/vocabulary",

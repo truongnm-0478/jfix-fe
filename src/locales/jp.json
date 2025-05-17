@@ -149,7 +149,11 @@
     "notifications": "通知",
     "home": "ホーム",
     "vocabularyManagement": "単語管理",
-    "grammarManagement": "文法管理"
+    "grammarManagement": "文法管理",
+    "freeTopicManagement": "フリーテーマ管理",
+    "questionManagement": "質問管理",
+    "sentenceManagement": "文法管理",
+    "paragraphManagement": "段落管理"
   },
   "learningGoalForm": {
     "title": "学習目標を入力",
@@ -443,5 +447,21 @@
     "viewDetails": "詳細を表示",
     "loading": "データを読み込んでいます...",
     "noGrammarsFound": "文法が見つかりません"
+  },
+  "adminFreeTopic": {
+    "freeTopicManagement": "フリーテーマ管理",
+    "manageAllFreeTopics": "システム内のすべてのフリーテーマを管理",
+    "conversationPrompt": "会話のプロンプト",
+    "createDate": "作成日",
+    "keyword": "キーワード",
+    "searchKeywordPlaceholder": "キーワードを入力して検索",
+    "level": "レベル",
+    "vietnameseText": "ベトナム語",
+    "japaneseText": "日本語",
+    "loading": "データを読み込んでいます...",
+    "noFreeTopicsFound": "フリーテーマが見つかりません",
+    "deleteFreeTopic": "フリーテーマを削除",
+    "confirmDelete": "本当にフリーテーマを削除しますか？",
+    "delete": "削除"
   }
 }

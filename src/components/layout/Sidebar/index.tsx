@@ -2,7 +2,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { ROUTERS } from "@/constant";
 import { cn } from "@/lib/utils";
 import { useUserStore } from "@/store/useUserStore";
-import { Bell, Book, BookA, BookOpen, BookType, Home, ListTodo, LucideIcon, Settings, SquareKanban, User2, Users } from "lucide-react";
+import { AudioLines, Bell, Book, BookA, BookOpen, BookType, Home, ListTodo, LucideIcon, MicVocal, ScrollText, Settings, SquareKanban, User2, Users, WrapText } from "lucide-react";
 import { forwardRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
@@ -115,6 +115,30 @@ export const Sidebar = () => {
       icon: BookType,
       label: t("sidebar.grammarManagement"),
       path: ROUTERS.ADMIN_GRAMMAR,
+      roles: ["ADMIN"]
+    },
+    {
+      icon: AudioLines,
+      label: t("sidebar.freeTopicManagement"),
+      path: ROUTERS.ADMIN_FREE_TOPICS,
+      roles: ["ADMIN"]
+    },
+    {
+      icon: MicVocal,
+      label: t("sidebar.questionManagement"),
+      path: ROUTERS.ADMIN_QUESTIONS,
+      roles: ["ADMIN"]
+    },
+    {
+      icon: WrapText,
+      label: t("sidebar.sentenceManagement"),
+      path: ROUTERS.ADMIN_SENTENCES,
+      roles: ["ADMIN"]
+    },
+    {
+      icon: ScrollText,
+      label: t("sidebar.paragraphManagement"),
+      path: ROUTERS.ADMIN_PARAGRAPHS,
       roles: ["ADMIN"]
     }
   ];
