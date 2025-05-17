@@ -149,7 +149,11 @@
     "notifications": "Thông báo",
     "home": "Trang chủ",
     "vocabularyManagement": "Quản lý từ vựng",
-    "grammarManagement": "Quản lý ngữ pháp"
+    "grammarManagement": "Quản lý ngữ pháp",
+    "freeTopicManagement": "Quản lý chủ đề trò chuyện",
+    "questionManagement": "Quản lý câu hỏi",
+    "sentenceManagement": "Quản lý câu phát âm",
+    "paragraphManagement": "Quản lý đoạn văn nghe hiểu"
   },
   "learningGoalForm": {
     "title": "Nhập mục tiêu học tập",
@@ -444,5 +448,21 @@
     "viewDetails": "Xem chi tiết",
     "loading": "Đang tải dữ liệu...",
     "noGrammarsFound": "Không tìm thấy ngữ pháp nào"
+  },
+  "adminFreeTopic": {
+    "freeTopicManagement": "Quản lý chủ đề trò chuyện",
+    "manageAllFreeTopics": "Quản lý tất cả chủ đề trò chuyện trong hệ thống",
+    "conversationPrompt": "Nội dung cuộc trò chuyện",
+    "createDate": "Ngày tạo",
+    "keyword": "Từ khóa",
+    "searchKeywordPlaceholder": "Nhập từ khoá để tìm kiếm",
+    "level": "Cấp độ",
+    "vietnameseText": "Tiếng Việt",
+    "japaneseText": "Tiếng Nhật",
+    "loading": "Đang tải dữ liệu...",
+    "noFreeTopicsFound": "Không tìm thấy chủ đề trò chuyện nào",
+    "deleteFreeTopic": "Xóa chủ đề trò chuyện",
+    "confirmDelete": "Bạn có chắc chắn muốn xóa chủ đề trò chuyện này không?",
+    "delete": "Xóa"
   }
 }

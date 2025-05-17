@@ -144,7 +144,11 @@
     "notifications": "Notifications",
     "home": "Home",
     "vocabularyManagement": "Vocabulary Management",
-    "grammarManagement": "Grammar Management"
+    "grammarManagement": "Grammar Management",
+    "freeTopicManagement": "Free Topic Management",
+    "questionManagement": "Question Management",
+    "sentenceManagement": "Sentence Management",
+    "paragraphManagement": "Paragraph Management"
   },
   "learningGoalForm": {
     "title": "Enter your learning goal",
@@ -438,5 +442,21 @@
     "viewDetails": "View details",
     "loading": "Loading data...",
     "noGrammarsFound": "No grammars found"
+  },
+  "adminFreeTopic": {
+    "freeTopicManagement": "Free topic management",
+    "manageAllFreeTopics": "Manage all free topics in the system",
+    "conversationPrompt": "Conversation prompt",
+    "createDate": "Create date",
+    "keyword": "Keyword",
+    "searchKeywordPlaceholder": "Enter keyword to search",
+    "level": "Level",
+    "vietnameseText": "Vietnamese",
+    "japaneseText": "Japanese",
+    "loading": "Loading data...",
+    "noFreeTopicsFound": "No free topics found",
+    "deleteFreeTopic": "Delete free topic",
+    "confirmDelete": "Are you sure you want to delete this free topic?",
+    "delete": "Delete"
   }
 }
