@@ -30,6 +30,10 @@ export const enum ROUTERS {
   ADMIN_VOCABULARY_DETAIL = "/admin/vocabulary/:id",
   ADMIN_VOCABULARY_EDIT = "/admin/vocabulary/edit/:id",
 
+  ADMIN_GRAMMAR = "/admin/grammar",
+  ADMIN_GRAMMAR_DETAIL = "/admin/grammar/:id",
+  ADMIN_GRAMMAR_EDIT = "/admin/grammar/edit/:id",
+
   // Learning
   LEARN = "/learn",
   LEARN_VOCABULARY = "/learn/vocabulary",

@@ -11,6 +11,7 @@ import Home from "@/pages/Home";
 import AddLearningGoal from "@/pages/user/AddLearningGoal";
 import Learn from "@/pages/user/Learn";
 import { Navigate, Route, Routes } from "react-router-dom";
+import AdminGrammar from "./pages/admin/Grammar";
 import UserDetail from "./pages/admin/UserDetail";
 import AdminVocabulary from "./pages/admin/Vocabulary";
 import NotFoundPage from "./pages/NotFound";
@@ -72,6 +73,7 @@ const Router = () => {
         <Route path={ROUTERS.ADMIN_USERS} element={<AdminUsers />} />
         <Route path={ROUTERS.ADMIN_USER_DETAIL} element={<UserDetail />} />
         <Route path={ROUTERS.ADMIN_VOCABULARY} element={<AdminVocabulary />} />
+        <Route path={ROUTERS.ADMIN_GRAMMAR} element={<AdminGrammar />} />
       </Route>
 
       {/* User routes */}

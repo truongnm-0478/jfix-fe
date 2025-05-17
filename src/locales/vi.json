@@ -148,7 +148,8 @@
     "adminSettings": "Cài đặt quản trị",
     "notifications": "Thông báo",
     "home": "Trang chủ",
-    "vocabularyManagement": "Quản lý từ vựng"
+    "vocabularyManagement": "Quản lý từ vựng",
+    "grammarManagement": "Quản lý ngữ pháp"
   },
   "learningGoalForm": {
     "title": "Nhập mục tiêu học tập",
@@ -424,5 +425,24 @@
     "deleting": "Đang xóa từ vựng...",
     "loading": "Đang tải dữ liệu...",
     "noVocabulariesFound": "Không tìm thấy từ vựng nào"
+  },
+  "adminGrammar": {
+    "grammarManagement": "Quản lý ngữ pháp",
+    "manageAllGrammars": "Quản lý tất cả ngữ pháp trong hệ thống",
+    "word": "Từ",
+    "reading": "Đọc",
+    "meaning": "Nghĩa",
+    "keyword": "Từ khóa",
+    "searchKeywordPlaceholder": "Nhập cấu trúc hoặc nghĩa để tìm",
+    "structure": "Cấu trúc",
+    "level": "Cấp độ",
+    "romaji": "Romaji",
+    "confirmDelete": "Bạn có chắc chắn muốn xóa ngữ pháp này không?",
+    "deleteGrammar": "Xoá ngữ pháp",
+    "delete": "Xóa",
+    "edit": "Sửa",
+    "viewDetails": "Xem chi tiết",
+    "loading": "Đang tải dữ liệu...",
+    "noGrammarsFound": "Không tìm thấy ngữ pháp nào"
   }
 }
