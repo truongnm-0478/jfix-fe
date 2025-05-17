@@ -26,6 +26,10 @@ export const enum ROUTERS {
   ADMIN_USERS = "/admin/users",
   ADMIN_USER_DETAIL = "/admin/users/:id",
 
+  ADMIN_VOCABULARY = "/admin/vocabulary",
+  ADMIN_VOCABULARY_DETAIL = "/admin/vocabulary/:id",
+  ADMIN_VOCABULARY_EDIT = "/admin/vocabulary/edit/:id",
+
   // Learning
   LEARN = "/learn",
   LEARN_VOCABULARY = "/learn/vocabulary",

@@ -91,7 +91,23 @@
     "hideFilters": "Ẩn bộ lọc",
     "showing": "Hiển thị",
     "of": "trong",
-    "cancel": "Hủy bỏ"
+    "cancel": "Hủy bỏ",
+    "viewDetails": "Xem chi tiết",
+    "edit": "Sửa",
+    "delete": "Xóa",
+    "search": "Tìm kiếm",
+    "all": "Tất cả",
+    "level": "Cấp độ",
+    "chapter": "Chương",
+    "resetFilters": "Xoá bộ lọc",
+    "allLevels": "Tất cả cấp độ",
+    "page": "Trang",
+    "results": "kết quả",
+    "levelN1": "N1",
+    "levelN2": "N2",
+    "levelN3": "N3",
+    "levelN4": "N4",
+    "levelN5": "N5"
   },
   "header": {
     "language": "Ngôn ngữ",
@@ -131,7 +147,8 @@
     "userManagement": "Quản lý người dùng",
     "adminSettings": "Cài đặt quản trị",
     "notifications": "Thông báo",
-    "home": "Trang chủ"
+    "home": "Trang chủ",
+    "vocabularyManagement": "Quản lý từ vựng"
   },
   "learningGoalForm": {
     "title": "Nhập mục tiêu học tập",
@@ -375,5 +392,37 @@
     "createDate": "Ngày tạo",
     "updateDate": "Ngày cập nhật",
     "deleteDate": "Ngày xóa"
+  },
+  "adminVocabulary": {
+    "vocabularyManagement": "Quản lý từ vựng",
+    "manageAllVocabularies": "Quản lý tất cả từ vựng trong hệ thống",
+    "word": "Từ",
+    "reading": "Đọc",
+    "meaning": "Nghĩa",
+    "exampleWithReading": "Ví dụ có đọc",
+    "exampleWithoutReading": "Ví dụ không đọc",
+    "exampleMeaning": "Ví dụ nghĩa",
+    "viewDetails": "Xem chi tiết",
+    "edit": "Sửa",
+    "delete": "Xóa",
+    "all": "Tất cả",
+    "level": "Cấp độ",
+    "chapter": "Chương",
+    "section": "Phần",
+    "keyword": "Từ khóa",
+    "searchKeywordPlaceholder": "Nhập từ khoá để tìm kiếm",
+    "chapterPlaceholder": "Nhập chương",
+    "sectionPlaceholder": "Nhập phần",
+    "deleteVocabulary": "Xóa từ vựng",
+    "confirmDelete": "Bạn có chắc chắn muốn xóa từ vựng này không?",
+    "createdSuccess": "Tạo từ vựng thành công",
+    "errorCreating": "Lỗi khi tạo từ vựng",
+    "updatedSuccess": "Cập nhật từ vựng thành công",
+    "errorUpdating": "Lỗi khi cập nhật từ vựng",
+    "deletedSuccess": "Xóa từ vựng thành công",
+    "errorDeleting": "Lỗi khi xóa từ vựng",
+    "deleting": "Đang xóa từ vựng...",
+    "loading": "Đang tải dữ liệu...",
+    "noVocabulariesFound": "Không tìm thấy từ vựng nào"
   }
 }

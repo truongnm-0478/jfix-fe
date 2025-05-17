@@ -2,7 +2,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { ROUTERS } from "@/constant";
 import { cn } from "@/lib/utils";
 import { useUserStore } from "@/store/useUserStore";
-import { Bell, Book, BookOpen, Home, ListTodo, LucideIcon, Settings, SquareKanban, User2, Users } from "lucide-react";
+import { Bell, Book, BookA, BookOpen, Home, ListTodo, LucideIcon, Settings, SquareKanban, User2, Users } from "lucide-react";
 import { forwardRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
@@ -103,6 +103,12 @@ export const Sidebar = () => {
       icon: BookOpen,
       label: t("sidebar.lessonManagement"),
       path: ROUTERS.ADMIN_LESSONS,
+      roles: ["ADMIN"]
+    },
+    {
+      icon: BookA,
+      label: t("sidebar.vocabularyManagement"),
+      path: ROUTERS.ADMIN_VOCABULARY,
       roles: ["ADMIN"]
     }
   ];

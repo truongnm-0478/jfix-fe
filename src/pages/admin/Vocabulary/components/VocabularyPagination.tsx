@@ -1,7 +1,7 @@
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-interface UserPaginationProps {
+interface VocabularyPaginationProps {
   currentPage: number;
   totalPages: number;
   pageSize: number;
@@ -9,13 +9,13 @@ interface UserPaginationProps {
   changePageSize: (size: number) => void;
 }
 
-const UserPagination = ({
+const VocabularyPagination = ({
   currentPage,
   totalPages,
   pageSize,
   changePage,
   changePageSize,
-}: UserPaginationProps) => {
+}: VocabularyPaginationProps) => {
   const getPaginationItems = () => {
     const items = [];
     const maxVisiblePages = 5;
@@ -97,4 +97,4 @@ const UserPagination = ({
   );
 };
 
-export default UserPagination;
+export default VocabularyPagination; 
