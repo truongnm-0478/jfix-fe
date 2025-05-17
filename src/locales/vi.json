@@ -367,6 +367,13 @@
     "unlocking": "Đang mở khóa tài khoản...",
     "loading": "Đang tải dữ liệu...",
     "userManagement": "Quản lý tài khoản",
-    "manageAllUsers": "Quản lý tất cả tài khoản người dùng trong hệ thống"
+    "manageAllUsers": "Quản lý tất cả tài khoản người dùng trong hệ thống",
+    "manageUserDetail": "Quản lý chi tiết tài khoản người dùng",
+    "by": "bởi",
+    "avatar": "Ảnh đại diện",
+    "lockedAt": "Đã khóa lúc",
+    "createDate": "Ngày tạo",
+    "updateDate": "Ngày cập nhật",
+    "deleteDate": "Ngày xóa"
   }
 }

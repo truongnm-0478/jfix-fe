@@ -11,6 +11,7 @@ import Home from "@/pages/Home";
 import AddLearningGoal from "@/pages/user/AddLearningGoal";
 import Learn from "@/pages/user/Learn";
 import { Navigate, Route, Routes } from "react-router-dom";
+import UserDetail from "./pages/admin/UserDetail";
 import NotFoundPage from "./pages/NotFound";
 import LearnCommunication from "./pages/user/LearnCommunication";
 import LearnCommunicationCard from "./pages/user/LearnCommunicationCard";
@@ -68,6 +69,7 @@ const Router = () => {
       >
         <Route path={ROUTERS.ADMIN_DASHBOARD} element={<AdminDashboard />} />
         <Route path={ROUTERS.ADMIN_USERS} element={<AdminUsers />} />
+        <Route path={ROUTERS.ADMIN_USER_DETAIL} element={<UserDetail />} />
       </Route>
 
       {/* User routes */}

@@ -1,10 +1,11 @@
+import Loading from "@/components/common/Loading";
 import { Button } from "@/components/ui/button";
 import ConfirmDialog from "@/components/ui/dialog";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { AdminUser, UserQueryParams } from "@/dataHelper/adminUser.dataHelper";
 import { useLockUser, useUnlockUser } from "@/hooks/useAdminUser";
-import { ArrowUpDown, Eye, Loader2, Lock, MoreVertical, UnlockKeyhole } from "lucide-react";
+import { ArrowUpDown, Eye, Lock, MoreVertical, UnlockKeyhole } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -101,11 +102,10 @@ const UserTable = ({
               <TableRow>
                 <TableCell colSpan={9} className="h-24 text-center">
                   <div className="flex justify-center items-center">
-                    <Loader2 className="h-6 w-6 animate-spin mr-2" />
-                    {isLocking || isUnlocking 
+                    <Loading message={isLocking || isUnlocking 
                       ? `${isLocking ? t("adminUsers.locking") : t("adminUsers.unlocking")} user...` 
                       : t("adminUsers.loading")
-                    }
+                    } />
                   </div>
                 </TableCell>
               </TableRow>

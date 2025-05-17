@@ -156,3 +156,7 @@ export const formatToDateDMYY = (isoDateString: string): string => {
     return '';
   }
 };
+
+export const formatDate = (dateStr: string) => {
+  return new Date(dateStr).toLocaleString("vi-VN");
+};

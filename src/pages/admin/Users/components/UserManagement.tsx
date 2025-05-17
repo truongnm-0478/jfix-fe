@@ -78,7 +78,7 @@ const UserManagement = () => {
   };
   
   const handleViewUser = (user: AdminUser) => {
-    navigate(ROUTERS.ADMIN_USER_DETAILS.replace(":id", user.id.toString()));
+    navigate(ROUTERS.ADMIN_USER_DETAIL.replace(":id", user.id.toString()));
   };
   
   useEffect(() => {

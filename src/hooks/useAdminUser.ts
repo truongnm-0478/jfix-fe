@@ -16,6 +16,7 @@ export const useAdminUserById = (userId: string) => {
   return useQuery({
     queryKey: ["admin-user", userId],
     queryFn: () => adminUserApi.getUserById(userId),
+    staleTime: 1000 * 60 * 5,
   });
 };
 
@@ -24,10 +25,11 @@ export const useLockUser = () => {
   const queryClient = useQueryClient();
   return useMutation({
     mutationFn: (userId: string) => adminUserApi.lockUser(userId),
-    onSuccess: (response) => {
+    onSuccess: (response, userId) => {
       if (response.status === 200 && response.message === "Success") {
         toast.success(response.data);
         queryClient.invalidateQueries({ queryKey: ["admin-users"] });
+        queryClient.invalidateQueries({ queryKey: ["admin-user", userId] });
         return;
       }
       toast.error(t("adminUsers.errorLockingUser"));
@@ -40,13 +42,14 @@ export const useLockUser = () => {
 
 export const useUnlockUser = () => {
   const { t } = useTranslation();
-  const queryClient = useQueryClient(); 
+  const queryClient = useQueryClient();
   return useMutation({
     mutationFn: (userId: string) => adminUserApi.unlockUser(userId),
-    onSuccess: (response) => {
+    onSuccess: (response, userId) => {
       if (response.status === 200 && response.message === "Success") {
         toast.success(response.data);
         queryClient.invalidateQueries({ queryKey: ["admin-users"] });
+        queryClient.invalidateQueries({ queryKey: ["admin-user", userId] });
         return;
       }
       toast.error(t("adminUsers.errorUnlockingUser"));

@@ -57,9 +57,9 @@ const ConfirmDialog = ({
   
   return (
     <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
-      <div 
+      <div
         ref={dialogRef}
-        className="bg-white rounded-lg shadow-lg w-full max-w-md p-6 animate-in fade-in-0 zoom-in-95 relative"
+        className="bg-white rounded-lg shadow-lg w-full max-w-lg p-6 animate-in fade-in-0 zoom-in-95 relative"
         role="dialog"
         aria-modal="true"
         aria-labelledby="dialog-title"

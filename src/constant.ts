@@ -24,7 +24,7 @@ export const enum ROUTERS {
   ADMIN_LESSONS = "/admin/lessons",
 
   ADMIN_USERS = "/admin/users",
-  ADMIN_USER_DETAILS = "/admin/users/:id",
+  ADMIN_USER_DETAIL = "/admin/users/:id",
 
   // Learning
   LEARN = "/learn",
