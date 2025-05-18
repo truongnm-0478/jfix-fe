@@ -1,8 +1,8 @@
 import LoadingDots from '@/components/common/LoadingDots';
 import { MAX_MESSAGES } from '@/constant';
+import { FreeTalkResponse } from '@/dataHelper/ai.dataHelper';
 import { Message, MessageProps } from '@/dataHelper/communication.dateHelper';
 import { Content } from '@/dataHelper/study.dataHelper';
-import { FreeTalkResponse } from '@/services/api/aiApi';
 import { Check, MessageSquare, Send } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,10 +1,10 @@
 import Loading from "@/components/common/Loading";
 import { ROUTERS } from "@/constant";
+import { FreeTalkResponse } from "@/dataHelper/ai.dataHelper";
 import { Message } from "@/dataHelper/communication.dateHelper";
 import { Content } from "@/dataHelper/study.dataHelper";
 import { useCalculateAchievement } from "@/hooks/useAchievement";
 import { useCommunication, useFreeTalk, useSpeechToText } from "@/hooks/useCommunication";
-import { FreeTalkResponse } from "@/services/api/aiApi";
 import { studyApi } from "@/services/api/studyApi";
 import { useUserStore } from "@/store/useUserStore";
 import { useMutation } from "@tanstack/react-query";

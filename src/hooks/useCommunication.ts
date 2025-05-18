@@ -1,4 +1,5 @@
-import { aiApi, FreeTalkResquest } from "@/services/api/aiApi";
+import { FreeTalkResquest } from "@/dataHelper/ai.dataHelper";
+import { aiApi } from "@/services/api/aiApi";
 import { studyApi } from "@/services/api/studyApi";
 import { audioBlobToBase64 } from "@/utils/audioUtils";
 import { formatToDateYMD } from "@/utils/dateUtils";

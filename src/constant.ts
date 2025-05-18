@@ -3,7 +3,7 @@ export const enum ROUTERS {
   DEFAULT = "/",
   ABOUT = "/about",
   CONTACT = "/contact",
-  HOME = "/",
+  HOME = "/home",
   NOT_FOUND = "/404",
   NOTIFICATIONS = "/notifications",
 
@@ -55,6 +55,7 @@ export const enum ROUTERS {
   ADMIN_PARAGRAPHS_DETAIL = "/admin/paragraphs/:id",
   ADMIN_PARAGRAPHS_EDIT = "/admin/paragraphs/edit/:id",
   ADMIN_PARAGRAPHS_CREATE = "/admin/paragraphs/create",
+
   // Learning
   LEARN = "/learn",
   LEARN_VOCABULARY = "/learn/vocabulary",
@@ -71,6 +72,7 @@ export const enum ROUTERS {
   ACHIEVEMENT = "/achievement",
   STREAK_DAY = "/streak-day",
   PROGRESS = "/progress",
+  CHECK_GRAMMAR = "/check-grammar",
 
   // Flashcard
   VOCABULARY_FLASHCARD = "/learn/vocabulary/flashcard",

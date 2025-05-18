@@ -22,6 +22,7 @@ import AdminVocabularyCreate from "./pages/admin/VocabularyCreate";
 import AdminVocabularyDetail from "./pages/admin/VocabularyDetail";
 import AdminVocabularyUpdate from "./pages/admin/VocabularyUpdate";
 import NotFoundPage from "./pages/NotFound";
+import CheckGrammar from "./pages/user/CheckGrammar";
 import LearnCommunication from "./pages/user/LearnCommunication";
 import LearnCommunicationCard from "./pages/user/LearnCommunicationCard";
 import LearnGrammar from "./pages/user/LearnGrammar";
@@ -108,7 +109,7 @@ const Router = () => {
         <Route path={ROUTERS.QUESTION_FLASHCARD} element={<LearnQuestionCard />} />
         <Route path={ROUTERS.ACHIEVEMENT} element={<>achievement</>} />
         <Route path={ROUTERS.PROGRESS} element={<UserProgress />} />
-
+        <Route path={ROUTERS.CHECK_GRAMMAR} element={<CheckGrammar />} />
         {/* Protected user routes */}
         <Route
           element={

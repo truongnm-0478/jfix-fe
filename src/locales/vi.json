@@ -159,7 +159,8 @@
     "freeTopicManagement": "Quản lý chủ đề trò chuyện",
     "questionManagement": "Quản lý câu hỏi",
     "sentenceManagement": "Quản lý câu phát âm",
-    "paragraphManagement": "Quản lý đoạn văn nghe hiểu"
+    "paragraphManagement": "Quản lý đoạn văn nghe hiểu",
+    "checkGrammar": "Kiểm tra ngữ pháp"
   },
   "learningGoalForm": {
     "title": "Nhập mục tiêu học tập",
@@ -552,5 +553,23 @@
     "loading": "Đang tải dữ liệu...",
     "noParagraphsFound": "Không tìm thấy đoạn văn nào",
     "searchPlaceholder": "Nhập từ khóa để tìm kiếm"
+  },
+  "checkGrammar": {
+    "title": "Kiểm tra ngữ pháp tiếng Nhật",
+    "description": "Nhập văn bản tiếng Nhật để kiểm tra lỗi ngữ pháp",
+    "placeholder": "Nhập văn bản tiếng Nhật ở đây...",
+    "checkButton": "Kiểm tra ngữ pháp",
+    "checking": "Đang kiểm tra...",
+    "originalText": "Văn bản gốc:",
+    "correctedText": "Văn bản đã sửa:",
+    "detectedCorrections": "Lỗi được phát hiện:",
+    "noGrammarIssues": "Không phát hiện lỗi ngữ pháp nào!",
+    "correction": "Sửa lỗi",
+    "error": "Lỗi",
+    "replacement": "Đề xuất",
+    "reason": "Lý do",
+    "detectedIssues": "Đã phát hiện {{count}} lỗi ngữ pháp",
+    "noIssuesFound": "Không tìm thấy lỗi ngữ pháp",
+    "errorOccurred": "Đã xảy ra lỗi"
   }
 }

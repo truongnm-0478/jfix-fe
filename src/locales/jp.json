@@ -159,7 +159,8 @@
     "freeTopicManagement": "フリーテーマ管理",
     "questionManagement": "質問管理",
     "sentenceManagement": "文法管理",
-    "paragraphManagement": "段落管理"
+    "paragraphManagement": "段落管理",
+    "checkGrammar": "Kiểm tra ngữ pháp"
   },
   "learningGoalForm": {
     "title": "学習目標を入力",
@@ -551,5 +552,23 @@
     "loading": "データを読み込んでいます...",
     "noParagraphsFound": "段落が見つかりません",
     "searchPlaceholder": "キーワードを入力して検索"
+  },
+  "checkGrammar": {
+    "title": "日本語の文法チェック",
+    "description": "日本語のテキストを入力して文法チェックを行います。",
+    "placeholder": "日本語のテキストを入力してください...",
+    "checkButton": "文法チェック",
+    "checking": "チェック中...",
+    "originalText": "原文:",
+    "correctedText": "修正されたテキスト:",
+    "detectedCorrections": "文法エラーが見つかりました:",
+    "noGrammarIssues": "文法エラーは見つかりませんでした!",
+    "correction": "修正",
+    "error": "エラー",
+    "replacement": "提案",
+    "reason": "理由",
+    "detectedIssues": "文法エラーが見つかりました{{count}}",
+    "noIssuesFound": "文法エラーは見つかりませんでした",
+    "errorOccurred": "エラーが発生しました"
   }
 }

@@ -154,7 +154,8 @@
     "freeTopicManagement": "Free Topic Management",
     "questionManagement": "Question Management",
     "sentenceManagement": "Sentence Management",
-    "paragraphManagement": "Paragraph Management"
+    "paragraphManagement": "Paragraph Management",
+    "checkGrammar": "Check Grammar"
   },
   "learningGoalForm": {
     "title": "Enter your learning goal",
@@ -546,5 +547,23 @@
     "loading": "Loading data...",
     "noParagraphsFound": "No paragraphs found",
     "searchPlaceholder": "Enter keyword to search"
+  },
+  "checkGrammar": {
+    "title": "Check Japanese grammar",
+    "description": "Enter Japanese text to check grammar errors",
+    "placeholder": "Enter Japanese text here...",
+    "checkButton": "Check grammar",
+    "checking": "Checking...",
+    "originalText": "Original text:",
+    "correctedText": "Corrected text:",
+    "detectedCorrections": "Detected corrections:",
+    "noGrammarIssues": "No grammar issues found!",
+    "correction": "Correction",
+    "error": "Error",
+    "replacement": "Replacement",
+    "reason": "Reason",
+    "detectedIssues": "Detected {{count}} grammar issues",
+    "noIssuesFound": "No grammar issues found",
+    "errorOccurred": "An error occurred"
   }
 }

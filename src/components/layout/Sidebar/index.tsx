@@ -2,7 +2,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { ROUTERS } from "@/constant";
 import { cn } from "@/lib/utils";
 import { useUserStore } from "@/store/useUserStore";
-import { AudioLines, Bell, Book, BookA, BookOpen, BookType, Home, ListTodo, LucideIcon, MicVocal, ScrollText, Settings, SquareKanban, User2, Users, WrapText } from "lucide-react";
+import { AudioLines, Bell, Book, BookA, BookOpen, BookType, CheckCheck, Home, ListTodo, LucideIcon, MicVocal, ScrollText, Settings, SquareKanban, User2, Users, WrapText } from "lucide-react";
 import { forwardRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
@@ -79,6 +79,7 @@ export const Sidebar = () => {
     { icon: Home, label: t("sidebar.home"), path: ROUTERS.HOME },
     { icon: Bell, label: t("sidebar.notifications"), path: ROUTERS.NOTIFICATIONS },
     { icon: Book, label: t("sidebar.study"), path: ROUTERS.LEARN },
+    { icon: CheckCheck, label: t("sidebar.checkGrammar"), path: ROUTERS.CHECK_GRAMMAR },
     { icon: ListTodo, label: t("sidebar.progress"), path: ROUTERS.PROGRESS },
     { icon: User2, label: t("sidebar.profile"), path: ROUTERS.USER_PROFILE },
     {
