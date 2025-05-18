@@ -1,7 +1,7 @@
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-interface SentencePaginationProps {
+interface ParagraphPaginationProps {
   currentPage: number;
   totalPages: number;
   pageSize: number;
@@ -9,13 +9,13 @@ interface SentencePaginationProps {
   changePageSize: (size: number) => void;
 }
 
-const SentencePagination = ({
+const ParagraphPagination = ({
   currentPage,
   totalPages,
   pageSize,
   changePage,
   changePageSize,
-}: SentencePaginationProps) => {
+}: ParagraphPaginationProps) => {
   const getPaginationItems = () => {
     const items = [];
     const maxVisiblePages = 5;
@@ -95,6 +95,6 @@ const SentencePagination = ({
       </span>
     </div>
   );
-}
+};
 
-export default SentencePagination; 
+export default ParagraphPagination; 

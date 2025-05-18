@@ -502,5 +502,28 @@
     "loading": "Loading data...",
     "noSentencesFound": "No sentences found",
     "searchPlaceholder": "Enter keyword to search"
+  },
+  "adminParagraph": {
+    "paragraphManagement": "Paragraph management",
+    "manageAllParagraphs": "Manage all paragraphs in the system",
+    "paragraph": "Paragraph",
+    "paragraphJapanese": "Japanese paragraph",
+    "paragraphVietnamese": "Vietnamese paragraph",
+    "createdSuccess": "Paragraph created successfully",
+    "errorCreating": "Error creating paragraph",
+    "updatedSuccess": "Paragraph updated successfully",
+    "errorUpdating": "Error updating paragraph",
+    "deletedSuccess": "Paragraph deleted successfully",
+    "errorDeleting": "Error deleting paragraph",
+    "confirmDelete": "Are you sure you want to delete this paragraph?",
+    "deleteParagraph": "Delete paragraph",
+    "keyword": "Keyword",
+    "searchKeywordPlaceholder": "Enter keyword to search",
+    "level": "Level",
+    "vietnameseText": "Vietnamese",
+    "japaneseText": "Japanese",
+    "loading": "Loading data...",
+    "noParagraphsFound": "No paragraphs found",
+    "searchPlaceholder": "Enter keyword to search"
   }
 }

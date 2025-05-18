@@ -508,5 +508,28 @@
     "loading": "Đang tải dữ liệu...",
     "noSentencesFound": "Không tìm thấy câu phát âm nào",
     "searchPlaceholder": "Nhập từ khóa để tìm kiếm"
+  },
+  "adminParagraph": {
+    "paragraphManagement": "Quản lý đoạn văn",
+    "manageAllParagraphs": "Quản lý tất cả đoạn văn trong hệ thống",
+    "paragraph": "Đoạn văn",
+    "paragraphJapanese": "Đoạn văn tiếng Nhật",
+    "paragraphVietnamese": "Đoạn văn tiếng Việt",
+    "createdSuccess": "Tạo đoạn văn thành công",
+    "errorCreating": "Lỗi khi tạo đoạn văn",
+    "updatedSuccess": "Cập nhật đoạn văn thành công",
+    "errorUpdating": "Lỗi khi cập nhật đoạn văn",
+    "deletedSuccess": "Xóa đoạn văn thành công",
+    "errorDeleting": "Lỗi khi xóa đoạn văn",
+    "confirmDelete": "Bạn có chắc chắn muốn xóa đoạn văn này không?",
+    "deleteParagraph": "Xóa đoạn văn",
+    "keyword": "Từ khóa",
+    "searchKeywordPlaceholder": "Nhập từ khoá để tìm kiếm",
+    "level": "Cấp độ",
+    "vietnameseText": "Tiếng Việt",
+    "japaneseText": "Tiếng Nhật",
+    "loading": "Đang tải dữ liệu...",
+    "noParagraphsFound": "Không tìm thấy đoạn văn nào",
+    "searchPlaceholder": "Nhập từ khóa để tìm kiếm"
   }
 }
