@@ -13,6 +13,9 @@ import Learn from "@/pages/user/Learn";
 import { Navigate, Route, Routes } from "react-router-dom";
 import AdminFreeTopic from "./pages/admin/FreeTopic";
 import AdminGrammar from "./pages/admin/Grammar";
+import AdminGrammarCreate from "./pages/admin/GrammarCreate";
+import AdminGrammarDetail from "./pages/admin/GrammarDetail";
+import AdminGrammarUpdate from "./pages/admin/GrammarUpdate";
 import AdminParagraph from "./pages/admin/Paragraph";
 import AdminSentence from "./pages/admin/Sentence";
 import AdminSpeakingQuestion from "./pages/admin/SpeakingQuestion";
@@ -89,6 +92,9 @@ const Router = () => {
         <Route path={ROUTERS.ADMIN_VOCABULARY_DETAIL} element={<AdminVocabularyDetail />} />
         <Route path={ROUTERS.ADMIN_VOCABULARY_CREATE} element={<AdminVocabularyCreate />} />
         <Route path={ROUTERS.ADMIN_VOCABULARY_EDIT} element={<AdminVocabularyUpdate />} />
+        <Route path={ROUTERS.ADMIN_GRAMMAR_DETAIL} element={<AdminGrammarDetail />} />
+        <Route path={ROUTERS.ADMIN_GRAMMAR_CREATE} element={<AdminGrammarCreate />} />
+        <Route path={ROUTERS.ADMIN_GRAMMAR_EDIT} element={<AdminGrammarUpdate />} />
       </Route>
 
       {/* User routes */}

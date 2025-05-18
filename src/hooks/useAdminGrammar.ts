@@ -1,5 +1,5 @@
 import { toast } from "@/components/ui/sonner";
-import { GrammarQueryParams } from "@/dataHelper/adminGrammar.dataHelper";
+import { GrammarCreate, GrammarQueryParams } from "@/dataHelper/adminGrammar.dataHelper";
 import { adminGrammarApi } from "@/services/api/adminGrammar";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
@@ -26,7 +26,7 @@ export const useCreateGrammar = () => {
   const queryClient = useQueryClient();
   
   return useMutation({
-    mutationFn: (grammarData: any) => adminGrammarApi.createGrammar(grammarData),
+    mutationFn: (grammarData: GrammarCreate) => adminGrammarApi.createGrammar(grammarData),
     onSuccess: (response) => {
       if (response.status === 200 && response.message === "Success") {
         toast.success(t("adminGrammar.createdSuccess"));
@@ -46,7 +46,7 @@ export const useUpdateGrammar = () => {
   const queryClient = useQueryClient();
   
   return useMutation({
-    mutationFn: ({ id, data }: { id: string, data: any }) => 
+    mutationFn: ({ id, data }: { id: string, data: GrammarCreate }) => 
       adminGrammarApi.updateGrammar(id, data),
     onSuccess: (response, variables) => {
       if (response.status === 200 && response.message === "Success") {

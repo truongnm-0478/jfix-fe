@@ -85,3 +85,23 @@ export const vocabularyUpdateFormSchema = (t: (key: string, params?: { field?: s
   chapter: z.string().min(1, { message: t("adminVocabulary.validationRequired", { field: t("adminVocabulary.chapter") }) }),
   section: z.string().min(1, { message: t("adminVocabulary.validationRequired", { field: t("adminVocabulary.section") }) }),
 });
+
+export const grammarCreateFormSchema = (t: (key: string, params?: { field?: string }) => string) => z.object({
+  romaji: z.string().min(1, { message: t("adminGrammar.validationRequired", { field: t("adminGrammar.romaji") }) }),
+  structure: z.string().min(1, { message: t("adminGrammar.validationRequired", { field: t("adminGrammar.structure") }) }),
+  usage: z.string().min(1, { message: t("adminGrammar.validationRequired", { field: t("adminGrammar.usage") }) }),
+  meaning: z.string().min(1, { message: t("adminGrammar.validationRequired", { field: t("adminGrammar.meaning") }) }),
+  example: z.string().min(1, { message: t("adminGrammar.validationRequired", { field: t("adminGrammar.example") }) }),
+  exampleMeaning: z.string().min(1, { message: t("adminGrammar.validationRequired", { field: t("adminGrammar.exampleMeaning") }) }),
+  level: z.string().min(1, { message: t("adminGrammar.validationRequired", { field: t("adminGrammar.level") }) }),
+});
+
+export const grammarUpdateFormSchema = (t: (key: string, params?: { field?: string }) => string) => z.object({
+  romaji: z.string().min(1, { message: t("adminGrammar.validationRequired", { field: t("adminGrammar.romaji") }) }),
+  structure: z.string().min(1, { message: t("adminGrammar.validationRequired", { field: t("adminGrammar.structure") }) }),
+  usage: z.string().min(1, { message: t("adminGrammar.validationRequired", { field: t("adminGrammar.usage") }) }),
+  meaning: z.string().min(1, { message: t("adminGrammar.validationRequired", { field: t("adminGrammar.meaning") }) }),
+  example: z.string().min(1, { message: t("adminGrammar.validationRequired", { field: t("adminGrammar.example") }) }),
+  exampleMeaning: z.string().min(1, { message: t("adminGrammar.validationRequired", { field: t("adminGrammar.exampleMeaning") }) }),
+  level: z.string().min(1, { message: t("adminGrammar.validationRequired", { field: t("adminGrammar.level") }) }),
+});

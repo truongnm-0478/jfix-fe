@@ -1,4 +1,4 @@
-import { AdminGrammar, AdminGrammarResponse, GrammarQueryParams } from "@/dataHelper/adminGrammar.dataHelper";
+import { AdminGrammar, AdminGrammarResponse, GrammarCreate, GrammarDetail, GrammarQueryParams } from "@/dataHelper/adminGrammar.dataHelper";
 import axiosClient from "./axiosClient";
 import { ApiResponse } from "./type";
 
@@ -9,10 +9,10 @@ export const adminGrammarApi = {
   getGrammarById: (grammarId: string): Promise<ApiResponse<AdminGrammar>> =>
     axiosClient.get(`/admin/grammars/${grammarId}`),
     
-  createGrammar: (grammarData: any): Promise<ApiResponse<any>> =>
+  createGrammar: (grammarData: GrammarCreate): Promise<ApiResponse<GrammarDetail>> =>
     axiosClient.post("/admin/grammars", grammarData),
     
-  updateGrammar: (grammarId: string, grammarData: any): Promise<ApiResponse<any>> =>
+  updateGrammar: (grammarId: string, grammarData: GrammarCreate): Promise<ApiResponse<GrammarDetail>> =>
     axiosClient.put(`/admin/grammars/${grammarId}`, grammarData),
     
   deleteGrammar: (grammarId: string): Promise<ApiResponse<any>> =>

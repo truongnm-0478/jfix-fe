@@ -31,3 +31,30 @@ export interface AdminGrammar {
   deleteDate?: string | null;
   deleteBy?: string | null;
 }
+
+export interface GrammarCreate {
+  romaji?: string;
+  structure?: string;
+  usage?: string;
+  meaning?: string;
+  example?: string;
+  exampleMeaning?: string;
+  level?: string;
+}
+
+export interface GrammarDetail {
+  id: number;
+  romaji?: string;
+  structure?: string;
+  usage?: string;
+  meaning?: string;
+  example?: string;
+  exampleMeaning?: string;
+  level?: string;
+  createDate?: string;
+  createBy?: string;
+  updateDate?: string | null;
+  updateBy?: string | null;
+  deleteDate?: string | null;
+  deleteBy?: string | null;
+}
