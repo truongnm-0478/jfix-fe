@@ -1,4 +1,4 @@
-import { AdminVocabulary, AdminVocabularyResponse, VocabularyQueryParams } from "@/dataHelper/adminVocubalary.dataHelper";
+import { AdminVocabulary, AdminVocabularyResponse, VocabularyCreate, VocabularyDetail, VocabularyQueryParams } from "@/dataHelper/adminVocubalary.dataHelper";
 import axiosClient from "./axiosClient";
 import { ApiResponse } from "./type";
 
@@ -9,11 +9,43 @@ export const adminVocabularyApi = {
   getVocabularyById: (vocabularyId: string): Promise<ApiResponse<AdminVocabulary>> =>
     axiosClient.get(`/admin/vocabularies/${vocabularyId}`),
     
-  createVocabulary: (vocabularyData: any): Promise<ApiResponse<any>> =>
-    axiosClient.post("/admin/vocabularies", vocabularyData),
-    
-  updateVocabulary: (vocabularyId: string, vocabularyData: any): Promise<ApiResponse<any>> =>
-    axiosClient.put(`/admin/vocabularies/${vocabularyId}`, vocabularyData),
+  createVocabulary: async (vocabularyData: VocabularyCreate): Promise<ApiResponse<VocabularyDetail>> => {
+    const formData = new FormData();
+  
+    Object.entries(vocabularyData).forEach(([key, value]) => {
+      if (key === 'audioFile' && value instanceof File) {
+        formData.append('audio', value);
+      } 
+      else if (key !== 'audioFile' && value !== undefined && value !== null) {
+        formData.append(key, String(value));
+      }
+    });
+  
+    return axiosClient.post("/admin/vocabularies", formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
+  },
+  
+  updateVocabulary: async (vocabularyId: string, vocabularyData: VocabularyCreate): Promise<ApiResponse<VocabularyDetail>> => {
+    const formData = new FormData();
+  
+    Object.entries(vocabularyData).forEach(([key, value]) => {
+      if (key === 'audioFile' && value instanceof File) {
+        formData.append('audio', value);
+      } 
+      else if (key !== 'audioFile' && value !== undefined && value !== null) {
+        formData.append(key, String(value));
+      }
+    });
+  
+    return axiosClient.put(`/admin/vocabularies/${vocabularyId}`, formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
+  },  
     
   deleteVocabulary: (vocabularyId: string): Promise<ApiResponse<any>> =>
     axiosClient.delete(`/admin/vocabularies/${vocabularyId}`),

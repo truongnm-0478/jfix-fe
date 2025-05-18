@@ -1,5 +1,5 @@
 import { toast } from "@/components/ui/sonner";
-import { VocabularyQueryParams } from "@/dataHelper/adminVocubalary.dataHelper";
+import { VocabularyCreate, VocabularyQueryParams } from "@/dataHelper/adminVocubalary.dataHelper";
 import { adminVocabularyApi } from "@/services/api/adminVocabulary";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
@@ -26,7 +26,7 @@ export const useCreateVocabulary = () => {
   const queryClient = useQueryClient();
   
   return useMutation({
-    mutationFn: (vocabularyData: any) => adminVocabularyApi.createVocabulary(vocabularyData),
+    mutationFn: (vocabularyData: VocabularyCreate) => adminVocabularyApi.createVocabulary(vocabularyData),
     onSuccess: (response) => {
       if (response.status === 200 && response.message === "Success") {
         toast.success(t("adminVocabulary.createdSuccess"));
@@ -46,7 +46,7 @@ export const useUpdateVocabulary = () => {
   const queryClient = useQueryClient();
   
   return useMutation({
-    mutationFn: ({ id, data }: { id: string, data: any }) => 
+    mutationFn: ({ id, data }: { id: string, data: VocabularyCreate }) => 
       adminVocabularyApi.updateVocabulary(id, data),
     onSuccess: (response, variables) => {
       if (response.status === 200 && response.message === "Success") {

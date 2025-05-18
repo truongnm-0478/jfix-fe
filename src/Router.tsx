@@ -18,6 +18,9 @@ import AdminSentence from "./pages/admin/Sentence";
 import AdminSpeakingQuestion from "./pages/admin/SpeakingQuestion";
 import UserDetail from "./pages/admin/UserDetail";
 import AdminVocabulary from "./pages/admin/Vocabulary";
+import AdminVocabularyCreate from "./pages/admin/VocabularyCreate";
+import AdminVocabularyDetail from "./pages/admin/VocabularyDetail";
+import AdminVocabularyUpdate from "./pages/admin/VocabularyUpdate";
 import NotFoundPage from "./pages/NotFound";
 import LearnCommunication from "./pages/user/LearnCommunication";
 import LearnCommunicationCard from "./pages/user/LearnCommunicationCard";
@@ -82,6 +85,9 @@ const Router = () => {
         <Route path={ROUTERS.ADMIN_QUESTIONS} element={<AdminSpeakingQuestion />} />
         <Route path={ROUTERS.ADMIN_SENTENCES} element={<AdminSentence />} />
         <Route path={ROUTERS.ADMIN_PARAGRAPHS} element={<AdminParagraph />} />
+        <Route path={ROUTERS.ADMIN_VOCABULARY_DETAIL} element={<AdminVocabularyDetail />} />
+        <Route path={ROUTERS.ADMIN_VOCABULARY_CREATE} element={<AdminVocabularyCreate />} />
+        <Route path={ROUTERS.ADMIN_VOCABULARY_EDIT} element={<AdminVocabularyUpdate />} />
       </Route>
 
       {/* User routes */}

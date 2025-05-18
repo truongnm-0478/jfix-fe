@@ -110,6 +110,9 @@ export const regexPhone = /^\d{10}$/;
 export const regexPassword = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
 
 export const LEVELS = ["N1", "N2", "N3", "N4", "N5", "FREE"] as const;
+export const levels = ["N1", "N2", "N3", "N4", "N5"] as const;
+export const chapters = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"] as const;
+export const sections = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"] as const;
 
 export const TOTAL_VOCAB = 800;
 export const MIN_DAYS = 20;

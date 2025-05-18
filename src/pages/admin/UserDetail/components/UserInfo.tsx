@@ -111,7 +111,7 @@ const UserInfo: React.FC<UserInfoProps> = ({ user, onToggleLock }) => {
           )}
           <div className="grid grid-cols-12 gap-4 py-4">
             <p className={labelClass + " col-span-3"}>{t("adminUsers.avatar")}</p>
-            <div className="col-span-9 flex items-center">
+            <div className="col-span-9 flex items-center w-36 h-36">
               <Avatar name={user?.name || ""} avatar={user?.avatar || ""} />
             </div>
           </div>

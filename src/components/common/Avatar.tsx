@@ -5,7 +5,7 @@ interface AvatarProps {
   rounded?: boolean;
 };
 
-const Avatar = ({ name, avatar, size = 36, rounded = true }: AvatarProps) => {
+const Avatar = ({ name, avatar, rounded = true }: AvatarProps) => {
   const initials =
     name
       ?.split(" ")
@@ -19,13 +19,13 @@ const Avatar = ({ name, avatar, size = 36, rounded = true }: AvatarProps) => {
       <img
         src={avatar}
         alt="avatar"
-        className={`w-${size} h-${size} ${rounded ? "rounded-md" : "rounded-full"} object-cover border`}
+        className={`${rounded ? "rounded-md" : "rounded-full"} object-cover border w-full h-full`}
       />
     );
   }
 
   return (
-    <div className={`w-${size} h-${size} ${rounded ? "rounded-md" : "rounded-full"} flex items-center justify-center text-white text-3xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400`}>
+    <div className={`${rounded ? "rounded-md" : "rounded-full"} flex items-center justify-center text-white text-3xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 w-full h-full`}>
       {initials}
     </div>
   );

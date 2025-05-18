@@ -59,3 +59,29 @@ export const learningGoalSchema = (t: (key: string) => string) =>
     },
     { message: t("learningGoalForm.targetDateMin"), path: ["targetDate"] }
   );
+
+export const vocabularyCreateFormSchema = (t: (key: string, params?: { field?: string }) => string) => z.object({
+  word: z.string().min(1, { message: t("adminVocabulary.validationRequired", { field: t("adminVocabulary.word") }) }),
+  reading: z.string().optional(),
+  meaning: z.string().min(1, { message: t("adminVocabulary.validationRequired", { field: t("adminVocabulary.meaning") }) }),
+  exampleWithoutReading: z.string().min(1, { message: t("adminVocabulary.validationRequired", { field: t("adminVocabulary.exampleWithReading") }) }),
+  exampleMeaning: z.string().min(1, { message: t("adminVocabulary.validationRequired", { field: t("adminVocabulary.exampleMeaning") }) }),
+  audio: z.string().optional().nullable(),
+  audioFile: z.instanceof(File).optional().nullable(),
+  level: z.string().min(1, { message: t("adminVocabulary.validationRequired", { field: t("adminVocabulary.level") }) }),
+  chapter: z.string().min(1, { message: t("adminVocabulary.validationRequired", { field: t("adminVocabulary.chapter") }) }),
+  section: z.string().min(1, { message: t("adminVocabulary.validationRequired", { field: t("adminVocabulary.section") }) }),
+});
+
+export const vocabularyUpdateFormSchema = (t: (key: string, params?: { field?: string }) => string) => z.object({
+  word: z.string().min(1, { message: t("adminVocabulary.validationRequired", { field: t("adminVocabulary.word") }) }),
+  reading: z.string().optional(),
+  meaning: z.string().min(1, { message: t("adminVocabulary.validationRequired", { field: t("adminVocabulary.meaning") }) }),
+  exampleWithoutReading: z.string().min(1, { message: t("adminVocabulary.validationRequired", { field: t("adminVocabulary.exampleWithReading") }) }),
+  exampleMeaning: z.string().min(1, { message: t("adminVocabulary.validationRequired", { field: t("adminVocabulary.exampleMeaning") }) }),
+  audio: z.union([z.string(), z.null()]).optional(),
+  audioFile: z.any().optional(),
+  level: z.string().min(1, { message: t("adminVocabulary.validationRequired", { field: t("adminVocabulary.level") }) }),
+  chapter: z.string().min(1, { message: t("adminVocabulary.validationRequired", { field: t("adminVocabulary.chapter") }) }),
+  section: z.string().min(1, { message: t("adminVocabulary.validationRequired", { field: t("adminVocabulary.section") }) }),
+});
