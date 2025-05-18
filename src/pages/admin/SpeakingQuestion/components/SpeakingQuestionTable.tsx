@@ -2,37 +2,44 @@ import Loading from "@/components/common/Loading";
 import { Button } from "@/components/ui/button";
 import ConfirmDialog from "@/components/ui/dialog";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { AdminVocabulary, VocabularyQueryParams } from "@/dataHelper/adminVocubalary.dataHelper";
-import { useDeleteVocabulary } from "@/hooks/useAdminVocabulary";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { AdminSpeakingQuestion, SpeakingQuestionQueryParams } from "@/dataHelper/adminSpeakingQuestions.dataHelper";
+import { useDeleteSpeakingQuestion } from "@/hooks/useAdminSpeakingQuestion";
 import { getColorByLevel } from "@/utils/lessonUtils";
 import { ArrowUpDown, Eye, MoreVertical, Pencil, Trash } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-interface VocabularyTableProps {
-  vocabularies: AdminVocabulary[];
+interface SpeakingQuestionTableProps {
+  speakingQuestions: AdminSpeakingQuestion[];
   isLoading: boolean;
-  filters: VocabularyQueryParams;
+  filters: SpeakingQuestionQueryParams;
   handleSort: (column: string) => void;
-  handleViewVocabulary: (vocabularyId: number) => void;
+  handleViewSpeakingQuestion: (speakingQuestionId: number) => void;
+  handleEditSpeakingQuestion: (speakingQuestionId: number) => void;
   sortableColumns: string[];
-  handleEditVocabulary: (vocabularyId: number) => void;
 }
 
-const VocabularyTable = ({
-  vocabularies,
+const SpeakingQuestionTable = ({
+  speakingQuestions,
   isLoading,
   filters,
   handleSort,
-  handleViewVocabulary,
+  handleViewSpeakingQuestion,
+  handleEditSpeakingQuestion,
   sortableColumns,
-  handleEditVocabulary
-}: VocabularyTableProps) => {
+}: SpeakingQuestionTableProps) => {
   const { t } = useTranslation();
   
-  const [dialogState, setDialogState] = useState<{isOpen: boolean; vocabularyId: number | null}>({ isOpen: false, vocabularyId: null });
-  const { mutate: deleteVocabularyMutate, isPending: isDeleting } = useDeleteVocabulary();
+  const [dialogState, setDialogState] = useState<{isOpen: boolean; speakingQuestionId: number | null}>({ isOpen: false, speakingQuestionId: null });
+  const { mutate: deleteSpeakingQuestionMutate, isPending: isDeleting } = useDeleteSpeakingQuestion();
 
   const renderSortIcon = (column: string) => (
     <ArrowUpDown
@@ -62,71 +69,69 @@ const VocabularyTable = ({
     );
   };  
 
-  const openDeleteDialog = (vocabularyId: number) => {
-    setDialogState({ isOpen: true, vocabularyId });
+  const openDeleteDialog = (speakingQuestionId: number) => {
+    setDialogState({ isOpen: true, speakingQuestionId });
   };
 
   const closeDeleteDialog = () => {
-    setDialogState({ isOpen: false, vocabularyId: null });
+    setDialogState({ isOpen: false, speakingQuestionId: null });
   };
 
   const handleDelete = () => {
-    if (!dialogState.vocabularyId) return;
+    if (!dialogState.speakingQuestionId) return;
     
-    deleteVocabularyMutate(String(dialogState.vocabularyId));
+    deleteSpeakingQuestionMutate(String(dialogState.speakingQuestionId));
     closeDeleteDialog();
   };
 
   return (
     <>
-      <div className="rounded-md border overflow-x-auto">
+      <div className="rounded-md border overflow-x-auto mb-6">
         <Table className="w-full table-fixed min-w-[900px]">
           <TableHeader>
             <TableRow>
               <TableHead className="w-[60px] text-center">#</TableHead>
-              {renderTableHeader("word", t("adminVocabulary.word"), "w-[180px]")}
-              {renderTableHeader("reading", t("adminVocabulary.reading"), "w-[180px]")}
-              {renderTableHeader("meaning", t("adminVocabulary.meaning"), "w-[240px]")}
-              {renderTableHeader("level", t("adminVocabulary.level"), "w-[100px]", true)}
-              {renderTableHeader("chapter", t("adminVocabulary.chapter"), "w-[100px]", true)}
-              {renderTableHeader("section", t("adminVocabulary.section"), "w-[100px]", true)}
+              {renderTableHeader("japaneseText", t("adminSpeakingQuestion.japaneseText"), "w-[280px]")}
+              {renderTableHeader("vietnameseText", t("adminSpeakingQuestion.vietnameseText"), "w-[280px]")}
+              {renderTableHeader("level", t("common.level"), "w-[120px]", true)}
               <TableHead className="text-center w-[80px]"></TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {isLoading || isDeleting ? (
               <TableRow>
-                <TableCell colSpan={8} className="h-24 text-center">
+                <TableCell colSpan={6} className="h-24 text-center">
                   <div className="flex justify-center items-center">
                     <Loading message={isDeleting 
-                      ? t("adminVocabulary.deleting")
-                      : t("adminVocabulary.loading")
+                      ? t("adminSpeakingQuestion.deleting")
+                      : t("adminSpeakingQuestion.loading")
                     } />
                   </div>
                 </TableCell>
               </TableRow>
-            ) : vocabularies.length === 0 ? (
+            ) : speakingQuestions.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={8} className="h-24 text-center">
-                  {t("adminVocabulary.noVocabulariesFound")}
+                <TableCell colSpan={6} className="h-24 text-center">
+                  {t("common.noDataFound")}
                 </TableCell>
               </TableRow>
             ) : (
-              vocabularies.map((vocabulary, index) => (
-                <TableRow key={vocabulary.id}>
+              speakingQuestions.map((speakingQuestion, index) => (
+                <TableRow key={speakingQuestion.id}>
                   <TableCell className="text-center">{(filters.page || 0) * (filters.size || 10) + index + 1}</TableCell>
-                  <TableCell className="font-medium">{vocabulary.word}</TableCell>
-                  <TableCell>{vocabulary.reading}</TableCell>
-                  <TableCell>{vocabulary.meaning}</TableCell>
+                  <TableCell className="font-medium truncate max-w-[280px]">
+                    {speakingQuestion.japaneseText}
+                  </TableCell>
+                  <TableCell className="truncate max-w-[280px]">
+                    {speakingQuestion.vietnameseText}
+                  </TableCell>
                   <TableCell className="text-center">
                     <div className={`rounded-md px-2 py-1 text-xs text-center min-w-[60px] w-fit mx-auto ${
-                      getColorByLevel(vocabulary.level || "")
+                      getColorByLevel(speakingQuestion.level || "")
                     }`}>
-                      {vocabulary.level}
+                      {speakingQuestion.level}
                     </div>
                   </TableCell>
-                  <TableCell className="text-center">{vocabulary.chapter}</TableCell>
-                  <TableCell className="text-center">{vocabulary.section}</TableCell>
                   <TableCell className="text-center">
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
@@ -135,20 +140,20 @@ const VocabularyTable = ({
                         </Button>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">
-                        <DropdownMenuItem onSelect={() => handleViewVocabulary(vocabulary.id)}>
+                        <DropdownMenuItem onSelect={() => handleViewSpeakingQuestion(speakingQuestion.id)}>
                           <Eye className="mr-2 h-4 w-4" />
-                          {t("adminVocabulary.viewDetails")}
+                          {t("common.viewDetails")}
                         </DropdownMenuItem>
-                        <DropdownMenuItem onSelect={() => handleEditVocabulary(vocabulary.id)}>
+                        <DropdownMenuItem onSelect={() => handleEditSpeakingQuestion(speakingQuestion.id)}>
                           <Pencil className="mr-2 h-4 w-4" />
-                          {t("adminVocabulary.edit")}
+                          {t("common.edit")}
                         </DropdownMenuItem>
                         <DropdownMenuItem 
-                          onSelect={() => openDeleteDialog(vocabulary.id)}
+                          onSelect={() => openDeleteDialog(speakingQuestion.id)}
                           className="text-red-500 focus:text-red-500"
                         >
                           <Trash className="mr-2 h-4 w-4" />
-                          {t("adminVocabulary.delete")}
+                          {t("common.delete")}
                         </DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>
@@ -164,13 +169,13 @@ const VocabularyTable = ({
         isOpen={dialogState.isOpen}
         onClose={closeDeleteDialog}
         onConfirm={handleDelete}
-        title={t("adminVocabulary.deleteVocabulary")}
-        description={t("adminVocabulary.confirmDelete")}
-        confirmText={t("adminVocabulary.delete")}
+        title={t("adminSpeakingQuestion.deleteSpeakingQuestion")}
+        description={t("adminSpeakingQuestion.confirmDelete")}
+        confirmText={t("common.delete")}
         confirmVariant="destructive"
       />
     </>
   );
 };
 
-export default VocabularyTable; 
+export default SpeakingQuestionTable; 

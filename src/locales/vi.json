@@ -107,7 +107,9 @@
     "levelN2": "N2",
     "levelN3": "N3",
     "levelN4": "N4",
-    "levelN5": "N5"
+    "levelN5": "N5",
+    "noDataFound": "Không tìm thấy dữ liệu",
+    "create": "Thêm mới"
   },
   "header": {
     "language": "Ngôn ngữ",
@@ -464,5 +466,24 @@
     "deleteFreeTopic": "Xóa chủ đề trò chuyện",
     "confirmDelete": "Bạn có chắc chắn muốn xóa chủ đề trò chuyện này không?",
     "delete": "Xóa"
+  },
+  "adminSpeakingQuestion": {
+    "speakingQuestionManagement": "Quản lý câu hỏi nói",
+    "manageAllSpeakingQuestions": "Quản lý tất cả câu hỏi nói trong hệ thống",
+    "speakingQuestions": "câu hỏi nói",
+    "searchPlaceholder": "Nhập từ khóa để tìm kiếm",
+    "japaneseText": "Văn bản tiếng Nhật",
+    "vietnameseText": "Văn bản tiếng Việt",
+    "sampleAnswerJapanese": "Mẫu câu trả lời (tiếng Nhật)",
+    "sampleAnswerVietnamese": "Mẫu câu trả lời (tiếng Việt)",
+    "createdSuccess": "Tạo câu hỏi nói thành công",
+    "errorCreating": "Lỗi khi tạo câu hỏi nói",
+    "updatedSuccess": "Cập nhật câu hỏi nói thành công",
+    "errorUpdating": "Lỗi khi cập nhật câu hỏi nói",
+    "deletedSuccess": "Xóa câu hỏi nói thành công",
+    "errorDeleting": "Lỗi khi xóa câu hỏi nói",
+    "confirmDelete": "Bạn có chắc chắn muốn xóa câu hỏi nói này không?",
+    "deleteSpeakingQuestion": "Xóa câu hỏi nói",
+    "keyword": "Từ khóa"
   }
 }

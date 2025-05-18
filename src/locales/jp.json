@@ -107,7 +107,9 @@
     "levelN2": "N2",
     "levelN3": "N3",
     "levelN4": "N4",
-    "levelN5": "N5"
+    "levelN5": "N5",
+    "noDataFound": "データが見つかりません",
+    "create": "作成"
   },
   "header": {
     "language": "言語",
@@ -463,5 +465,24 @@
     "deleteFreeTopic": "フリーテーマを削除",
     "confirmDelete": "本当にフリーテーマを削除しますか？",
     "delete": "削除"
+  },
+  "adminSpeakingQuestion": {
+    "speakingQuestionManagement": "スピーキング質問管理",
+    "manageAllSpeakingQuestions": "システム内のすべてのスピーキング質問を管理",
+    "speakingQuestions": "スピーキング質問",
+    "searchPlaceholder": "キーワードを入力して検索",
+    "japaneseText": "日本語",
+    "vietnameseText": "ベトナム語",
+    "sampleAnswerJapanese": "サンプル回答（日本語）",
+    "sampleAnswerVietnamese": "サンプル回答（ベトナム語）",
+    "createdSuccess": "スピーキング質問が作成されました",
+    "errorCreating": "スピーキング質問の作成に失敗しました",
+    "updatedSuccess": "スピーキング質問が更新されました",
+    "errorUpdating": "スピーキング質問の更新に失敗しました",
+    "deletedSuccess": "スピーキング質問が削除されました",
+    "errorDeleting": "スピーキング質問の削除に失敗しました",
+    "confirmDelete": "本当にスピーキング質問を削除しますか？",
+    "deleteSpeakingQuestion": "スピーキング質問を削除",
+    "keyword": "キーワード"
   }
 }

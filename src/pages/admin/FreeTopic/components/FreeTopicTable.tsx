@@ -115,8 +115,8 @@ const FreeTopicTable = ({
                   <TableCell className="font-medium">{freeTopic.japaneseText}</TableCell>
                   <TableCell>{freeTopic.vietnameseText}</TableCell>
                   <TableCell className="text-center">
-                    <div className={`rounded-md px-2 py-1 text-xs text-center min-w-[100px] ${
-                      getColorByLevel(freeTopic.level || "N5")
+                    <div className={`rounded-md px-2 py-1 text-xs text-center min-w-[60px] w-fit mx-auto ${
+                      getColorByLevel(freeTopic.level || "")
                     }`}>
                       {freeTopic.level}
                     </div>

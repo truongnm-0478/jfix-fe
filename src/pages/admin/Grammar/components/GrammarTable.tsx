@@ -117,7 +117,7 @@ const GrammarTable = ({
                   <TableCell>{grammar.structure}</TableCell>
                   <TableCell>{grammar.meaning}</TableCell>
                   <TableCell className="text-center">
-                    <div className={`rounded-md px-2 py-1 text-xs text-center min-w-[100px] ${
+                    <div className={`rounded-md px-2 py-1 text-xs text-center min-w-[60px] w-fit mx-auto ${
                       getColorByLevel(grammar.level || "")
                     }`}>
                       {grammar.level}
