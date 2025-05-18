@@ -1,7 +1,9 @@
+import { Button } from "@/components/ui/button";
 import { ROUTERS } from "@/constant";
 import { GrammarQueryParams } from "@/dataHelper/adminGrammar.dataHelper";
 import { useAdminGrammar } from "@/hooks/useAdminGrammar";
 import { getTablePageSize, setTablePageSize } from "@/utils/storage";
+import { CirclePlus } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
@@ -85,6 +87,10 @@ const GrammarManagement = () => {
   const handleEditGrammar = (grammarId: number) => {
     navigate(ROUTERS.ADMIN_GRAMMAR_EDIT.replace(":id", grammarId.toString()));
   };
+
+  const handleCreateGrammar = () => {
+    navigate(ROUTERS.ADMIN_GRAMMAR_CREATE);
+  };
   
   useEffect(() => {
     refetch();
@@ -92,9 +98,18 @@ const GrammarManagement = () => {
 
   return (
     <div className="">
-      <div className="flex flex-col mb-4 py-4">
-        <h1 className="text-2xl font-bold text-primary">{t("adminGrammar.grammarManagement")}</h1>
-        <p className="text-muted-foreground font-light">{t("adminGrammar.manageAllGrammars")}</p>
+      <div className="flex mb-4 py-4 gap-2 items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-bold text-primary">{t("adminGrammar.grammarManagement")}</h1>
+          <p className="text-muted-foreground font-light">{t("adminGrammar.manageAllGrammars")}</p>
+        </div>
+        <Button 
+          className="flex items-center gap-1" 
+          onClick={handleCreateGrammar}
+        >
+          <CirclePlus className="h-4 w-4" />
+          <span>{t("common.create")}</span>
+        </Button>
       </div>
       
       <GrammarFilters

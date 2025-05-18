@@ -1,7 +1,9 @@
+import { Button } from "@/components/ui/button";
 import { ROUTERS } from "@/constant";
 import { VocabularyQueryParams } from "@/dataHelper/adminVocubalary.dataHelper";
 import { useAdminVocabulary } from "@/hooks/useAdminVocabulary";
 import { getTablePageSize, setTablePageSize } from "@/utils/storage";
+import { CirclePlus } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
@@ -85,6 +87,10 @@ const VocabularyManagement = () => {
   const handleEditVocabulary = (vocabularyId: number) => {
     navigate(ROUTERS.ADMIN_VOCABULARY_EDIT.replace(":id", vocabularyId.toString()));
   };
+
+  const handleCreateVocabulary = () => {
+    navigate(ROUTERS.ADMIN_VOCABULARY_CREATE);
+  };
   
   useEffect(() => {
     refetch();
@@ -92,9 +98,18 @@ const VocabularyManagement = () => {
 
   return (
     <div className="">
-      <div className="flex flex-col mb-4 py-4">
-        <h1 className="text-2xl font-bold text-primary">{t("adminVocabulary.vocabularyManagement")}</h1>
-        <p className="text-muted-foreground font-light">{t("adminVocabulary.manageAllVocabularies")}</p>
+      <div className="flex mb-4 py-4 gap-2 items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-bold text-primary">{t("adminVocabulary.vocabularyManagement")}</h1>
+          <p className="text-muted-foreground font-light">{t("adminVocabulary.manageAllVocabularies")}</p>
+        </div>
+        <Button 
+          className="flex items-center gap-1" 
+          onClick={handleCreateVocabulary}
+        >
+          <CirclePlus className="h-4 w-4" />
+          <span>{t("common.create")}</span>
+        </Button>
       </div>
       
       <VocabularyFilters

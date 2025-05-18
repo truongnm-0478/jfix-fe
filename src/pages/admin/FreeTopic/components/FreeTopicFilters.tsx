@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { FreeTopicQueryParams } from "@/dataHelper/adminFreeTopic.dataHelper";
-import { ChevronDown, Search, X } from "lucide-react";
+import { ChevronDown, Filter, FilterX, Search } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -77,7 +77,7 @@ const FreeTopicFilters = ({
               onClick={toggleFilters}
               className="flex items-center gap-2 min-w-40 bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground"
             >
-              <Search className="h-4 w-4" />
+              <Filter className="h-4 w-4" />
               {showFilters ? t("common.hideFilters") : t("common.showFilters")}
               <ChevronDown className={`h-4 w-4 transition-transform ${showFilters ? "rotate-180" : ""}`} />
             </Button>
@@ -134,7 +134,7 @@ const FreeTopicFilters = ({
                   onClick={resetFilters}
                   className="flex items-center gap-2 bg-red-500 text-white hover:bg-red-600 hover:text-white"
                 >
-                  <X className="h-4 w-4" />
+                  <FilterX className="h-4 w-4" />
                   {t("common.resetFilters")}
                 </Button>
               </div>
