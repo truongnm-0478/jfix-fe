@@ -484,5 +484,28 @@
     "confirmDelete": "本当にスピーキング質問を削除しますか？",
     "deleteSpeakingQuestion": "スピーキング質問を削除",
     "keyword": "キーワード"
+  },
+  "adminSentence": {
+    "sentenceManagement": "文法管理",
+    "manageAllSentences": "システム内のすべての文法を管理",
+    "sentence": "文法",
+    "sentenceJapanese": "日本語の文法",
+    "sentenceVietnamese": "ベトナム語の文法",
+    "createdSuccess": "文法が作成されました",
+    "errorCreating": "文法の作成に失敗しました",
+    "updatedSuccess": "文法が更新されました",
+    "errorUpdating": "文法の更新に失敗しました",
+    "deletedSuccess": "文法が削除されました",
+    "errorDeleting": "文法の削除に失敗しました",
+    "confirmDelete": "本当に文法を削除しますか？",
+    "deleteSentence": "文法を削除",
+    "keyword": "キーワード",
+    "searchKeywordPlaceholder": "キーワードを入力して検索",
+    "level": "レベル",
+    "vietnameseText": "ベトナム語",
+    "japaneseText": "日本語",
+    "loading": "データを読み込んでいます...",
+    "noSentencesFound": "文法が見つかりません",
+    "searchPlaceholder": "キーワードを入力して検索"
   }
 }

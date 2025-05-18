@@ -479,5 +479,28 @@
     "confirmDelete": "Are you sure you want to delete this speaking question?",
     "deleteSpeakingQuestion": "Delete speaking question",
     "keyword": "Keyword"
+  },
+  "adminSentence": {
+    "sentenceManagement": "Sentence management",
+    "manageAllSentences": "Manage all sentences in the system",
+    "sentence": "Sentence",
+    "sentenceJapanese": "Japanese sentence",
+    "sentenceVietnamese": "Vietnamese sentence",
+    "createdSuccess": "Sentence created successfully",
+    "errorCreating": "Error creating sentence",
+    "updatedSuccess": "Sentence updated successfully",
+    "errorUpdating": "Error updating sentence",
+    "deletedSuccess": "Sentence deleted successfully",
+    "errorDeleting": "Error deleting sentence",
+    "confirmDelete": "Are you sure you want to delete this sentence?",
+    "deleteSentence": "Delete sentence",
+    "keyword": "Keyword",
+    "searchKeywordPlaceholder": "Enter keyword to search",
+    "level": "Level",
+    "vietnameseText": "Vietnamese",
+    "japaneseText": "Japanese",
+    "loading": "Loading data...",
+    "noSentencesFound": "No sentences found",
+    "searchPlaceholder": "Enter keyword to search"
   }
 }

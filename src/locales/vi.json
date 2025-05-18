@@ -485,5 +485,28 @@
     "confirmDelete": "Bạn có chắc chắn muốn xóa câu hỏi nói này không?",
     "deleteSpeakingQuestion": "Xóa câu hỏi nói",
     "keyword": "Từ khóa"
+  },
+  "adminSentence": {
+    "sentenceManagement": "Quản lý câu phát âm",
+    "manageAllSentences": "Quản lý tất cả câu phát âm trong hệ thống",
+    "sentence": "Câu",
+    "sentenceJapanese": "Câu tiếng Nhật",
+    "sentenceVietnamese": "Câu tiếng Việt",
+    "createdSuccess": "Tạo câu phát âm thành công",
+    "errorCreating": "Lỗi khi tạo câu phát âm",
+    "updatedSuccess": "Cập nhật câu phát âm thành công",
+    "errorUpdating": "Lỗi khi cập nhật câu phát âm",
+    "deletedSuccess": "Xóa câu phát âm thành công",
+    "errorDeleting": "Lỗi khi xóa câu phát âm",
+    "confirmDelete": "Bạn có chắc chắn muốn xóa câu phát âm này không?",
+    "deleteSentence": "Xóa câu phát âm",
+    "keyword": "Từ khóa",
+    "searchKeywordPlaceholder": "Nhập từ khoá để tìm kiếm",
+    "level": "Cấp độ",
+    "vietnameseText": "Tiếng Việt",
+    "japaneseText": "Tiếng Nhật",
+    "loading": "Đang tải dữ liệu...",
+    "noSentencesFound": "Không tìm thấy câu phát âm nào",
+    "searchPlaceholder": "Nhập từ khóa để tìm kiếm"
   }
 }

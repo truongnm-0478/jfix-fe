@@ -13,6 +13,7 @@ import Learn from "@/pages/user/Learn";
 import { Navigate, Route, Routes } from "react-router-dom";
 import AdminFreeTopic from "./pages/admin/FreeTopic";
 import AdminGrammar from "./pages/admin/Grammar";
+import AdminSentence from "./pages/admin/Sentence";
 import AdminSpeakingQuestion from "./pages/admin/SpeakingQuestion";
 import UserDetail from "./pages/admin/UserDetail";
 import AdminVocabulary from "./pages/admin/Vocabulary";
@@ -78,6 +79,7 @@ const Router = () => {
         <Route path={ROUTERS.ADMIN_GRAMMAR} element={<AdminGrammar />} />
         <Route path={ROUTERS.ADMIN_FREE_TOPICS} element={<AdminFreeTopic />} />
         <Route path={ROUTERS.ADMIN_QUESTIONS} element={<AdminSpeakingQuestion />} />
+        <Route path={ROUTERS.ADMIN_SENTENCES} element={<AdminSentence />} />
       </Route>
 
       {/* User routes */}
