@@ -1,5 +1,5 @@
 import { toast } from "@/components/ui/sonner";
-import { ParagraphQueryParams } from "@/dataHelper/adminParagraph.dataHelper";
+import { AdminParagraphCreate, ParagraphQueryParams } from "@/dataHelper/adminParagraph.dataHelper";
 import { adminParagraphApi } from "@/services/api/adminParagraphApi";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
@@ -26,7 +26,7 @@ export const useCreateParagraph = () => {
   const queryClient = useQueryClient();
   
   return useMutation({
-    mutationFn: (paragraphData: any) => adminParagraphApi.createParagraph(paragraphData),
+    mutationFn: (paragraphData: AdminParagraphCreate) => adminParagraphApi.createParagraph(paragraphData),
     onSuccess: (response) => {
       if (response.status === 200 && response.message === "Success") {
         toast.success(t("adminParagraph.createdSuccess"));
@@ -46,7 +46,7 @@ export const useUpdateParagraph = () => {
   const queryClient = useQueryClient();
   
   return useMutation({
-    mutationFn: ({ id, data }: { id: string, data: any }) => 
+    mutationFn: ({ id, data }: { id: string, data: AdminParagraphCreate }) => 
       adminParagraphApi.updateParagraph(id, data),
     onSuccess: (response, variables) => {
       if (response.status === 200 && response.message === "Success") {

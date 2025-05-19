@@ -89,7 +89,7 @@ const ParagraphManagement = () => {
   };
   
   const handleCreateParagraph = () => {
-    navigate(ROUTERS.ADMIN_PARAGRAPHS_EDIT.replace(":id", "new"));
+    navigate(ROUTERS.ADMIN_PARAGRAPHS_CREATE);
   };
   
   useEffect(() => {

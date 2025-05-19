@@ -3,6 +3,7 @@ export interface AdminParagraph {
   japaneseText: string;
   vietnameseText: string;
   level: string;
+  topic: string;
   createDate?: string;
   updateDate?: string;
   audioUrl?: string;
@@ -25,4 +26,27 @@ export interface AdminParagraphResponse {
   totalPages: number;
   nextPage: number | null;
   previousPage: number | null;
+}
+
+export interface AdminParagraphDetail {
+  id: number;
+  japaneseText: string;
+  vietnameseText: string;
+  level: string;
+  topic: string;
+  audioUrl?: string;
+  createDate?: string;
+  createBy?: string;
+  updateDate?: string | null;
+  updateBy?: string | null;
+  deleteDate?: string | null;
+  deleteBy?: string | null;
+}
+
+export interface AdminParagraphCreate {
+  japaneseText: string;
+  vietnameseText: string;
+  level: string;
+  topic: string;
+  audio: File | null;
 }

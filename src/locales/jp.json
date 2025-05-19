@@ -570,7 +570,8 @@
     "errorDeleting": "スピーキング質問の削除に失敗しました",
     "validationRequired": "{{field}}は必須です",
     "updateDate": "更新日",
-    "deleting": "削除中..."
+    "deleting": "削除中...",
+    "searchPlaceholder": "キーワードを入力して検索"
   },
   "adminSentence": {
     "sentenceManagement": "文法管理",
@@ -606,7 +607,8 @@
     "validationRequired": "{{field}}は必須です",
     "deleting": "削除中...",
     "loading": "データを読み込んでいます...",
-    "noSentencesFound": "文法が見つかりません"
+    "noSentencesFound": "文法が見つかりません",
+    "searchPlaceholder": "キーワードを入力して検索"
   },
   "adminParagraph": {
     "paragraphManagement": "段落管理",
@@ -614,6 +616,8 @@
     "paragraph": "段落",
     "paragraphJapanese": "日本語の段落",
     "paragraphVietnamese": "ベトナム語の段落",
+    "japaneseText": "日本語",
+    "vietnameseText": "ベトナム語",
     "createdSuccess": "段落が作成されました",
     "errorCreating": "段落の作成に失敗しました",
     "updatedSuccess": "段落が更新されました",
@@ -622,14 +626,31 @@
     "errorDeleting": "段落の削除に失敗しました",
     "confirmDelete": "本当に段落を削除しますか？",
     "deleteParagraph": "段落を削除",
+    "deleteConfirmTitle": "段落を削除する",
+    "deleteConfirmDescription": "本当に段落を削除しますか？この操作は元に戻すことができません。",
     "keyword": "キーワード",
     "searchKeywordPlaceholder": "キーワードを入力して検索",
     "level": "レベル",
-    "vietnameseText": "ベトナム語",
-    "japaneseText": "日本語",
+    "topic": "トピック",
+    "topicPlaceholder": "トピックを入力",
+    "audio": "音声",
+    "audioNotSupported": "ブラウザが音声をサポートしていません。",
+    "noAudio": "音声がありません",
     "loading": "データを読み込んでいます...",
     "noParagraphsFound": "段落が見つかりません",
-    "searchPlaceholder": "キーワードを入力して検索"
+    "searchPlaceholder": "キーワードを入力して検索",
+    "japaneseTextPlaceholder": "日本語の段落を入力",
+    "vietnameseTextPlaceholder": "ベトナム語の段落を入力",
+    "levelPlaceholder": "レベルを選択",
+    "audioPlaceholder": "ファイルを選択",
+    "audioDescription": "MP3, WAVファイルをアップロード",
+    "createTitle": "新しい段落を作成",
+    "updateTitle": "段落を更新",
+    "createDate": "作成日",
+    "updateDate": "更新日",
+    "by": "by",
+    "validationRequired": "{{field}}は必須です",
+    "deleting": "段落を削除中..."
   },
   "checkGrammar": {
     "title": "日本語の文法チェック",

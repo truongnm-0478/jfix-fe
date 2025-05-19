@@ -153,3 +153,20 @@ export const sentenceUpdateFormSchema = (t: (key: string, params?: { field?: str
   audioFile: z.any().optional(),
   level: z.string().min(1, { message: t("adminSentence.validationRequired", { field: t("adminSentence.level") }) }),
 });
+
+export const paragraphCreateFormSchema = (t: (key: string, params?: { field?: string }) => string) => z.object({
+  japaneseText: z.string().min(1, { message: t("adminParagraph.validationRequired", { field: t("adminParagraph.japaneseText") }) }),
+  vietnameseText: z.string().min(1, { message: t("adminParagraph.validationRequired", { field: t("adminParagraph.vietnameseText") }) }),
+  audio: z.any().refine((val) => val instanceof File, { message: t("adminParagraph.validationRequired", { field: t("adminParagraph.audio") }) }),
+  level: z.string().min(1, { message: t("adminParagraph.validationRequired", { field: t("adminParagraph.level") }) }),
+  topic: z.string().min(1, { message: t("adminParagraph.validationRequired", { field: t("adminParagraph.topic") }) }),
+});
+
+export const paragraphUpdateFormSchema = (t: (key: string, params?: { field?: string }) => string) => z.object({
+  japaneseText: z.string().min(1, { message: t("adminParagraph.validationRequired", { field: t("adminParagraph.japaneseText") }) }),
+  vietnameseText: z.string().min(1, { message: t("adminParagraph.validationRequired", { field: t("adminParagraph.vietnameseText") }) }),
+  audioUrl: z.union([z.string(), z.null()]).optional(),
+  audioFile: z.any().optional(),
+  level: z.string().min(1, { message: t("adminParagraph.validationRequired", { field: t("adminParagraph.level") }) }),
+  topic: z.string().min(1, { message: t("adminParagraph.validationRequired", { field: t("adminParagraph.topic") }) }),
+});
