@@ -29,23 +29,13 @@ export interface AdminSentence {
   deleteBy?: string | null;
 }
 
-export interface AdminSentenceDetail {
-  id: number;
-  japaneseText: string;
-  vietnameseText: string;
-  level: string;
-  audioUrl?: string;
-  createDate?: string;
-  createBy?: string;
-  updateDate?: string | null;
-  updateBy?: string | null;
-  deleteDate?: string | null;
-  deleteBy?: string | null;
-}
+export interface AdminSentenceDetail extends AdminSentence {}
 
 export interface AdminSentenceCreate {
   japaneseText: string;
   vietnameseText: string;
   level: string;
   audio: File | null;
+  audioFile?: File | null;
+  audioUrl?: string | null;
 }

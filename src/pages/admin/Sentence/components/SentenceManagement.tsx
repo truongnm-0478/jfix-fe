@@ -89,7 +89,7 @@ const SentenceManagement = () => {
   };
   
   const handleCreateSentence = () => {
-    navigate(ROUTERS.ADMIN_SENTENCES_EDIT.replace(":id", "new"));
+    navigate(ROUTERS.ADMIN_SENTENCES_CREATE);
   };
   
   useEffect(() => {

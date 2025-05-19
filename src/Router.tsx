@@ -21,6 +21,9 @@ import AdminGrammarDetail from "./pages/admin/GrammarDetail";
 import AdminGrammarUpdate from "./pages/admin/GrammarUpdate";
 import AdminParagraph from "./pages/admin/Paragraph";
 import AdminSentence from "./pages/admin/Sentence";
+import AdminSentenceCreate from "./pages/admin/SentenceCreate";
+import AdminSentenceDetail from "./pages/admin/SentenceDetail";
+import AdminSentenceUpdate from "./pages/admin/SentenceUpdate";
 import AdminSpeakingQuestion from "./pages/admin/SpeakingQuestion";
 import AdminSpeakingQuestionCreate from "./pages/admin/SpeakingQuestionCreate";
 import AdminSpeakingQuestionDetail from "./pages/admin/SpeakingQuestionDetail";
@@ -107,6 +110,9 @@ const Router = () => {
         <Route path={ROUTERS.ADMIN_QUESTIONS_CREATE} element={<AdminSpeakingQuestionCreate />} />
         <Route path={ROUTERS.ADMIN_QUESTIONS_DETAIL} element={<AdminSpeakingQuestionDetail />} />
         <Route path={ROUTERS.ADMIN_QUESTIONS_EDIT} element={<AdminSpeakingQuestionUpdate />} />
+        <Route path={ROUTERS.ADMIN_SENTENCES_CREATE} element={<AdminSentenceCreate />} />
+        <Route path={ROUTERS.ADMIN_SENTENCES_DETAIL} element={<AdminSentenceDetail />} />
+        <Route path={ROUTERS.ADMIN_SENTENCES_EDIT} element={<AdminSentenceUpdate />} />
       </Route>
 
       {/* User routes */}

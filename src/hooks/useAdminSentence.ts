@@ -4,19 +4,29 @@ import { adminSentenceApi } from "@/services/api/adminSentenceApi";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 
-export const useAdminSentence = (params: SentenceQueryParams) => {
+export const useAdminSentence = (params: SentenceQueryParams = {}) => {
   return useQuery({
     queryKey: ["admin-sentence", params],
-    queryFn: () => adminSentenceApi.getSentence(params),
-    staleTime: 1000 * 60 * 5,
+    queryFn: async () => {
+      const response = await adminSentenceApi.getSentence(params);
+      if (response.status === 200 && response.message === "Success") {
+        return response;
+      }
+      throw new Error("Failed to fetch sentences");
+    },
   });
 };
 
 export const useAdminSentenceById = (sentenceId: string) => {
   return useQuery({
     queryKey: ["admin-sentence-detail", sentenceId],
-    queryFn: () => adminSentenceApi.getSentenceById(sentenceId),
-    staleTime: 1000 * 60 * 5,
+    queryFn: async () => {
+      const response = await adminSentenceApi.getSentenceById(sentenceId);
+      if (response.status === 200 && response.message === "Success") {
+        return response;
+      }
+      throw new Error("Failed to fetch sentence detail");
+    },
     enabled: !!sentenceId,
   });
 };
