@@ -12,6 +12,9 @@ import AddLearningGoal from "@/pages/user/AddLearningGoal";
 import Learn from "@/pages/user/Learn";
 import { Navigate, Route, Routes } from "react-router-dom";
 import AdminFreeTopic from "./pages/admin/FreeTopic";
+import AdminFreeTopicCreate from "./pages/admin/FreeTopicCreate";
+import AdminFreeTopicDetail from "./pages/admin/FreeTopicDetail";
+import AdminFreeTopicUpdate from "./pages/admin/FreeTopicUpdate";
 import AdminGrammar from "./pages/admin/Grammar";
 import AdminGrammarCreate from "./pages/admin/GrammarCreate";
 import AdminGrammarDetail from "./pages/admin/GrammarDetail";
@@ -95,6 +98,9 @@ const Router = () => {
         <Route path={ROUTERS.ADMIN_GRAMMAR_DETAIL} element={<AdminGrammarDetail />} />
         <Route path={ROUTERS.ADMIN_GRAMMAR_CREATE} element={<AdminGrammarCreate />} />
         <Route path={ROUTERS.ADMIN_GRAMMAR_EDIT} element={<AdminGrammarUpdate />} />
+        <Route path={ROUTERS.ADMIN_FREE_TOPICS_CREATE} element={<AdminFreeTopicCreate />} />
+        <Route path={ROUTERS.ADMIN_FREE_TOPICS_DETAIL} element={<AdminFreeTopicDetail />} />
+        <Route path={ROUTERS.ADMIN_FREE_TOPICS_EDIT} element={<AdminFreeTopicUpdate />} />
       </Route>
 
       {/* User routes */}

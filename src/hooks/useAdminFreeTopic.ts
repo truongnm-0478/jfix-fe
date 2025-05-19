@@ -1,12 +1,12 @@
 import { toast } from "@/components/ui/sonner";
-import { FreeTopicQueryParams } from "@/dataHelper/adminFreeTopic.dataHelper";
+import { FreeTopicCreate, FreeTopicQueryParams } from "@/dataHelper/adminFreeTopic.dataHelper";
 import { adminFreeTopicApi } from "@/services/api/adminFreeTopic";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 
 export const useAdminFreeTopic = (params: FreeTopicQueryParams) => {
   return useQuery({
-    queryKey: ["admin-freetopic", params],
+    queryKey: ["admin-free-topic", params],
     queryFn: () => adminFreeTopicApi.getFreeTopic(params),
     staleTime: 1000 * 60 * 5,
   });
@@ -14,7 +14,7 @@ export const useAdminFreeTopic = (params: FreeTopicQueryParams) => {
 
 export const useAdminFreeTopicById = (freeTopicId: string) => {
   return useQuery({
-    queryKey: ["admin-freetopic-detail", freeTopicId],
+    queryKey: ["admin-free-topic-detail", freeTopicId],
     queryFn: () => adminFreeTopicApi.getFreeTopicById(freeTopicId),
     staleTime: 1000 * 60 * 5,
     enabled: !!freeTopicId,
@@ -26,11 +26,11 @@ export const useCreateFreeTopic = () => {
   const queryClient = useQueryClient();
   
   return useMutation({
-    mutationFn: (freeTopicData: any) => adminFreeTopicApi.createFreeTopic(freeTopicData),
+    mutationFn: (freeTopicData: FreeTopicCreate) => adminFreeTopicApi.createFreeTopic(freeTopicData),
     onSuccess: (response) => {
       if (response.status === 200 && response.message === "Success") {
         toast.success(t("adminFreeTopic.createdSuccess"));
-        queryClient.invalidateQueries({ queryKey: ["admin-freetopic"] });
+        queryClient.invalidateQueries({ queryKey: ["admin-free-topic"] });
         return;
       }
       toast.error(t("adminFreeTopic.errorCreating"));
@@ -46,14 +46,14 @@ export const useUpdateFreeTopic = () => {
   const queryClient = useQueryClient();
   
   return useMutation({
-    mutationFn: ({ id, data }: { id: string, data: any }) => 
+    mutationFn: ({ id, data }: { id: string, data: FreeTopicCreate }) => 
       adminFreeTopicApi.updateFreeTopic(id, data),
     onSuccess: (response, variables) => {
       if (response.status === 200 && response.message === "Success") {
         toast.success(t("adminFreeTopic.updatedSuccess"));
-        queryClient.invalidateQueries({ queryKey: ["admin-freetopic"] });
+        queryClient.invalidateQueries({ queryKey: ["admin-free-topic"] });
         queryClient.invalidateQueries({ 
-          queryKey: ["admin-freetopic-detail", variables.id] 
+          queryKey: ["admin-free-topic-detail", variables.id] 
         });
         return;
       }
@@ -74,7 +74,7 @@ export const useDeleteFreeTopic = () => {
     onSuccess: (response) => {
       if (response.status === 200 && response.message === "Success") {
         toast.success(t("adminFreeTopic.deletedSuccess"));
-        queryClient.invalidateQueries({ queryKey: ["admin-freetopic"] });
+        queryClient.invalidateQueries({ queryKey: ["admin-free-topic"] });
         return;
       }
       toast.error(t("adminFreeTopic.errorDeleting"));

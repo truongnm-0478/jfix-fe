@@ -29,3 +29,25 @@ export interface AdminFreeTopic {
   deleteDate?: string | null;
   deleteBy?: string | null;
 }
+
+export interface FreeTopicDetail {
+  id: number;
+  japaneseText?: string;
+  vietnameseText?: string;
+  level?: string;
+  conversationPrompt?: string;
+  sampleAnswerVietnamese?: string;
+  audioUrl?: string;
+  createDate?: string;
+  createBy?: string;
+  updateDate?: string | null;
+  updateBy?: string | null;
+  deleteDate?: string | null;
+  deleteBy?: string | null;
+}
+
+export interface FreeTopicCreate {
+  japaneseText?: string;
+  vietnameseText?: string;
+  level?: string;
+}

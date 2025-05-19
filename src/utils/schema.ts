@@ -105,3 +105,17 @@ export const grammarUpdateFormSchema = (t: (key: string, params?: { field?: stri
   exampleMeaning: z.string().min(1, { message: t("adminGrammar.validationRequired", { field: t("adminGrammar.exampleMeaning") }) }),
   level: z.string().min(1, { message: t("adminGrammar.validationRequired", { field: t("adminGrammar.level") }) }),
 });
+
+export const freeTopicCreateFormSchema = (t: (key: string, params?: { field?: string }) => string) => z.object({
+  japaneseText: z.string().min(1, { message: t("adminFreeTopic.validationRequired", { field: t("adminFreeTopic.japaneseText") }) }),
+  vietnameseText: z.string().min(1, { message: t("adminFreeTopic.validationRequired", { field: t("adminFreeTopic.vietnameseText") }) }),
+  conversationPrompt: z.string().min(1, { message: t("adminFreeTopic.validationRequired", { field: t("adminFreeTopic.conversationPrompt") }) }),
+  level: z.string().min(1, { message: t("adminFreeTopic.validationRequired", { field: t("adminFreeTopic.level") }) }),
+});
+
+export const freeTopicUpdateFormSchema = (t: (key: string, params?: { field?: string }) => string) => z.object({
+  japaneseText: z.string().min(1, { message: t("adminFreeTopic.validationRequired", { field: t("adminFreeTopic.japaneseText") }) }),
+  vietnameseText: z.string().min(1, { message: t("adminFreeTopic.validationRequired", { field: t("adminFreeTopic.vietnameseText") }) }),
+  conversationPrompt: z.string().min(1, { message: t("adminFreeTopic.validationRequired", { field: t("adminFreeTopic.conversationPrompt") }) }),
+  level: z.string().min(1, { message: t("adminFreeTopic.validationRequired", { field: t("adminFreeTopic.level") }) }),
+});
