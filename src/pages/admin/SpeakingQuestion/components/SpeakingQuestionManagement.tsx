@@ -89,7 +89,7 @@ const SpeakingQuestionManagement = () => {
   };
   
   const handleCreateSpeakingQuestion = () => {
-    navigate(ROUTERS.ADMIN_QUESTIONS_EDIT.replace(":id", "new"));
+    navigate(ROUTERS.ADMIN_QUESTIONS_CREATE);
   };
   
   useEffect(() => {

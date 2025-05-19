@@ -1,5 +1,5 @@
 import { toast } from "@/components/ui/sonner";
-import { SpeakingQuestionQueryParams } from "@/dataHelper/adminSpeakingQuestions.dataHelper";
+import { AdminSpeakingQuestionCreate, SpeakingQuestionQueryParams } from "@/dataHelper/adminSpeakingQuestions.dataHelper";
 import { adminSpeakingQuestionApi } from "@/services/api/adminSpeakingQuestion";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
@@ -26,7 +26,7 @@ export const useCreateSpeakingQuestion = () => {
   const queryClient = useQueryClient();
   
   return useMutation({
-    mutationFn: (speakingQuestionData: any) => adminSpeakingQuestionApi.createSpeakingQuestion(speakingQuestionData),
+    mutationFn: (speakingQuestionData: AdminSpeakingQuestionCreate) => adminSpeakingQuestionApi.createSpeakingQuestion(speakingQuestionData),
     onSuccess: (response) => {
       if (response.status === 200 && response.message === "Success") {
         toast.success(t("adminSpeakingQuestion.createdSuccess"));
@@ -46,7 +46,7 @@ export const useUpdateSpeakingQuestion = () => {
   const queryClient = useQueryClient();
   
   return useMutation({
-    mutationFn: ({ id, data }: { id: string, data: any }) => 
+    mutationFn: ({ id, data }: { id: string, data: AdminSpeakingQuestionCreate }) => 
       adminSpeakingQuestionApi.updateSpeakingQuestion(id, data),
     onSuccess: (response, variables) => {
       if (response.status === 200 && response.message === "Success") {

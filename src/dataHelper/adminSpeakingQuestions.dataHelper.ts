@@ -30,3 +30,28 @@ export interface AdminSpeakingQuestion {
   deleteDate?: string | null;
   deleteBy?: string | null;
 }
+
+export interface AdminSpeakingQuestionDetail {
+  id: number;
+  japaneseText?: string;
+  vietnameseText?: string;
+  level?: string;
+  sampleAnswerJapanese?: string;
+  sampleAnswerVietnamese?: string;
+  audioUrl?: string;
+  createDate?: string;
+  createBy?: string;
+  updateDate?: string | null;
+  updateBy?: string | null;
+  deleteDate?: string | null;
+  deleteBy?: string | null;
+}
+
+export interface AdminSpeakingQuestionCreate {
+  japaneseText: string;
+  vietnameseText: string;
+  level: string;
+  audio: File | null;
+  sampleAnswerJapanese: string;
+  sampleAnswerVietnamese: string;
+}

@@ -119,3 +119,22 @@ export const freeTopicUpdateFormSchema = (t: (key: string, params?: { field?: st
   conversationPrompt: z.string().min(1, { message: t("adminFreeTopic.validationRequired", { field: t("adminFreeTopic.conversationPrompt") }) }),
   level: z.string().min(1, { message: t("adminFreeTopic.validationRequired", { field: t("adminFreeTopic.level") }) }),
 });
+
+export const speakingQuestionCreateFormSchema = (t: (key: string, params?: { field?: string }) => string) => z.object({
+  japaneseText: z.string().min(1, { message: t("adminSpeakingQuestion.validationRequired", { field: t("adminSpeakingQuestion.japaneseText") }) }),
+  vietnameseText: z.string().min(1, { message: t("adminSpeakingQuestion.validationRequired", { field: t("adminSpeakingQuestion.vietnameseText") }) }),
+  sampleAnswerJapanese: z.string().min(1, { message: t("adminSpeakingQuestion.validationRequired", { field: t("adminSpeakingQuestion.sampleAnswerJapanese") }) }),
+  sampleAnswerVietnamese: z.string().min(1, { message: t("adminSpeakingQuestion.validationRequired", { field: t("adminSpeakingQuestion.sampleAnswerVietnamese") }) }),
+  audio: z.any().refine((val) => val instanceof File, { message: t("adminSpeakingQuestion.validationRequired", { field: t("adminSpeakingQuestion.audio") }) }),
+  level: z.string().min(1, { message: t("adminSpeakingQuestion.validationRequired", { field: t("adminSpeakingQuestion.level") }) }),
+});
+
+export const speakingQuestionUpdateFormSchema = (t: (key: string, params?: { field?: string }) => string) => z.object({
+  japaneseText: z.string().min(1, { message: t("adminSpeakingQuestion.validationRequired", { field: t("adminSpeakingQuestion.japaneseText") }) }),
+  vietnameseText: z.string().min(1, { message: t("adminSpeakingQuestion.validationRequired", { field: t("adminSpeakingQuestion.vietnameseText") }) }),
+  sampleAnswerJapanese: z.string().min(1, { message: t("adminSpeakingQuestion.validationRequired", { field: t("adminSpeakingQuestion.sampleAnswerJapanese") }) }),
+  sampleAnswerVietnamese: z.string().min(1, { message: t("adminSpeakingQuestion.validationRequired", { field: t("adminSpeakingQuestion.sampleAnswerVietnamese") }) }),
+  audioUrl: z.union([z.string(), z.null()]).optional(),
+  audioFile: z.any().optional(),
+  level: z.string().min(1, { message: t("adminSpeakingQuestion.validationRequired", { field: t("adminSpeakingQuestion.level") }) }),
+});
