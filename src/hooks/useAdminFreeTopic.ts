@@ -1,6 +1,6 @@
 import { toast } from "@/components/ui/sonner";
 import { FreeTopicCreate, FreeTopicQueryParams } from "@/dataHelper/adminFreeTopic.dataHelper";
-import { adminFreeTopicApi } from "@/services/api/adminFreeTopic";
+import { adminFreeTopicApi } from "@/services/api/adminFreeTopicApi";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 

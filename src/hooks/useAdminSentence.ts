@@ -1,6 +1,6 @@
 import { toast } from "@/components/ui/sonner";
-import { SentenceQueryParams } from "@/dataHelper/adminSentence.dataHelper";
-import { adminSentenceApi } from "@/services/api/adminSentence";
+import { AdminSentenceCreate, SentenceQueryParams } from "@/dataHelper/adminSentence.dataHelper";
+import { adminSentenceApi } from "@/services/api/adminSentenceApi";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 
@@ -26,7 +26,7 @@ export const useCreateSentence = () => {
   const queryClient = useQueryClient();
   
   return useMutation({
-    mutationFn: (sentenceData: any) => adminSentenceApi.createSentence(sentenceData),
+    mutationFn: (sentenceData: AdminSentenceCreate) => adminSentenceApi.createSentence(sentenceData),
     onSuccess: (response) => {
       if (response.status === 200 && response.message === "Success") {
         toast.success(t("adminSentence.createdSuccess"));
@@ -46,7 +46,7 @@ export const useUpdateSentence = () => {
   const queryClient = useQueryClient();
   
   return useMutation({
-    mutationFn: ({ id, data }: { id: string, data: any }) => 
+    mutationFn: ({ id, data }: { id: string, data: AdminSentenceCreate }) => 
       adminSentenceApi.updateSentence(id, data),
     onSuccess: (response, variables) => {
       if (response.status === 200 && response.message === "Success") {

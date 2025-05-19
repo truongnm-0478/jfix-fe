@@ -1,6 +1,6 @@
 import { toast } from "@/components/ui/sonner";
 import { VocabularyCreate, VocabularyQueryParams } from "@/dataHelper/adminVocubalary.dataHelper";
-import { adminVocabularyApi } from "@/services/api/adminVocabulary";
+import { adminVocabularyApi } from "@/services/api/adminVocabularyApi";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 

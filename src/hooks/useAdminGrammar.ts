@@ -1,6 +1,6 @@
 import { toast } from "@/components/ui/sonner";
 import { GrammarCreate, GrammarQueryParams } from "@/dataHelper/adminGrammar.dataHelper";
-import { adminGrammarApi } from "@/services/api/adminGrammar";
+import { adminGrammarApi } from "@/services/api/adminGrammarApi";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 

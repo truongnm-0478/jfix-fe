@@ -1,6 +1,6 @@
 import { toast } from "@/components/ui/sonner";
 import { AdminSpeakingQuestionCreate, SpeakingQuestionQueryParams } from "@/dataHelper/adminSpeakingQuestions.dataHelper";
-import { adminSpeakingQuestionApi } from "@/services/api/adminSpeakingQuestion";
+import { adminSpeakingQuestionApi } from "@/services/api/adminSpeakingQuestionApi";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 
