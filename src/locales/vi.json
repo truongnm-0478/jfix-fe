@@ -670,5 +670,109 @@
     "detectedIssues": "Đã phát hiện {{count}} lỗi ngữ pháp",
     "noIssuesFound": "Không tìm thấy lỗi ngữ pháp",
     "errorOccurred": "Đã xảy ra lỗi"
+  },
+  "landing": {
+    "title": "JFIXER - Học tiếng Nhật tốt hơn",
+    "description": "JFIXER là nền tảng học tiếng Nhật online dành cho tất cả mọi người. Từ người mới bắt đầu đến người đã biết tiếng Nhật, chúng tôi cung cấp khóa học tiếng Nhật dễ hiểu và hiệu quả.",
+    "courses": {
+      "title": "Khóa học tiếng Nhật",
+      "description": "Chúng tôi cung cấp nhiều khóa học tiếng Nhật dễ hiểu và hiệu quả:",
+      "course1": "Khóa học tiếng Nhật dễ hiểu và hiệu quả",
+      "course2": "Bài tập và bài kiểm tra ngữ pháp tiếng Nhật",
+      "course3": "Tài liệu học tập tiếng Nhật"
+    },
+    "nav": {
+      "home": "Trang chủ",
+      "features": "Tính năng",
+      "about": "Về chúng tôi",
+      "contact": "Liên hệ"
+    },
+    "hero": {
+      "title": "Học tiếng Nhật cùng JFixer",
+      "subtitle": "Phát hiện và sửa lỗi thông minh - Học đúng tiến xa",
+      "cta": "Bắt đầu ngay - Miễn phí",
+      "secondaryCta": "Tìm hiểu thêm"
+    },
+    "features": {
+      "title": "Tính năng nổi bật",
+      "feature1": "Phát hiện lỗi AI",
+      "description1": "Công nghệ AI phát hiện và sửa lỗi phát âm, ngữ pháp một cách chính xác",
+      "feature2": "Lặp lại ngắt quãng",
+      "description2": "Phương pháp học khoa học giúp ghi nhớ lâu dài và hiệu quả",
+      "feature3": "Phát âm chuẩn xác",
+      "description3": "Luyện phát âm với công nghệ nhận diện giọng nói tiên tiến",
+      "feature4": "Theo dõi tiến độ",
+      "description4": "Biểu đồ tiến trình chi tiết giúp bạn luôn giữ động lực học tập"
+    },
+    "how": {
+      "title": "Cách thức hoạt động",
+      "step1": {
+        "title": "Đăng ký miễn phí",
+        "description": "Tạo tài khoản chỉ trong vài giây và bắt đầu hành trình học tiếng Nhật"
+      },
+      "step2": {
+        "title": "Luyện tập hàng ngày",
+        "description": "Dành 15-20 phút mỗi ngày để luyện tập với các bài học sinh động"
+      },
+      "step3": {
+        "title": "Nhận phản hồi AI",
+        "description": "AI thông minh sẽ phát hiện lỗi và đưa ra gợi ý cải thiện"
+      },
+      "step4": {
+        "title": "Tiến bộ vững chắc",
+        "description": "Theo dõi sự tiến bộ và đạt được các cột mốc quan trọng"
+      }
+    },
+    "demo": {
+      "title": "Trải nghiệm J-Fixer",
+      "description": "Công nghệ AI thông minh giúp phát hiện và sửa lỗi ngay lập tức. Xem cách J-Fixer hoạt động:",
+      "feature1": {
+        "title": "Phát hiện lỗi chính xác",
+        "description": "AI phát hiện lỗi phát âm, ngữ pháp và từ vựng với độ chính xác cao"
+      },
+      "feature2": {
+        "title": "Gợi ý cải thiện chi tiết",
+        "description": "Nhận phản hồi chi tiết và gợi ý cải thiện cụ thể cho từng lỗi"
+      },
+      "feature3": {
+        "title": "Luyện tập mục tiêu",
+        "description": "Tập trung vào điểm yếu của bạn với các bài tập được cá nhân hóa"
+      },
+      "exerciseTitle": "Bài tập hôm nay",
+      "errorText": "Lỗi ngữ pháp: \"見った\" nên là \"見た\"",
+      "explanation": "Xem giải thích",
+      "next": "Tiếp theo",
+      "progress": "Tiến độ của bạn",
+      "streak": "7 ngày liên tiếp"
+    },
+    "testimonials": {
+      "title": "Người dùng nói gì về chúng tôi",
+      "person1": {
+        "name": "Nguyễn Văn A",
+        "role": "Học sinh",
+        "content": "J-Fixer đã giúp tôi cải thiện đáng kể khả năng phát âm tiếng Nhật. Các bài học thú vị và phương pháp lặp lại ngắt quãng thực sự hiệu quả!"
+      },
+      "person2": {
+        "name": "Trần Thị B",
+        "role": "Nhân viên văn phòng",
+        "content": "Tôi học tiếng Nhật được 3 tháng với J-Fixer và đã có thể giao tiếp cơ bản. Công nghệ AI phát hiện lỗi giúp tôi tự tin hơn khi nói."
+      },
+      "person3": {
+        "name": "Lê Văn C",
+        "role": "Du học sinh",
+        "content": "Ứng dụng tuyệt vời để ôn luyện và cải thiện tiếng Nhật. Tính năng lặp lại ngắt quãng giúp tôi nhớ từ vựng lâu hơn rất nhiều."
+      }
+    },
+    "cta": {
+      "title": "Sẵn sàng nâng cao khả năng tiếng Nhật của bạn?",
+      "subtitle": "Học đúng tiến xa cùng J-Fixer ngay hôm nay",
+      "button": "Bắt đầu miễn phí"
+    },
+    "footer": {
+      "copyright": "© 2025 J-Fixer. Đã đăng ký bản quyền.",
+      "terms": "Điều khoản",
+      "privacy": "Chính sách bảo mật",
+      "contact": "Liên hệ"
+    }
   }
 }

@@ -664,5 +664,100 @@
     "detectedIssues": "Detected {{count}} grammar issues",
     "noIssuesFound": "No grammar issues found",
     "errorOccurred": "An error occurred"
+  },
+  "landing": {
+    "nav": {
+      "home": "Home",
+      "features": "Features",
+      "about": "About Us",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Learn Japanese with JFixer",
+      "subtitle": "Smart error detection and correction - Learn right, advance far",
+      "cta": "Start for free",
+      "secondaryCta": "Learn more"
+    },
+    "features": {
+      "title": "Key Features",
+      "feature1": "AI Error Detection",
+      "description1": "AI technology detects and corrects pronunciation and grammar errors accurately",
+      "feature2": "Spaced Repetition",
+      "description2": "Scientific learning method for long-term and effective memorization",
+      "feature3": "Perfect Pronunciation",
+      "description3": "Practice pronunciation with advanced voice recognition technology",
+      "feature4": "Progress Tracking",
+      "description4": "Detailed progress charts help you stay motivated"
+    },
+    "how": {
+      "title": "How It Works",
+      "step1": {
+        "title": "Sign up for free",
+        "description": "Create an account in seconds and start your Japanese learning journey"
+      },
+      "step2": {
+        "title": "Practice daily",
+        "description": "Spend 15-20 minutes each day practicing with interactive lessons"
+      },
+      "step3": {
+        "title": "Get AI feedback",
+        "description": "Smart AI detects errors and provides improvement suggestions"
+      },
+      "step4": {
+        "title": "Make steady progress",
+        "description": "Track your improvement and achieve important milestones"
+      }
+    },
+    "demo": {
+      "title": "Experience J-Fixer",
+      "description": "Smart AI technology helps detect and fix errors instantly. See how J-Fixer works:",
+      "feature1": {
+        "title": "Accurate error detection",
+        "description": "AI detects pronunciation, grammar, and vocabulary errors with high accuracy"
+      },
+      "feature2": {
+        "title": "Detailed improvement suggestions",
+        "description": "Get detailed feedback and specific improvement suggestions for each error"
+      },
+      "feature3": {
+        "title": "Targeted practice",
+        "description": "Focus on your weaknesses with personalized exercises"
+      },
+      "exerciseTitle": "Today's exercise",
+      "errorText": "Grammar error: \"見った\" should be \"見た\"",
+      "explanation": "See explanation",
+      "next": "Next",
+      "progress": "Your progress",
+      "streak": "7 day streak"
+    },
+    "testimonials": {
+      "title": "What Our Users Say",
+      "person1": {
+        "name": "John Smith",
+        "role": "Student",
+        "content": "J-Fixer has helped me significantly improve my Japanese pronunciation. The interesting lessons and spaced repetition method are truly effective!"
+      },
+      "person2": {
+        "name": "Emily Johnson",
+        "role": "Office worker",
+        "content": "I've been learning Japanese for 3 months with J-Fixer and can now communicate at a basic level. The AI error detection technology makes me more confident when speaking."
+      },
+      "person3": {
+        "name": "Michael Wang",
+        "role": "International student",
+        "content": "A great app for practicing and improving Japanese. The spaced repetition feature helps me remember vocabulary much longer."
+      }
+    },
+    "cta": {
+      "title": "Ready to enhance your Japanese skills?",
+      "subtitle": "Learn right, advance far with J-Fixer today",
+      "button": "Start for free"
+    },
+    "footer": {
+      "copyright": "© 2025 J-Fixer. All rights reserved.",
+      "terms": "Terms",
+      "privacy": "Privacy Policy",
+      "contact": "Contact"
+    }
   }
 }

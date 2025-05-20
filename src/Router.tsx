@@ -1,6 +1,5 @@
 import { AdminLayout } from "@/components/layout/AdminLayout";
 import { AuthLayout } from "@/components/layout/AuthLayout";
-import { DefaultLayout } from "@/components/layout/DefaultLayout";
 import { UserLayout } from "@/components/layout/UserLayout";
 import { ROUTERS } from "@/constant";
 import AdminDashboard from "@/pages/admin/Dashboard";
@@ -11,6 +10,7 @@ import Home from "@/pages/Home";
 import AddLearningGoal from "@/pages/user/AddLearningGoal";
 import Learn from "@/pages/user/Learn";
 import { Navigate, Route, Routes } from "react-router-dom";
+import { LandingLayout } from "./components/layout/LandingLayout";
 import AdminFreeTopic from "./pages/admin/FreeTopic";
 import AdminFreeTopicCreate from "./pages/admin/FreeTopicCreate";
 import AdminFreeTopicDetail from "./pages/admin/FreeTopicDetail";
@@ -36,6 +36,7 @@ import AdminVocabulary from "./pages/admin/Vocabulary";
 import AdminVocabularyCreate from "./pages/admin/VocabularyCreate";
 import AdminVocabularyDetail from "./pages/admin/VocabularyDetail";
 import AdminVocabularyUpdate from "./pages/admin/VocabularyUpdate";
+import LandingPage from "./pages/Landing";
 import NotFoundPage from "./pages/NotFound";
 import CheckGrammar from "./pages/user/CheckGrammar";
 import LearnCommunication from "./pages/user/LearnCommunication";
@@ -72,8 +73,8 @@ const Router = () => {
   return (
     <Routes>
       {/* Default routes */}
-      <Route element={<DefaultLayout />}>
-        <Route path={ROUTERS.HOME} element={<Home />} />
+      <Route element={<LandingLayout />}>
+        <Route path={ROUTERS.HOME} element={<LandingPage />} />
       </Route>
 
       {/* Auth routes */}

@@ -669,5 +669,100 @@
     "detectedIssues": "文法エラーが見つかりました{{count}}",
     "noIssuesFound": "文法エラーは見つかりませんでした",
     "errorOccurred": "エラーが発生しました"
+  },
+  "landing": {
+    "nav": {
+      "home": "ホーム",
+      "features": "特徴",
+      "about": "私たちについて",
+      "contact": "お問い合わせ"
+    },
+    "hero": {
+      "title": "JFixerで日本語を学ぶ",
+      "subtitle": "スマートエラー検出と修正 - 正しく学ぶ、遠くまで進む",
+      "cta": "無料で始める",
+      "secondaryCta": "詳細を見る"
+    },
+    "features": {
+      "title": "主な特徴",
+      "feature1": "AIエラー検出",
+      "description1": "AI技術が発音や文法のエラーを正確に検出し修正します",
+      "feature2": "間隔反復学習",
+      "description2": "長期的かつ効果的な記憶のための科学的学習方法",
+      "feature3": "完璧な発音",
+      "description3": "先進的な音声認識技術で発音を練習",
+      "feature4": "進捗管理",
+      "description4": "詳細な進捗チャートがモチベーションを維持するのに役立ちます"
+    },
+    "how": {
+      "title": "使い方",
+      "step1": {
+        "title": "無料でサインアップ",
+        "description": "数秒でアカウントを作成し、日本語学習の旅を始めましょう"
+      },
+      "step2": {
+        "title": "毎日練習",
+        "description": "インタラクティブなレッスンで毎日15〜20分練習しましょう"
+      },
+      "step3": {
+        "title": "AIフィードバック",
+        "description": "スマートAIがエラーを検出し、改善提案を提供します"
+      },
+      "step4": {
+        "title": "着実な進歩",
+        "description": "あなたの進歩を追跡し、重要なマイルストーンを達成しましょう"
+      }
+    },
+    "demo": {
+      "title": "J-Fixerを体験する",
+      "description": "スマートAI技術がエラーを即座に検出して修正します。J-Fixerの動作を確認してください：",
+      "feature1": {
+        "title": "正確なエラー検出",
+        "description": "AIが発音、文法、語彙のエラーを高精度で検出します"
+      },
+      "feature2": {
+        "title": "詳細な改善提案",
+        "description": "各エラーに対する詳細なフィードバックと具体的な改善提案を受け取る"
+      },
+      "feature3": {
+        "title": "ターゲットを絞った練習",
+        "description": "パーソナライズされた演習であなたの弱点に焦点を当てる"
+      },
+      "exerciseTitle": "今日の練習",
+      "errorText": "文法エラー：「見った」は「見た」であるべきです",
+      "explanation": "説明を見る",
+      "next": "次へ",
+      "progress": "あなたの進捗",
+      "streak": "7日連続"
+    },
+    "testimonials": {
+      "title": "ユーザーの声",
+      "person1": {
+        "name": "田中太郎",
+        "role": "学生",
+        "content": "J-Fixerは私の日本語の発音を大幅に改善するのに役立ちました。興味深いレッスンと間隔反復学習法は本当に効果的です！"
+      },
+      "person2": {
+        "name": "佐藤花子",
+        "role": "会社員",
+        "content": "J-Fixerで3ヶ月間日本語を勉強し、基本的なコミュニケーションができるようになりました。AIエラー検出技術のおかげで、話すときの自信が増しました。"
+      },
+      "person3": {
+        "name": "鈴木一郎",
+        "role": "留学生",
+        "content": "日本語の練習と向上に最適なアプリです。間隔反復機能のおかげで、語彙をずっと長く覚えていられます。"
+      }
+    },
+    "cta": {
+      "title": "日本語スキルを向上させる準備はできていますか？",
+      "subtitle": "今日からJ-Fixerで正しく学び、遠くまで進みましょう",
+      "button": "無料で始める"
+    },
+    "footer": {
+      "copyright": "© 2025 J-Fixer. 全著作権所有。",
+      "terms": "利用規約",
+      "privacy": "プライバシーポリシー",
+      "contact": "お問い合わせ"
+    }
   }
 }

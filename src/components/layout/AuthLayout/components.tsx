@@ -44,7 +44,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className={`flex items-center gap-2 py-1 px-2 bg-slate-800 bg-opacity-10 rounded-md ${className}`}>
+      <DropdownMenuTrigger className={`flex items-center gap-2 py-1 px-2 bg-slate-800 bg-opacity-10 rounded-md ${className} focus:outline-none`}>
         <img
           src={getCurrentFlag()}
           alt={currentLang}
