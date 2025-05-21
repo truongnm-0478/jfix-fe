@@ -7,42 +7,12 @@ import useLanguage from "@/store/useLanguage";
 import { useUserStore } from "@/store/useUserStore";
 import { getRefreshToken, setLanguageStorage } from "@/utils/storage";
 import { useMutation } from "@tanstack/react-query";
-import { Download, LogOut, Settings } from "lucide-react";
+import { Download, LogOut } from "lucide-react";
 import { forwardRef, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-
-const languageOptions = [
-  { value: "en", label: "English", flag: "/app/images/front/flag-en.svg" },
-  { value: "ja", label: "日本語", flag: "/app/images/front/flag-jp.svg" },
-  { value: "vi", label: "Tiếng Việt", flag: "/app/images/front/flag-vi.svg" },
-];
-
-const SettingsButton = forwardRef<HTMLButtonElement>((props, ref) => {
-  const { t } = useTranslation();
-  return (
-    <button
-      ref={ref}
-      className={cn(
-        "flex items-center gap-3 rounded-xl px-3 py-3 text-sm transition-colors select-none relative w-full",
-        "hover:bg-primary/5 hover:text-primary",
-        "text-[#707EAE]",
-        "lg:text-sm md:text-xs"
-      )}
-      {...props}
-    >
-      <Settings className="h-[18px] w-[18px] stroke-[2.5px] transform-none transition-transform" />
-      <span
-        className={cn(
-          "font-medium transform-none transition-none whitespace-nowrap",
-          "lg:block md:hidden"
-        )}
-      >
-        {t("sidebar.settings")}
-      </span>
-    </button>
-  );
-});
+import { LANGUAGE_OPTIONS } from "../constant";
+import { SettingsButton } from "./SettingsButton";
 
 export const SettingsMenu = forwardRef<HTMLButtonElement>((props, ref) => {
   const { t, i18n } = useTranslation();
@@ -50,6 +20,8 @@ export const SettingsMenu = forwardRef<HTMLButtonElement>((props, ref) => {
   const { lang, setLanguage } = useLanguage();
   const [open, setOpen] = useState(false);
   const { logout } = useUserStore();
+
+  const languageOptions = LANGUAGE_OPTIONS;
 
   useEffect(() => {
     const handleResize = () => {
@@ -80,8 +52,7 @@ export const SettingsMenu = forwardRef<HTMLButtonElement>((props, ref) => {
   };
 
   const handleCheckUpdate = () => {
-    // Handle check update logic here
-    console.log("Checking for updates...");
+    window.location.reload();
   };
 
   const handleLanguageChange = (newLang: string) => {

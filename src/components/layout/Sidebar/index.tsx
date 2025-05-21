@@ -1,152 +1,25 @@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { ROUTERS } from "@/constant";
 import { cn } from "@/lib/utils";
 import { useUserStore } from "@/store/useUserStore";
-import { AudioLines, Bell, Book, BookA, BookOpen, BookType, CheckCheck, Home, ListTodo, LucideIcon, MicVocal, ScrollText, Settings, SquareKanban, User2, Users, WrapText } from "lucide-react";
-import { forwardRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
-import { SettingsMenu } from "./components";
-
-interface MenuItem {
-  icon: LucideIcon;
-  label: string;
-  path: string;
-  roles?: string[];
-}
-
-const MenuLink = forwardRef<HTMLAnchorElement, { item: MenuItem; isActive: boolean }>(({ item, isActive }, ref) => {
-  const Icon = item.icon;
-  return (
-    <Link
-      ref={ref}
-      to={item.path}
-      className={cn(
-        "flex items-center gap-3 rounded-xl px-4 py-3 text-sm transition-colors select-none relative",
-        "hover:bg-primary/5 hover:text-primary",
-        isActive 
-          ? "bg-primary text-white before:absolute before:right-0 before:top-0 before:h-full before:w-1 before:rounded-l-xl before:bg-primary-light" 
-          : "text-[#707EAE]",
-        "lg:text-sm md:text-xs"
-      )}
-    >
-      <Icon className="h-[18px] w-[18px] stroke-[2.5px] transform-none transition-transform" />
-      <span className={cn(
-        "font-medium transform-none transition-none whitespace-nowrap",
-        "lg:block md:hidden"
-      )}>{item.label}</span>
-    </Link>
-  );
-});
-
-const MenuItem = ({ item }: { item: MenuItem }) => {
-  const isActive = useLocation().pathname.startsWith(item.path);
-  const { user } = useUserStore();
-
-  // Nếu item có roles và vai trò của người dùng không nằm trong roles, không hiển thị
-  if (item.roles && user?.role && !item.roles.includes(user.role)) {
-    return null;
-  }
-
-  return (
-    <div className="lg:block md:block">
-      <div className="lg:hidden md:block">
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <MenuLink item={item} isActive={isActive} />
-          </TooltipTrigger>
-          <TooltipContent side="right" className="bg-primary text-white border border-gray-100 shadow-sm">
-            <p>{item.label}</p>
-          </TooltipContent>
-        </Tooltip>
-      </div>
-      <div className="lg:block md:hidden">
-        <MenuLink item={item} isActive={isActive} />
-      </div>
-    </div>
-  );
-};
+import { SidebarMenuItem } from "./components/MenuItem";
+import { SettingsMenu } from "./components/SettingsMenu";
+import { MENU_ITEMS } from "./constant";
+import { MenuItem } from "./type";
 
 export const Sidebar = () => {
   const { t } = useTranslation();
   const { user } = useUserStore();
 
-  // Kiểm tra vai trò người dùng, chuyển thành chữ hoa để so sánh
   const userRole = user?.role?.toUpperCase() || "";
   const isAdmin = userRole === "ADMIN";
 
-  const menuItems: MenuItem[] = [
-    { icon: Home, label: t("sidebar.home"), path: ROUTERS.HOME },
-    { icon: Bell, label: t("sidebar.notifications"), path: ROUTERS.NOTIFICATIONS },
-    { icon: Book, label: t("sidebar.study"), path: ROUTERS.LEARN },
-    { icon: CheckCheck, label: t("sidebar.checkGrammar"), path: ROUTERS.CHECK_GRAMMAR },
-    { icon: ListTodo, label: t("sidebar.progress"), path: ROUTERS.PROGRESS },
-    { icon: User2, label: t("sidebar.profile"), path: ROUTERS.USER_PROFILE },
-    {
-      icon: SquareKanban,
-      label: t("sidebar.dashboard"),
-      path: ROUTERS.ADMIN_DASHBOARD,
-      roles: ["ADMIN"]
-    },
-    {
-      icon: Users,
-      label: t("sidebar.userManagement"),
-      path: ROUTERS.ADMIN_USERS,
-      roles: ["ADMIN"]
-    },
-    {
-      icon: Settings,
-      label: t("sidebar.adminSettings"),
-      path: ROUTERS.ADMIN_SETTINGS,
-      roles: ["ADMIN"]
-    },
-    {
-      icon: BookOpen,
-      label: t("sidebar.lessonManagement"),
-      path: ROUTERS.ADMIN_LESSONS,
-      roles: ["ADMIN"]
-    },
-    {
-      icon: BookA,
-      label: t("sidebar.vocabularyManagement"),
-      path: ROUTERS.ADMIN_VOCABULARY,
-      roles: ["ADMIN"]
-    },
-    {
-      icon: BookType,
-      label: t("sidebar.grammarManagement"),
-      path: ROUTERS.ADMIN_GRAMMAR,
-      roles: ["ADMIN"]
-    },
-    {
-      icon: AudioLines,
-      label: t("sidebar.freeTopicManagement"),
-      path: ROUTERS.ADMIN_FREE_TOPICS,
-      roles: ["ADMIN"]
-    },
-    {
-      icon: MicVocal,
-      label: t("sidebar.questionManagement"),
-      path: ROUTERS.ADMIN_QUESTIONS,
-      roles: ["ADMIN"]
-    },
-    {
-      icon: WrapText,
-      label: t("sidebar.sentenceManagement"),
-      path: ROUTERS.ADMIN_SENTENCES,
-      roles: ["ADMIN"]
-    },
-    {
-      icon: ScrollText,
-      label: t("sidebar.paragraphManagement"),
-      path: ROUTERS.ADMIN_PARAGRAPHS,
-      roles: ["ADMIN"]
-    }
-  ];
+  const menuItems: MenuItem[] = MENU_ITEMS;
 
   const filteredMenuItems = isAdmin
     ? menuItems.filter(item => item.roles && item.roles.includes("ADMIN"))
-    : menuItems.filter(item => !item.roles);
+    : menuItems.filter(item => item.roles && item.roles.includes("USER"));
 
   return (
     <TooltipProvider>
@@ -178,7 +51,7 @@ export const Sidebar = () => {
           <nav className="flex flex-1 flex-col justify-between py-6">
             <div className="space-y-1 px-3">
               {filteredMenuItems.map((item) => (
-                <MenuItem key={item.path} item={item} />
+                <SidebarMenuItem key={item.path} item={item} />
               ))}
             </div>
 
@@ -224,7 +97,7 @@ export const Sidebar = () => {
                   )}
                 >
                   <Icon className="h-[18px] w-[18px] stroke-[2.5px] transform-none transition-transform" />
-                  <span className="transform-none transition-none whitespace-nowrap text-[10px] font-medium">{item.label}</span>
+                  <span className="transform-none transition-none whitespace-nowrap text-[10px] font-medium">{t(item.label)}</span>
                 </Link>
               );
             })}
