@@ -36,3 +36,10 @@ export type UserDetail = {
   refreshToken?: string | null;
   accessToken?: string | null;
 };
+
+export type UpdateProfile = {
+  name: string;
+  email: string;
+  phone: string;
+  avatar?: File | string | null;
+};

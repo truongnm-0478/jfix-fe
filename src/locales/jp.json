@@ -790,5 +790,67 @@
       "privacy": "プライバシーポリシー",
       "contact": "お問い合わせ"
     }
+  },
+  "profile": {
+    "title": "ユーザーのプロフィール",
+    "settings": "設定",
+    "tabs": {
+      "userProfile": "ユーザーのプロフィール",
+      "updateInfo": "情報を変更する",
+      "changePassword": "パスワードを変更する"
+    },
+    "fields": {
+      "id": "ID",
+      "username": "ユーザー名",
+      "name": "名前",
+      "email": "メールアドレス",
+      "phone": "電話番号",
+      "currentPassword": "現在のパスワード",
+      "newPassword": "新しいパスワード",
+      "confirmPassword": "新しいパスワードを確認する"
+    },
+    "notProvided": "提供されていません",
+    "changeAvatar": "アバターを変更する",
+    "updateProfile": "プロフィールを更新する",
+    "changePassword": "パスワードを変更する",
+    "passwordRequirements": "パスワードは少なくとも8文字で、大文字、小文字、数字、特殊文字を含む必要があります。",
+    "buttons": {
+      "saveChanges": "変更を保存する",
+      "saving": "保存中...",
+      "updatePassword": "パスワードを更新する",
+      "updating": "更新中..."
+    },
+    "errors": {
+      "fetchFailed": "ユーザーの情報を読み込めませんでした。後でもう一度試してください。",
+      "updateFailed": "情報を更新できませんでした。後でもう一度試してください。",
+      "passwordsDoNotMatch": "新しいパスワードと確認パスワードが一致しません。",
+      "passwordRequirements": "新しいパスワードが要件を満たしていません。",
+      "passwordChangeFailed": "パスワードの変更に失敗しました。現在のパスワードを確認してください。"
+    },
+    "successMessages": {
+      "profileUpdated": "プロフィールが更新されました。",
+      "passwordChanged": "パスワードが変更されました。"
+    },
+    "placeholders": {
+      "name": "名前を入力",
+      "email": "メールアドレスを入力",
+      "phone": "電話番号を入力",
+      "currentPassword": "現在のパスワードを入力",
+      "newPassword": "新しいパスワードを入力",
+      "confirmPassword": "新しいパスワードを確認"
+    },
+    "validation": {
+      "nameRequired": "名前を入力してください",
+      "emailRequired": "メールアドレスを入力してください",
+      "phoneRequired": "電話番号を入力してください",
+      "currentPasswordRequired": "現在のパスワードを入力してください",
+      "newPasswordRequired": "新しいパスワードを入力してください",
+      "confirmPasswordRequired": "新しいパスワードを確認してください",
+      "passwordRequirements": "パスワードは少なくとも8文字で、大文字、小文字、数字、特殊文字を含む必要があります。",
+      "newPasswordMin": "パスワードは少なくとも8文字である必要があります",
+      "newPasswordMax": "パスワードは16文字を超えてはいけません",
+      "passwordsMatch": "新しいパスワードと確認パスワードが一致しません",
+      "phoneFormat": "電話番号が不正です"
+    }
   }
 }

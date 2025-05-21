@@ -785,5 +785,67 @@
       "privacy": "Privacy Policy",
       "contact": "Contact"
     }
+  },
+  "profile": {
+    "title": "User profile",
+    "settings": "Settings",
+    "tabs": {
+      "userProfile": "User profile",
+      "updateInfo": "Update information",
+      "changePassword": "Change password"
+    },
+    "fields": {
+      "id": "ID",
+      "username": "Username",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "currentPassword": "Current password",
+      "newPassword": "New password",
+      "confirmPassword": "Confirm new password"
+    },
+    "notProvided": "Not provided",
+    "changeAvatar": "Change avatar",
+    "updateProfile": "Update profile",
+    "changePassword": "Change password",
+    "passwordRequirements": "Password must be at least 8 characters, including uppercase, lowercase, numbers, and special characters.",
+    "buttons": {
+      "saveChanges": "Save changes",
+      "saving": "Saving...",
+      "updatePassword": "Update password",
+      "updating": "Updating..."
+    },
+    "errors": {
+      "fetchFailed": "Failed to fetch user information. Please try again later.",
+      "updateFailed": "Update information failed. Please try again later.",
+      "passwordsDoNotMatch": "New password and confirm password do not match.",
+      "passwordRequirements": "New password does not meet the strength requirements.",
+      "passwordChangeFailed": "Password change failed. Please check your current password."
+    },
+    "successMessages": {
+      "profileUpdated": "Profile updated successfully.",
+      "passwordChanged": "Password changed successfully."
+    },
+    "placeholders": {
+      "name": "Enter name",
+      "email": "Enter email",
+      "phone": "Enter phone",
+      "currentPassword": "Enter current password",
+      "newPassword": "Enter new password",
+      "confirmPassword": "Confirm new password"
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "phoneRequired": "Phone is required",
+      "currentPasswordRequired": "Current password is required",
+      "newPasswordRequired": "New password is required",
+      "confirmPasswordRequired": "Confirm password is required",
+      "passwordRequirements": "Password must be at least 8 characters, including uppercase, lowercase, numbers, and special characters.",
+      "newPasswordMin": "Password must be at least 8 characters",
+      "newPasswordMax": "Password cannot exceed 16 characters",
+      "passwordsMatch": "New password and confirm password do not match",
+      "phoneFormat": "Phone is invalid"
+    }
   }
 }

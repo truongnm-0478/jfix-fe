@@ -170,3 +170,25 @@ export const paragraphUpdateFormSchema = (t: (key: string, params?: { field?: st
   level: z.string().min(1, { message: t("adminParagraph.validationRequired", { field: t("adminParagraph.level") }) }),
   topic: z.string().min(1, { message: t("adminParagraph.validationRequired", { field: t("adminParagraph.topic") }) }),
 });
+
+export const updateProfileSchema = (t: (key: string) => string) => z.object({
+  name: z.string().min(1, t("profile.validation.nameRequired")),
+  email: z.string()
+    .min(1, t("profile.validation.emailRequired"))
+    .regex(regexEmail, t("validation.invalid-email")),
+  phone: z.string()
+    .min(1, t("profile.validation.phoneRequired"))
+    .regex(/^\d{10,15}$/, t("profile.validation.phoneFormat")),
+  avatar: z.any().optional(),
+});
+
+export const changePasswordSchema = (t: (key: string) => string) => z.object({
+  oldPassword: z.string().min(1, t("profile.validation.currentPasswordRequired")),
+  newPassword: z.string()
+    .min(8, t("profile.validation.newPasswordMin"))
+    .regex(regexPassword, t("profile.validation.passwordRequirements")),
+  confirmPassword: z.string().min(1, t("profile.validation.confirmPasswordRequired")),
+}).refine((data) => data.newPassword === data.confirmPassword, {
+  message: t("profile.validation.passwordsMatch"),
+  path: ["confirmPassword"],
+});

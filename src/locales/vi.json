@@ -800,5 +800,67 @@
       "privacy": "Chính sách bảo mật",
       "contact": "Liên hệ"
     }
+  },
+  "profile": {
+    "title": "Hồ sơ người dùng",
+    "settings": "Cài đặt",
+    "tabs": {
+      "userProfile": "Hồ sơ người dùng",
+      "updateInfo": "Thay đổi thông tin",
+      "changePassword": "Thay đổi mật khẩu"
+    },
+    "fields": {
+      "id": "ID",
+      "username": "Tên đăng nhập",
+      "name": "Họ và tên",
+      "email": "Email",
+      "phone": "Số điện thoại",
+      "currentPassword": "Mật khẩu hiện tại",
+      "newPassword": "Mật khẩu mới",
+      "confirmPassword": "Xác nhận mật khẩu mới"
+    },
+    "notProvided": "Chưa cung cấp",
+    "changeAvatar": "Thay đổi ảnh đại diện",
+    "updateProfile": "Cập nhật hồ sơ",
+    "changePassword": "Thay đổi mật khẩu",
+    "passwordRequirements": "Mật khẩu phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt.",
+    "buttons": {
+      "saveChanges": "Lưu thay đổi",
+      "saving": "Đang lưu...",
+      "updatePassword": "Cập nhật mật khẩu",
+      "updating": "Đang cập nhật..."
+    },
+    "errors": {
+      "fetchFailed": "Không thể tải thông tin người dùng. Vui lòng thử lại sau.",
+      "updateFailed": "Cập nhật thông tin không thành công. Vui lòng thử lại sau.",
+      "passwordsDoNotMatch": "Mật khẩu mới và mật khẩu xác nhận không khớp.",
+      "passwordRequirements": "Mật khẩu mới không đáp ứng yêu cầu về độ mạnh.",
+      "passwordChangeFailed": "Thay đổi mật khẩu không thành công. Vui lòng kiểm tra mật khẩu hiện tại của bạn."
+    },
+    "successMessages": {
+      "profileUpdated": "Thông tin hồ sơ đã được cập nhật thành công.",
+      "passwordChanged": "Mật khẩu đã được thay đổi thành công."
+    },
+    "placeholders": {
+      "name": "Nhập họ và tên",
+      "email": "Nhập email",
+      "phone": "Nhập số điện thoại",
+      "currentPassword": "Nhập mật khẩu hiện tại",
+      "newPassword": "Nhập mật khẩu mới",
+      "confirmPassword": "Xác nhận mật khẩu mới"
+    },
+    "validation": {
+      "nameRequired": "Họ và tên không được để trống",
+      "emailRequired": "Email không được để trống",
+      "phoneRequired": "Số điện thoại không được để trống",
+      "currentPasswordRequired": "Mật khẩu hiện tại không được để trống",
+      "newPasswordRequired": "Mật khẩu mới không được để trống",
+      "confirmPasswordRequired": "Xác nhận mật khẩu không được để trống",
+      "passwordRequirements": "Mật khẩu phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt.",
+      "newPasswordMin": "Mật khẩu phải có ít nhất 8 ký tự",
+      "newPasswordMax": "Mật khẩu không được vượt quá 16 ký tự",
+      "passwordsMatch": "Mật khẩu mới và mật khẩu xác nhận không khớp",
+      "phoneFormat": "Số điện thoại không hợp lệ"
+    }
   }
 }

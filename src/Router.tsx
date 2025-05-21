@@ -38,6 +38,7 @@ import AdminVocabularyDetail from "./pages/admin/VocabularyDetail";
 import AdminVocabularyUpdate from "./pages/admin/VocabularyUpdate";
 import LandingPage from "./pages/Landing";
 import NotFoundPage from "./pages/NotFound";
+import Profile from "./pages/Profile";
 import CheckGrammar from "./pages/user/CheckGrammar";
 import LearnCommunication from "./pages/user/LearnCommunication";
 import LearnCommunicationCard from "./pages/user/LearnCommunicationCard";
@@ -74,7 +75,7 @@ const Router = () => {
     <Routes>
       {/* Default routes */}
       <Route element={<LandingLayout />}>
-        <Route path={ROUTERS.HOME} element={<LandingPage />} />
+        <Route path={ROUTERS.DEFAULT} element={<LandingPage />} />
       </Route>
 
       {/* Auth routes */}
@@ -125,6 +126,7 @@ const Router = () => {
       {/* User routes */}
       <Route element={<UserLayout />}>
         {/* Public route */}
+        <Route path={ROUTERS.HOME} element={<Home />} />
         <Route path={ROUTERS.LEARN} element={<Learn />} />
         <Route path={ROUTERS.LEARN_VOCABULARY} element={<LearnVocabulary />} />
         <Route path={ROUTERS.LEARN_GRAMMAR} element={<LearnGrammar />} />
@@ -141,11 +143,10 @@ const Router = () => {
         <Route path={ROUTERS.ACHIEVEMENT} element={<>achievement</>} />
         <Route path={ROUTERS.PROGRESS} element={<UserProgress />} />
         <Route path={ROUTERS.CHECK_GRAMMAR} element={<CheckGrammar />} />
-        {/* Protected user routes */}
+        <Route path={ROUTERS.USER_PROFILE} element={<Profile />} />
         <Route
           element={
             <PrivateRoute>
-              <Route path={ROUTERS.USER_PROFILE} element={<Home />} />
               <Route path={ROUTERS.USER_SETTINGS} element={<Home />} />
             </PrivateRoute>
           }
