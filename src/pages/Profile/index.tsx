@@ -21,7 +21,7 @@ export const Profile = () => {
   };
 
   return (
-    <div className="min-h-screen py-8 xl:px-2 px-4">
+    <div className="min-h-screen md:py-8 py-12 xl:px-2 px-4">
       <div className="xl:px-5 px-0 grid grid-cols-1 xl:grid-cols-12 gap-8">
         <div className="xl:col-span-4 order-1 xl:order-2 flex flex-col gap-4">
           <MenuSetting activeTab={activeTab} setActiveTab={setActiveTab} />

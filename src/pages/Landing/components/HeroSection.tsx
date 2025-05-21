@@ -43,7 +43,7 @@ export const HeroSection = () => {
           
           <div className="md:w-1/2 relative">
             <div className={`transition-all duration-700 delay-300 ${inView ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'}`}>
-              <img src="public/images/landing.png" alt="Hero Image" className="w-full h-full object-cover" />
+              <img src="/images/landing.png" alt="Hero Image" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

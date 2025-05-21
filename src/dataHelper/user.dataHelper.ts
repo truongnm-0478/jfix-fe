@@ -43,3 +43,22 @@ export type UpdateProfile = {
   phone: string;
   avatar?: File | string | null;
 };
+
+export interface UserStreak {
+  id: number;
+  name: string;
+  avatar: string | null;
+  streak: number;
+  email: string;
+  username: string;
+}
+
+export interface UserCardCount {
+  id: number;
+  name: string;
+  avatar: string | null;
+  email: string;
+  username: string;
+  month: string;
+  cardCount: number;
+}

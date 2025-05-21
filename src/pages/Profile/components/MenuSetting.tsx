@@ -29,7 +29,7 @@ export const MenuSetting = ({ activeTab, setActiveTab }: { activeTab: string, se
         {menuItems.map((item) => (
           <button
             key={item.id}
-            className={`flex items-center gap-3 p-4 text-left transition-colors border-b border-gray-100 hover:bg-primary/10 hover:text-primary/70 ${
+            className={`flex items-center text-sm gap-3 p-4 text-left transition-colors border-b border-gray-100 hover:bg-primary/10 hover:text-primary/70 ${
               activeTab === item.id
                 ? "bg-primary text-white font-medium"
                 : "text-slate-500"

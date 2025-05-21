@@ -862,5 +862,33 @@
       "passwordsMatch": "Mật khẩu mới và mật khẩu xác nhận không khớp",
       "phoneFormat": "Số điện thoại không hợp lệ"
     }
+  },
+  "userRanking": {
+    "header": {
+      "title": "Bảng Xếp Hạng",
+      "description": "Cùng theo dõi và thi đua với những người học xuất sắc nhất!",
+      "cta": "Cùng nhau phát triển!"
+    },
+    "rank": "Hạng",
+    "day": "ngày",
+    "card": "thẻ",
+    "loading": "Đang tải dữ liệu...",
+    "mostStreak": "Chuỗi ngày dài nhất",
+    "mostCards": "Thẻ học nhiều nhất",
+    "topUser": "Người dẫn đầu tháng",
+    "streak": "Chuỗi ngày học",
+    "cards": "Số thẻ đã học",
+    "topCards": "Top Số Thẻ Học Tập",
+    "streakDescription": "Những người dùng có chuỗi ngày học liên tục dài nhất",
+    "cardsDescription": "Những người dùng học nhiều thẻ nhất trong tháng"
+  },
+  "userAchievementCard": {
+    "lessonCompleted": "Bài học hoàn thành",
+    "streakDays": "Chuỗi ngày học",
+    "achievement": "Thành tích",
+    "lessonCompletedUnit": "bài",
+    "streakDaysUnit": "ngày",
+    "newAchievement": "Thành tích mới nhất",
+    "continue": "Tiếp tục phát huy!"
   }
 }
