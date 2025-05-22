@@ -434,7 +434,22 @@
     "lockedAt": "Đã khóa lúc",
     "createDate": "Ngày tạo",
     "updateDate": "Ngày cập nhật",
-    "deleteDate": "Ngày xóa"
+    "deleteDate": "Ngày xóa",
+    "password": "Mật khẩu",
+    "createTitle": "Thêm tài khoản mới",
+    "userCreatedSuccess": "Tạo tài khoản thành công",
+    "errorCreatingUser": "Lỗi khi tạo tài khoản",
+    "usernamePlaceholder": "Nhập tên đăng nhập",
+    "namePlaceholder": "Nhập họ và tên",
+    "emailPlaceholder": "Nhập email",
+    "phonePlaceholder": "Nhập số điện thoại",
+    "rolePlaceholder": "Chọn vai trò",
+    "passwordPlaceholder": "Nhập mật khẩu",
+    "validationRequired": "{{field}} là bắt buộc",
+    "roles": {
+      "ADMIN": "Quản trị viên",
+      "USER": "Người dùng"
+    }
   },
   "adminVocabulary": {
     "vocabularyManagement": "Quản lý từ vựng",

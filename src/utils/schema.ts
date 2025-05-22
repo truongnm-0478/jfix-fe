@@ -192,3 +192,24 @@ export const changePasswordSchema = (t: (key: string) => string) => z.object({
   message: t("profile.validation.passwordsMatch"),
   path: ["confirmPassword"],
 });
+
+export const userCreateFormSchema = (t: (key: string, params?: { field?: string }) => string) => z.object({
+  username: z.string()
+    .min(3, t("validation.username.min"))
+    .max(50, t("validation.username.max"))
+    .regex(regexUsername, t("validation.username.regex")),
+  name: z.string()
+    .min(1, { message: t("adminUsers.validationRequired", { field: t("adminUsers.name") }) }),
+  email: z.string()
+    .min(1, { message: t("adminUsers.validationRequired", { field: t("adminUsers.email") }) })
+    .regex(regexEmail, t("validation.invalid-email")),
+  phone: z.string()
+    .min(1, { message: t("adminUsers.validationRequired", { field: t("adminUsers.phone") }) })
+    .regex(regexPhone, t("validation.invalid-phone")),
+  role: z.string()
+    .min(1, { message: t("adminUsers.validationRequired", { field: t("adminUsers.role") }) }),
+  password: z.string()
+    .min(8, t("validation.password.min"))
+    .max(50, t("validation.password.max"))
+    .regex(regexPassword, t("validation.password.regex")),
+});

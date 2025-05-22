@@ -31,6 +31,7 @@ import AdminSpeakingQuestion from "./pages/admin/SpeakingQuestion";
 import AdminSpeakingQuestionCreate from "./pages/admin/SpeakingQuestionCreate";
 import AdminSpeakingQuestionDetail from "./pages/admin/SpeakingQuestionDetail";
 import AdminSpeakingQuestionUpdate from "./pages/admin/SpeakingQuestionUpdate";
+import UserCreate from "./pages/admin/UserCreate";
 import UserDetail from "./pages/admin/UserDetail";
 import AdminVocabulary from "./pages/admin/Vocabulary";
 import AdminVocabularyCreate from "./pages/admin/VocabularyCreate";
@@ -110,6 +111,7 @@ const Router = () => {
       >
         <Route path={ROUTERS.ADMIN_DASHBOARD} element={<AdminDashboard />} />
         <Route path={ROUTERS.ADMIN_USERS} element={<AdminUsers />} />
+        <Route path={ROUTERS.ADMIN_USER_CREATE} element={<UserCreate />} />
         <Route path={ROUTERS.ADMIN_USER_DETAIL} element={<UserDetail />} />
         <Route path={ROUTERS.ADMIN_VOCABULARY} element={<AdminVocabulary />} />
         <Route path={ROUTERS.ADMIN_GRAMMAR} element={<AdminGrammar />} />

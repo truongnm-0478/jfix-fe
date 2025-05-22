@@ -426,7 +426,22 @@
     "lockedAt": "Locked at",
     "createDate": "Create date",
     "updateDate": "Update date",
-    "deleteDate": "Delete date"
+    "deleteDate": "Delete date",
+    "password": "Password",
+    "createTitle": "Create new account",
+    "userCreatedSuccess": "User created successfully",
+    "errorCreatingUser": "Error creating user",
+    "usernamePlaceholder": "Enter username",
+    "namePlaceholder": "Enter name",
+    "emailPlaceholder": "Enter email",
+    "phonePlaceholder": "Enter phone",
+    "rolePlaceholder": "Select role",
+    "passwordPlaceholder": "Enter password",
+    "validationRequired": "{{field}} is required",
+    "roles": {
+      "ADMIN": "Admin",
+      "USER": "User"
+    }
   },
   "adminVocabulary": {
     "vocabularyManagement": "Vocabulary management",

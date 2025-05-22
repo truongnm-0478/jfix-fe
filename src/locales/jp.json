@@ -430,7 +430,22 @@
     "lockedAt": "ロックされた日時",
     "createDate": "作成日",
     "updateDate": "更新日",
-    "deleteDate": "削除日"
+    "deleteDate": "削除日",
+    "password": "パスワード",
+    "createTitle": "新しいアカウントを作成",
+    "userCreatedSuccess": "ユーザーが作成されました",
+    "errorCreatingUser": "ユーザーの作成に失敗しました",
+    "usernamePlaceholder": "ユーザー名を入力",
+    "namePlaceholder": "名前を入力",
+    "emailPlaceholder": "メールアドレスを入力",
+    "phonePlaceholder": "電話番号を入力",
+    "rolePlaceholder": "ロールを選択",
+    "passwordPlaceholder": "パスワードを入力",
+    "validationRequired": "{{field}}は必須です",
+    "roles": {
+      "ADMIN": "管理者",
+      "USER": "ユーザー"
+    }
   },
   "adminVocabulary": {
     "vocabularyManagement": "単語管理",

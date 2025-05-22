@@ -36,3 +36,12 @@ export interface UserQueryParams {
   sortDir?: "asc" | "desc";
   deleted?: boolean;
 }
+
+export interface CreateUserRequest {
+  username: string;
+  role: string;
+  name: string;
+  email: string;
+  phone: string;
+  password: string;
+}

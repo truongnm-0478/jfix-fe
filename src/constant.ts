@@ -23,6 +23,7 @@ export const enum ROUTERS {
 
   ADMIN_USERS = "/admin/users",
   ADMIN_USER_DETAIL = "/admin/users/:id",
+  ADMIN_USER_CREATE = "/admin/users/create",
 
   ADMIN_VOCABULARY = "/admin/vocabulary",
   ADMIN_VOCABULARY_DETAIL = "/admin/vocabulary/:id",
