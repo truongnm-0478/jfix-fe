@@ -54,6 +54,7 @@ import LearnVocabulary from "./pages/user/LearnVocabulary";
 import LearnVocabularyCard from "./pages/user/LearnVocabularyCard";
 import StreakDay from "./pages/user/StreakDay";
 import UserProgress from "./pages/user/UserProgress";
+import UserRanking from "./pages/user/UserRanking";
 import { useUserStore } from "./store/useUserStore";
 
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
@@ -144,6 +145,7 @@ const Router = () => {
         <Route path={ROUTERS.PROGRESS} element={<UserProgress />} />
         <Route path={ROUTERS.CHECK_GRAMMAR} element={<CheckGrammar />} />
         <Route path={ROUTERS.USER_PROFILE} element={<Profile />} />
+        <Route path={ROUTERS.USER_RANKING} element={<UserRanking />} />
         <Route
           element={
             <PrivateRoute>

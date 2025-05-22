@@ -6,6 +6,7 @@ export const enum ROUTERS {
   HOME = "/home",
   NOT_FOUND = "/404",
   NOTIFICATIONS = "/notifications",
+  USER_RANKING = "/user-ranking",
 
   // Auth
   LOGIN = "/login",
