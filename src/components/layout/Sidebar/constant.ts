@@ -118,7 +118,7 @@ export const MENU_ITEMS = [
   {
     icon: User2,
     label: "sidebar.profile",
-    path: ROUTERS.USER_PROFILE,
+    path: ROUTERS.USER_SETTING + "/" + ROUTERS.USER_PROFILE,
     roles: ["USER", "ADMIN"],
     mobile: true,
   },

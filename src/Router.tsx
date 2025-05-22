@@ -10,6 +10,7 @@ import AddLearningGoal from "@/pages/user/AddLearningGoal";
 import Learn from "@/pages/user/Learn";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { LandingLayout } from "./components/layout/LandingLayout";
+import SettingLayout from "./components/layout/SettingLayout";
 import AdminFreeTopic from "./pages/admin/FreeTopic";
 import AdminFreeTopicCreate from "./pages/admin/FreeTopicCreate";
 import AdminFreeTopicDetail from "./pages/admin/FreeTopicDetail";
@@ -37,7 +38,7 @@ import AdminVocabularyDetail from "./pages/admin/VocabularyDetail";
 import AdminVocabularyUpdate from "./pages/admin/VocabularyUpdate";
 import LandingPage from "./pages/Landing";
 import NotFoundPage from "./pages/NotFound";
-import Profile from "./pages/Profile";
+import ChangePassword from "./pages/user/ChangePassword";
 import CheckGrammar from "./pages/user/CheckGrammar";
 import LearnCommunication from "./pages/user/LearnCommunication";
 import LearnCommunicationCard from "./pages/user/LearnCommunicationCard";
@@ -52,6 +53,9 @@ import LearnQuestionCard from "./pages/user/LearnQuestionCard";
 import LearnVocabulary from "./pages/user/LearnVocabulary";
 import LearnVocabularyCard from "./pages/user/LearnVocabularyCard";
 import StreakDay from "./pages/user/StreakDay";
+import UpdateLearningGoal from "./pages/user/UpdateLearningGoal";
+import UpdateProfile from "./pages/user/UpdateProfile";
+import UserProfile from "./pages/user/UserProfile";
 import UserProgress from "./pages/user/UserProgress";
 import UserRanking from "./pages/user/UserRanking";
 import { useUserStore } from "./store/useUserStore";
@@ -61,12 +65,22 @@ const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
   return user ? <>{children}</> : <Navigate to={ROUTERS.LOGIN} />;
 };
 
+const UserRoute = ({ children }: { children: React.ReactNode }) => {
+  const { user } = useUserStore();
+  return user?.role === "USER" ? (
+    <>{children}</>
+  ) : (
+    <Navigate to={ROUTERS.DEFAULT} />
+  );
+};
+
+
 const AdminRoute = ({ children }: { children: React.ReactNode }) => {
   const { user } = useUserStore();
   return user?.role === "ADMIN" ? (
     <>{children}</>
   ) : (
-    <Navigate to={ROUTERS.HOME} />
+    <Navigate to={ROUTERS.DEFAULT} />
   );
 };
 
@@ -121,12 +135,16 @@ const Router = () => {
         <Route path={ROUTERS.ADMIN_PARAGRAPHS_CREATE} element={<AdminParagraphCreate />} />
         <Route path={ROUTERS.ADMIN_PARAGRAPHS_DETAIL} element={<AdminParagraphDetail />} />
         <Route path={ROUTERS.ADMIN_PARAGRAPHS_EDIT} element={<AdminParagraphUpdate />} />
-        <Route path={ROUTERS.USER_PROFILE} element={<Profile />} />
       </Route>
 
       {/* User routes */}
-      <Route element={<UserLayout />}>
-        {/* Public route */}
+      <Route element={
+        <PrivateRoute>
+          <UserRoute>
+            <UserLayout />
+          </UserRoute>
+        </PrivateRoute>
+      }>
         <Route path={ROUTERS.HOME} element={<UserRanking />} />
         <Route path={ROUTERS.LEARN} element={<Learn />} />
         <Route path={ROUTERS.LEARN_VOCABULARY} element={<LearnVocabulary />} />
@@ -143,8 +161,13 @@ const Router = () => {
         <Route path={ROUTERS.QUESTION_FLASHCARD} element={<LearnQuestionCard />} />
         <Route path={ROUTERS.PROGRESS} element={<UserProgress />} />
         <Route path={ROUTERS.CHECK_GRAMMAR} element={<CheckGrammar />} />
-        <Route path={ROUTERS.USER_PROFILE} element={<Profile />} />
         <Route path={ROUTERS.USER_RANKING} element={<UserRanking />} />
+        <Route path={ROUTERS.USER_SETTING} element={<SettingLayout />}>
+          <Route path={ROUTERS.USER_PROFILE} element={<UserProfile />} />
+          <Route path={ROUTERS.UPDATE_PROFILE} element={<UpdateProfile />} />
+          <Route path={ROUTERS.CHANGE_PASSWORD} element={<ChangePassword />} />
+          <Route path={ROUTERS.UPDATE_LEARNING_GOAL} element={<UpdateLearningGoal />} />
+        </Route>
       </Route>
 
       <Route path={ROUTERS.LEARNING_GOAL} element={<AddLearningGoal />} />

@@ -16,7 +16,9 @@ export const UserProfile = () => {
   if (error) {
     return (
       <div className="bg-red-50 text-red-600 p-4 rounded-lg">
-        {error instanceof Error ? error.message : t("profile.errors.fetchFailed")}
+        {error instanceof Error
+          ? error.message
+          : t("profile.errors.fetchFailed")}
       </div>
     );
   }
@@ -40,11 +42,11 @@ export const UserProfile = () => {
               )}
             </div>
           </div>
-          
+
           <div className="flex-1 flex flex-col items-center md:items-start">
             <h3 className="text-2xl font-bold text-slate-700">{user?.name}</h3>
             <p className="text-md text-slate-500 mb-4">@{user?.username}</p>
-            
+
             <div className="flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
               <Shield size={14} />
               <span>{user?.role}</span>
@@ -61,7 +63,7 @@ export const UserProfile = () => {
             </div>
             <p className="text-gray-900">{user?.username}</p>
           </div>
-          
+
           <div className="border-b border-gray-100 pb-4">
             <div className="flex items-center gap-2">
               <h4 className="text-sm font-bold text-gray-500 mb-2">
@@ -70,7 +72,7 @@ export const UserProfile = () => {
             </div>
             <p className="text-gray-900">{user?.name}</p>
           </div>
-          
+
           <div className="border-b border-gray-100 pb-4">
             <div className="flex items-center gap-2">
               <h4 className="text-sm font-bold text-gray-500">
@@ -79,14 +81,16 @@ export const UserProfile = () => {
             </div>
             <p className="text-gray-900 mt-1">{user?.email}</p>
           </div>
-          
+
           <div className="pb-2">
             <div className="flex items-center gap-2">
               <h4 className="text-sm font-bold text-gray-500">
                 {t("profile.fields.phone")}
               </h4>
             </div>
-            <p className="text-gray-900 mt-1">{user?.phone || t("profile.notProvided")}</p>
+            <p className="text-gray-900 mt-1">
+              {user?.phone || t("profile.notProvided")}
+            </p>
           </div>
         </div>
       </CardContent>

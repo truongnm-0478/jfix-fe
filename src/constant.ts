@@ -13,10 +13,6 @@ export const enum ROUTERS {
   REGISTER = "/register",
   FORGOT_PASSWORD = "/forgot-password",
 
-  // User
-  USER_PROFILE = "/profile",
-  USER_SETTINGS = "/settings",
-
   // Admin
   ADMIN_DASHBOARD = "/admin/dashboard",
   ADMIN_SETTINGS = "/admin/settings",
@@ -86,6 +82,13 @@ export const enum ROUTERS {
 
   // Japanese Chat
   JAPANESE_CHAT = "/learn/communication/chat",
+
+  // Setting
+  USER_SETTING = "/setting",
+  USER_PROFILE = "profile",
+  UPDATE_PROFILE = "update",
+  CHANGE_PASSWORD = "password",
+  UPDATE_LEARNING_GOAL = "learning-goal",
 }
 
 export const enum STORAGE_VAR {

@@ -25,7 +25,7 @@ const Avatar = ({ name, avatar, rounded = true }: AvatarProps) => {
   }
 
   return (
-    <div className={`${rounded ? "rounded-md" : "rounded-full"} flex items-center justify-center text-white text-3xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 w-full h-full`}>
+    <div className={`${rounded ? "rounded-md" : "rounded-full"} flex items-center justify-center text-white text-xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 w-full h-full`}>
       {initials}
     </div>
   );

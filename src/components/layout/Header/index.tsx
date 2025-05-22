@@ -198,7 +198,7 @@ export const Header = () => {
                       {t("header.profile")}
                     </MenubarItem>
                     <MenubarItem
-                      onClick={() => navigate(ROUTERS.USER_SETTINGS)}
+                      onClick={() => navigate(ROUTERS.USER_SETTING)}
                     >
                       {t("header.settings")}
                     </MenubarItem>

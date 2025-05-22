@@ -44,9 +44,9 @@ export const registerSchema = (t: (key: string) => string) => z.object({
 export const learningGoalSchema = (t: (key: string) => string) =>
   z.object({
     targetLevel: z.enum(LEVELS, {
-      errorMap: () => ({ message: t("validation.required") }),
+      errorMap: () => ({ message: t("validation.targetLevelRequired") }),
     }),
-    description: z.string().nonempty(t("validation.required")),
+    description: z.string().nonempty(t("validation.descriptionRequired")),
     targetDate: z.string().optional(),
   }).refine(
     (data) => {

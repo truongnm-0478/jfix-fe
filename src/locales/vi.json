@@ -44,7 +44,9 @@
     },
     "required": "Bắt buộc",
     "invalid-email": "Email không hợp lệ",
-    "invalid-phone": "Số điện thoại không hợp lệ"
+    "invalid-phone": "Số điện thoại không hợp lệ",
+    "descriptionRequired": "Mô tả là bắt buộc",
+    "targetLevelRequired": "Trình độ là bắt buộc"
   },
   "nav": {
     "home": "Trang chủ",
@@ -178,7 +180,8 @@
     "success": "Tạo mục tiêu học tập thành công!",
     "error": "Có lỗi xảy ra, vui lòng thử lại!",
     "targetDateMin": "Ngày hoàn thành phải cách hiện tại ít nhất 20 ngày",
-    "motivation": "Đặt mục tiêu hôm nay để chinh phục tiếng Nhật! Hãy chọn trình độ phù hợp và bắt đầu hành trình học tập của bạn."
+    "motivation": "Đặt mục tiêu hôm nay để chinh phục tiếng Nhật! Hãy chọn trình độ phù hợp và bắt đầu hành trình học tập của bạn.",
+    "update": "Cập nhật mục tiêu học tập"
   },
   "learn": {
     "title": "Bộ thẻ hôm nay",
@@ -806,10 +809,12 @@
   "profile": {
     "title": "Hồ sơ người dùng",
     "settings": "Cài đặt",
+    "loading": "Đang tải...",
     "tabs": {
       "userProfile": "Hồ sơ người dùng",
       "updateInfo": "Thay đổi thông tin",
-      "changePassword": "Thay đổi mật khẩu"
+      "changePassword": "Thay đổi mật khẩu",
+      "learningGoal": "Mục tiêu học tập"
     },
     "fields": {
       "id": "ID",

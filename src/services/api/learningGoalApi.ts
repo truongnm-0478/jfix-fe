@@ -11,4 +11,7 @@ export const learningGoalApi = {
 
   getLearningGoal: (): Promise<ApiResponse<LearningGoalResponse>> =>
     axiosClient.get("/learning-goals"),
+
+  updateLearningGoal: (data: LearningGoal): Promise<ApiResponse<LearningGoalResponse>> =>
+    axiosClient.put("/learning-goals", data),
 };

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Award, BookOpen, Calendar, Flame, Star, Trophy } from 'lucide-react';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import Avatar from '../common/Avatar';
 
 interface UserAchievementCardProps {
   username: string;
@@ -141,10 +142,11 @@ export const UserAchievementCard: React.FC<UserAchievementCardProps> = ({
             className="relative"
           >
             <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 p-0.5">
-              <img
-                src={avatar}
-                alt={name}
-                className="w-full h-full rounded-full object-cover bg-white"
+              <Avatar
+                name={name}
+                avatar={avatar}
+                size={64}
+                rounded={false}
               />
             </div>
             <motion.div
