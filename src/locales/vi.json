@@ -113,7 +113,8 @@
     "save": "Lưu",
     "browse": "Chọn tệp",
     "saving": "Đang lưu...",
-    "deleting": "Đang xóa..."
+    "deleting": "Đang xóa...",
+    "mobile": "Đây là chức năng quản trị không thể sử dụng ở các thiết bị điện thoại với kích thước màn hình nhỏ"
   },
   "header": {
     "language": "Ngôn ngữ",
@@ -145,7 +146,7 @@
     "logout": "Đăng xuất",
     "practice": "Luyện tập",
     "tasks": "Nhiệm vụ",
-    "progress": "Theo dõi tiến độ",
+    "progress": "Tiến độ",
     "language": "Ngôn ngữ",
     "checkUpdate": "Kiểm tra cập nhật",
     "study": "Học tập",
@@ -160,7 +161,8 @@
     "questionManagement": "Quản lý câu hỏi",
     "sentenceManagement": "Quản lý câu phát âm",
     "paragraphManagement": "Quản lý đoạn văn nghe hiểu",
-    "checkGrammar": "Kiểm tra ngữ pháp"
+    "checkGrammar": "Kiểm tra lỗi",
+    "userRanking": "Bảng xếp hạng"
   },
   "learningGoalForm": {
     "title": "Nhập mục tiêu học tập",
@@ -680,10 +682,10 @@
     "deleting": "Đang xóa đoạn văn nghe hiểu..."
   },
   "checkGrammar": {
-    "title": "Kiểm tra ngữ pháp tiếng Nhật",
-    "description": "Nhập văn bản tiếng Nhật để kiểm tra lỗi ngữ pháp",
+    "title": "Kiểm tra lỗi tiếng Nhật",
+    "description": "Nhập văn bản tiếng Nhật để kiểm tra lỗi",
     "placeholder": "Nhập văn bản tiếng Nhật ở đây...",
-    "checkButton": "Kiểm tra ngữ pháp",
+    "checkButton": "Kiểm tra lỗi",
     "checking": "Đang kiểm tra...",
     "originalText": "Văn bản gốc:",
     "correctedText": "Văn bản đã sửa:",

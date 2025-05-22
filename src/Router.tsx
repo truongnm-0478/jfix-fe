@@ -6,7 +6,6 @@ import AdminDashboard from "@/pages/admin/Dashboard";
 import AdminUsers from "@/pages/admin/Users";
 import Login from "@/pages/auth/Login";
 import Register from "@/pages/auth/Register";
-import Home from "@/pages/Home";
 import AddLearningGoal from "@/pages/user/AddLearningGoal";
 import Learn from "@/pages/user/Learn";
 import { Navigate, Route, Routes } from "react-router-dom";
@@ -122,12 +121,13 @@ const Router = () => {
         <Route path={ROUTERS.ADMIN_PARAGRAPHS_CREATE} element={<AdminParagraphCreate />} />
         <Route path={ROUTERS.ADMIN_PARAGRAPHS_DETAIL} element={<AdminParagraphDetail />} />
         <Route path={ROUTERS.ADMIN_PARAGRAPHS_EDIT} element={<AdminParagraphUpdate />} />
+        <Route path={ROUTERS.USER_PROFILE} element={<Profile />} />
       </Route>
 
       {/* User routes */}
       <Route element={<UserLayout />}>
         {/* Public route */}
-        <Route path={ROUTERS.HOME} element={<Home />} />
+        <Route path={ROUTERS.HOME} element={<UserRanking />} />
         <Route path={ROUTERS.LEARN} element={<Learn />} />
         <Route path={ROUTERS.LEARN_VOCABULARY} element={<LearnVocabulary />} />
         <Route path={ROUTERS.LEARN_GRAMMAR} element={<LearnGrammar />} />
@@ -141,18 +141,10 @@ const Router = () => {
         <Route path={ROUTERS.LISTENING_FLASHCARD} element={<LearnListeningCard />} />
         <Route path={ROUTERS.COMMUNICATION_FLASHCARD} element={<LearnCommunicationCard />} />
         <Route path={ROUTERS.QUESTION_FLASHCARD} element={<LearnQuestionCard />} />
-        <Route path={ROUTERS.ACHIEVEMENT} element={<>achievement</>} />
         <Route path={ROUTERS.PROGRESS} element={<UserProgress />} />
         <Route path={ROUTERS.CHECK_GRAMMAR} element={<CheckGrammar />} />
         <Route path={ROUTERS.USER_PROFILE} element={<Profile />} />
         <Route path={ROUTERS.USER_RANKING} element={<UserRanking />} />
-        <Route
-          element={
-            <PrivateRoute>
-              <Route path={ROUTERS.USER_SETTINGS} element={<Home />} />
-            </PrivateRoute>
-          }
-        />
       </Route>
 
       <Route path={ROUTERS.LEARNING_GOAL} element={<AddLearningGoal />} />

@@ -113,7 +113,8 @@
     "save": "保存",
     "browse": "選択",
     "saving": "保存中...",
-    "deleting": "削除中..."
+    "deleting": "削除中...",
+    "mobile": "これは管理機能です。携帯電話の小さな画面サイズでは使用できません。"
   },
   "header": {
     "language": "言語",
@@ -145,7 +146,7 @@
     "logout": "ログアウト",
     "practice": "練習",
     "tasks": "タスク",
-    "progress": "進捗状況",
+    "progress": "進捗",
     "language": "言語",
     "checkUpdate": "更新を確認",
     "study": "学習",
@@ -160,7 +161,8 @@
     "questionManagement": "質問管理",
     "sentenceManagement": "文法管理",
     "paragraphManagement": "段落管理",
-    "checkGrammar": "Kiểm tra ngữ pháp"
+    "checkGrammar": "エラーチェック",
+    "userRanking": "ユーザーランキング"
   },
   "learningGoalForm": {
     "title": "学習目標を入力",
@@ -852,5 +854,33 @@
       "passwordsMatch": "新しいパスワードと確認パスワードが一致しません",
       "phoneFormat": "電話番号が不正です"
     }
+  },
+  "userRanking": {
+    "header": {
+      "title": "ランキング表",
+      "description": "最も優れた学習者と競争し、一緒に成長しましょう！",
+      "cta": "一緒に成長しましょう！"
+    },
+    "rank": "順位",
+    "day": "日",
+    "card": "カード",
+    "loading": "データを読み込んでいます...",
+    "mostStreak": "最長連続日数",
+    "mostCards": "最も多くのカードを学習",
+    "topUser": "月間トップユーザー",
+    "streak": "連続学習日数",
+    "cards": "学習カード数",
+    "topCards": "月間トップカード数",
+    "streakDescription": "最も長い連続学習日数を持つユーザー",
+    "cardsDescription": "月間で最も多くのカードを学習したユーザー"
+  },
+  "userAchievementCard": {
+    "lessonCompleted": "レッスンを完了",
+    "streakDays": "連続学習日数",
+    "achievement": "達成",
+    "lessonCompletedUnit": "レッスン",
+    "streakDaysUnit": "日",
+    "newAchievement": "最新の達成",
+    "continue": "続けて発揮しましょう！"
   }
 }

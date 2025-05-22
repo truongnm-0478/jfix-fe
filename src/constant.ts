@@ -23,6 +23,7 @@ export const enum ROUTERS {
   BLANK_PAGE = "admin/blank_page",
   UNAUTHORIZED = "admin/403_unauthorized",
   ADMIN_LESSONS = "/admin/lessons",
+  ADMIN_NOTIFICATIONS = "/admin/notifications",
 
   ADMIN_USERS = "/admin/users",
   ADMIN_USER_DETAIL = "/admin/users/:id",

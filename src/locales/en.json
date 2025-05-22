@@ -108,7 +108,8 @@
     "save": "Save",
     "browse": "Browse",
     "saving": "Saving...",
-    "deleting": "Deleting..."
+    "deleting": "Deleting...",
+    "mobile": "This is an admin feature and cannot be used on small screen devices."
   },
   "header": {
     "language": "Language",
@@ -155,7 +156,8 @@
     "questionManagement": "Question Management",
     "sentenceManagement": "Sentence Management",
     "paragraphManagement": "Paragraph Management",
-    "checkGrammar": "Check Grammar"
+    "checkGrammar": "Check errors",
+    "userRanking": "User Ranking"
   },
   "learningGoalForm": {
     "title": "Enter your learning goal",
@@ -847,5 +849,33 @@
       "passwordsMatch": "New password and confirm password do not match",
       "phoneFormat": "Phone is invalid"
     }
+  },
+  "userRanking": {
+    "header": {
+      "title": "Ranking Table",
+      "description": "Follow and compete with the best learners!",
+      "cta": "Let's grow together!"
+    },
+    "rank": "Rank",
+    "day": "day",
+    "card": "card",
+    "loading": "Loading data...",
+    "mostStreak": "Longest streak",
+    "mostCards": "Most cards",
+    "topUser": "Top user",
+    "streak": "Streak",
+    "cards": "Cards",
+    "topCards": "Top cards",
+    "streakDescription": "Users with the longest streak of consecutive learning days",
+    "cardsDescription": "Users with the most cards in the month"
+  },
+  "userAchievementCard": {
+    "lessonCompleted": "Lesson completed",
+    "streakDays": "Streak",
+    "achievement": "Achievement",
+    "lessonCompletedUnit": "lesson",
+    "streakDaysUnit": "days",
+    "newAchievement": "New achievement",
+    "continue": "Continue!"
   }
 }

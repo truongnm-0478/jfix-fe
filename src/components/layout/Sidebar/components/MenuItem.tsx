@@ -19,8 +19,8 @@ import { MenuLink } from "./MenuLink";
     }
 
     return (
-      <div className="lg:block md:block">
-        <div className="lg:hidden md:block">
+      <div className="lg:block block">
+        <div className="lg:hidden block">
           <Tooltip>
             <TooltipTrigger asChild>
               <MenuLink item={item} isActive={isActive} />
@@ -33,7 +33,7 @@ import { MenuLink } from "./MenuLink";
             </TooltipContent>
           </Tooltip>
         </div>
-        <div className="lg:block md:hidden">
+        <div className="lg:block hidden">
           <MenuLink item={item} isActive={isActive} />
         </div>
       </div>

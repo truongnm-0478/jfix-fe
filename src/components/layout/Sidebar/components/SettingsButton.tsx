@@ -12,7 +12,7 @@ export const SettingsButton = forwardRef<HTMLButtonElement>((props, ref) => {
         "flex items-center gap-3 rounded-xl px-3 py-3 text-sm transition-colors select-none relative w-full",
         "hover:bg-primary/5 hover:text-primary",
         "text-[#707EAE]",
-        "lg:text-sm md:text-xs"
+        "lg:text-sm text-xs"
       )}
       {...props}
     >
@@ -20,7 +20,7 @@ export const SettingsButton = forwardRef<HTMLButtonElement>((props, ref) => {
       <span
         className={cn(
           "font-medium transform-none transition-none whitespace-nowrap",
-          "lg:block md:hidden"
+          "lg:block hidden"
         )}
       >
         {t("sidebar.settings")}

@@ -20,14 +20,14 @@ export const MenuLink = forwardRef<
         isActive
           ? "bg-primary text-white before:absolute before:right-0 before:top-0 before:h-full before:w-1 before:rounded-l-xl before:bg-primary-light"
           : "text-[#707EAE]",
-        "lg:text-sm md:text-xs"
+        "lg:text-sm text-xs"
       )}
     >
       <Icon className="h-[18px] w-[18px] stroke-[2.5px] transform-none transition-transform" />
       <span
         className={cn(
           "font-medium transform-none transition-none whitespace-nowrap",
-          "lg:block md:hidden"
+          "lg:block hidden"
         )}
       >
         {t(item.label)}
