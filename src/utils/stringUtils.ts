@@ -20,3 +20,9 @@ export const capitalizeEachWord = (text: string): string => {
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(' ');
 };
+
+export const truncateText = (text: string, maxLength: number): string => {
+  if (!text) return text;
+  if (text.length <= maxLength) return text;
+  return text.slice(0, maxLength).trimEnd() + '...';
+};

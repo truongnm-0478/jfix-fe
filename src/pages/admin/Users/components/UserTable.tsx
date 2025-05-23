@@ -5,6 +5,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { AdminUser, UserQueryParams } from "@/dataHelper/adminUser.dataHelper";
 import { useLockUser, useUnlockUser } from "@/hooks/useAdminUser";
+import { truncateText } from "@/utils/stringUtils";
 import { ArrowUpDown, Eye, Lock, MoreVertical, UnlockKeyhole } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -90,7 +91,7 @@ const UserTable = ({
               <TableHead className="w-[60px] text-center">#</TableHead>
               {renderTableHeader("username", t("adminUsers.username"), "w-[140px]")}
               {renderTableHeader("name", t("adminUsers.name"), "w-[200px]")}
-              {renderTableHeader("email", t("adminUsers.email"), "w-[180px]")}
+              {renderTableHeader("email", t("adminUsers.email"), "w-[200px]")}
               {renderTableHeader("phone", t("adminUsers.phone"), "w-[120px]")}
               {renderTableHeader("role", t("adminUsers.role"), "w-[100px]", true)}
               {renderTableHeader("deleted", t("adminUsers.status"), "w-[100px]", true)}
@@ -119,10 +120,10 @@ const UserTable = ({
               users.map((user, index) => (
                 <TableRow key={user.id}>
                   <TableCell className="text-center">{(filters.page || 0) * (filters.size || 5) + index + 1}</TableCell>
-                  <TableCell className="font-medium">{user.username}</TableCell>
-                  <TableCell>{user.name}</TableCell>
-                  <TableCell>{user.email || "-"}</TableCell>
-                  <TableCell>{user.phone || "-"}</TableCell>
+                  <TableCell className="font-medium">{truncateText(user.username, 15)}</TableCell>
+                  <TableCell>{truncateText(user.name, 25)}</TableCell>
+                  <TableCell>{truncateText(user.email || "-", 25)}</TableCell>
+                  <TableCell>{truncateText(user.phone || "-", 20)}</TableCell>
                   <TableCell>
                     <div className={`rounded-md px-2 py-1 text-xs text-center min-w-[100px] ${user.role === "ADMIN" ? "bg-blue-50 text-blue-500" : "bg-cyan-50 text-cyan-500"}`}>
                       {t(`adminUsers.${user.role.toLowerCase()}`)}
