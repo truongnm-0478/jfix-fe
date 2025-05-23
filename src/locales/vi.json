@@ -939,5 +939,26 @@
     "error": "Không thể đặt lại mật khẩu. Vui lòng kiểm tra lại mã OTP và thử lại.",
     "invalidOtp": "Mã OTP không hợp lệ hoặc đã hết hạn",
     "backToLogin": "Quay lại đăng nhập"
+  },
+  "notification": {
+    "title": "Thông báo",
+    "newReport": "Báo cáo mới",
+    "reportStatusUpdate": "Cập nhật trạng thái báo cáo",
+    "connectionError": "Lỗi kết nối",
+    "connectionErrorDescription": "Không thể kết nối đến dịch vụ thông báo. Vui lòng thử lại sau.",
+    "report": "đã báo cáo lỗi về",
+    "content": "Nội dung",
+    "viewDetail": "Xem chi tiết",
+    "reportContent": "Nội dung báo cáo",
+    "reportId": "ID báo cáo",
+    "reportType": "Loại báo cáo",
+    "reportUserId": "ID người dùng báo cáo",
+    "reportUserName": "Tên người dùng báo cáo",
+    "reportUserEmail": "Email người dùng báo cáo",
+    "reportCreateDate": "Ngày báo cáo",
+    "reportIsRead": "Trạng thái báo cáo",
+    "reportIsReadDescription": "Đã đọc",
+    "reportIsReadDescriptionNotRead": "Chưa đọc",
+    "reportIsReadDescriptionRead": "Đã đọc"
   }
 }

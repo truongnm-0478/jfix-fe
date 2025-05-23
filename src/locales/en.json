@@ -921,5 +921,26 @@
     "error": "Failed to reset password. Please check the OTP and try again.",
     "invalidOtp": "Invalid OTP or expired",
     "backToLogin": "Back to login"
+  },
+  "notification": {
+    "title": "Notification",
+    "newReport": "New report",
+    "reportStatusUpdate": "Update report status",
+    "connectionError": "Connection error",
+    "connectionErrorDescription": "Cannot connect to notification service. Please try again later.",
+    "report": "reported an error about",
+    "content": "Content",
+    "viewDetail": "View detail",
+    "reportContent": "Report content",
+    "reportId": "Report ID",
+    "reportType": "Report type",
+    "reportUserId": "Report user ID",
+    "reportUserName": "Report user name",
+    "reportUserEmail": "Report user email",
+    "reportCreateDate": "Report create date",
+    "reportIsRead": "Report status",
+    "reportIsReadDescription": "Read",
+    "reportIsReadDescriptionNotRead": "Not read",
+    "reportIsReadDescriptionRead": "Read"
   }
 }

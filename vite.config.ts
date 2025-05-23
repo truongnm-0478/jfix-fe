@@ -12,6 +12,7 @@ export default defineConfig({
   },
   define: {
     'process.env': {},
+    global: 'globalThis',
   },
   optimizeDeps: {
     include: ['process'],

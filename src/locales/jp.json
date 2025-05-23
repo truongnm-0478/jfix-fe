@@ -926,5 +926,26 @@
     "error": "パスワードリセットに失敗しました。OTPを確認してください。",
     "invalidOtp": "OTPが無効です。",
     "backToLogin": "ログイン画面に戻る"
+  },
+  "notification": {
+    "title": "通知",
+    "newReport": "新しいレポート",
+    "reportStatusUpdate": "レポートの状態を更新",
+    "connectionError": "接続エラー",
+    "connectionErrorDescription": "通知サービスに接続できません。後でもう一度試してください。",
+    "report": "はエラーを報告しました",
+    "content": "内容",
+    "viewDetail": "詳細を見る",
+    "reportContent": "レポート内容",
+    "reportId": "レポートID",
+    "reportType": "レポートタイプ",
+    "reportUserId": "レポートユーザーID",
+    "reportUserName": "レポートユーザー名",
+    "reportUserEmail": "レポートユーザーのメールアドレス",
+    "reportCreateDate": "レポート作成日",
+    "reportIsRead": "レポートの読み取り状態",
+    "reportIsReadDescription": "読み取り済み",
+    "reportIsReadDescriptionNotRead": "未読",
+    "reportIsReadDescriptionRead": "読み取り済み"
   }
 }
