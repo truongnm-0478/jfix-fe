@@ -1,4 +1,4 @@
-import { ChangePassword, ChangePasswordByToken, ChangePasswordResponse, LogoutResponse, UserData, UserLogin, UserRegister } from "@/dataHelper/auth.dataHelper";
+import { LogoutResponse, UserData, UserLogin, UserRegister } from "@/dataHelper/auth.dataHelper";
 import axiosClient from "./axiosClient";
 import { ApiResponse } from "./type";
 
@@ -12,14 +12,9 @@ export const authApi = {
   register: (data: UserRegister): Promise<ApiResponse<UserData>> =>
     axiosClient.post("/auth/register", data),
 
-  changePassword: (data: ChangePassword): Promise<ChangePasswordResponse> =>
-    axiosClient.post("/crew/change-password", data),
+  forgotPassword: (data: { email: string }): Promise<ApiResponse<{ message: string }>> =>
+    axiosClient.post("/auth/forgot-password", data),
 
-  changePasswordByToken: (
-    data: ChangePasswordByToken
-  ): Promise<ChangePasswordResponse> =>
-    axiosClient.post("/crew/change-password-token", data),
-
-  forgotPassword: (data: { email: string }): Promise<ChangePasswordResponse> =>
-    axiosClient.post("/crew/send-mail-forgot-password", data),
+  resetPassword: (data: { token: string; newPassword: string; confirmPassword: string }): Promise<ApiResponse<{ message: string }>> =>
+    axiosClient.post("/auth/reset-password", data),
 };

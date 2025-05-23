@@ -221,3 +221,20 @@ export const forgotPasswordSchema = (t: (key: string) => string) =>
       .min(1, t("validation.required"))
       .email(t("validation.invalid-email")),
   });
+
+export const resetPasswordSchema = (t: (key: string) => string) =>
+  z.object({
+    otp: z
+      .string()
+      .min(1, t("validation.required"))
+      .length(6, t("validation.otp.length")),
+    newPassword: z
+      .string()
+      .min(8, t("validation.password.min"))
+      .max(50, t("validation.password.max"))
+      .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/, t("validation.password.regex")),
+    confirmPassword: z.string().min(1, t("validation.required")),
+  }).refine((data) => data.newPassword === data.confirmPassword, {
+    message: t("validation.password.match"),
+    path: ["confirmPassword"],
+  });
