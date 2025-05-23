@@ -44,7 +44,12 @@
     },
     "required": "必須",
     "invalid-email": "無効なメールアドレス",
-    "invalid-phone": "無効な電話番号"
+    "invalid-phone": "無効な電話番号",
+    "descriptionRequired": "説明は必須です",
+    "targetLevelRequired": "レベルは必須です",
+    "otp": {
+      "length": "OTPは6文字でなければなりません"
+    }
   },
   "nav": {
     "home": "ホーム",
@@ -897,5 +902,29 @@
     "streakDaysUnit": "日",
     "newAchievement": "最新の達成",
     "continue": "続けて発揮しましょう！"
+  },
+  "forgotPassword": {
+    "title": "パスワードを忘れた",
+    "description": "パスワードをリセットするためのリンクをメールで送信します",
+    "email": "メールアドレス",
+    "submit": "リクエストを送信",
+    "submitting": "リクエストを送信中...",
+    "success": "パスワードリセットリクエストが送信されました。メールを確認してください。",
+    "error": "パスワードリセットリクエストの送信に失敗しました。後でもう一度試してください。",
+    "backToLogin": "ログイン画面に戻る"
+  },
+  "resetPassword": {
+    "title": "パスワードをリセット",
+    "description": "パスワードをリセットするためのリンクをメールで送信します",
+    "otp": "OTP",
+    "otpPlaceholder": "OTPを入力してください",
+    "newPassword": "新しいパスワード",
+    "confirmPassword": "新しいパスワードを確認",
+    "submit": "パスワードをリセット",
+    "submitting": "パスワードをリセット中...",
+    "success": "パスワードがリセットされました。ログインしてください。",
+    "error": "パスワードリセットに失敗しました。OTPを確認してください。",
+    "invalidOtp": "OTPが無効です。",
+    "backToLogin": "ログイン画面に戻る"
   }
 }

@@ -12,6 +12,7 @@ export const enum ROUTERS {
   LOGIN = "/login",
   REGISTER = "/register",
   FORGOT_PASSWORD = "/forgot-password",
+  RESET_PASSWORD = "/reset-password",
 
   // Admin
   ADMIN_DASHBOARD = "/admin/dashboard",

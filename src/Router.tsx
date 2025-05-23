@@ -37,6 +37,8 @@ import AdminVocabulary from "./pages/admin/Vocabulary";
 import AdminVocabularyCreate from "./pages/admin/VocabularyCreate";
 import AdminVocabularyDetail from "./pages/admin/VocabularyDetail";
 import AdminVocabularyUpdate from "./pages/admin/VocabularyUpdate";
+import ForgotPassword from "./pages/auth/ForgotPassword";
+import ResetPassword from "./pages/auth/ResetPassword";
 import LandingPage from "./pages/Landing";
 import NotFoundPage from "./pages/NotFound";
 import ChangePassword from "./pages/user/ChangePassword";
@@ -97,6 +99,8 @@ const Router = () => {
       <Route element={<AuthLayout />}>
         <Route path={ROUTERS.LOGIN} element={<Login />} />
         <Route path={ROUTERS.REGISTER} element={<Register />} />
+        <Route path={ROUTERS.FORGOT_PASSWORD} element={<ForgotPassword />} />
+        <Route path={ROUTERS.RESET_PASSWORD} element={<ResetPassword />} />
       </Route>
 
       {/* Admin routes */}

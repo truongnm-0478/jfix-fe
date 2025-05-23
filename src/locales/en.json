@@ -44,7 +44,12 @@
     },
     "required": "Required",
     "invalid-email": "Invalid email address",
-    "invalid-phone": "Invalid phone number"
+    "invalid-phone": "Invalid phone number",
+    "descriptionRequired": "Description is required",
+    "targetLevelRequired": "Level is required",
+    "otp": {
+      "length": "OTP must be exactly 6 characters"
+    }
   },
   "nav": {
     "home": "Home",
@@ -892,5 +897,29 @@
     "streakDaysUnit": "days",
     "newAchievement": "New achievement",
     "continue": "Continue!"
+  },
+  "forgotPassword": {
+    "title": "Forgot password",
+    "description": "Enter your email to receive a password reset link",
+    "email": "Email",
+    "submit": "Send request",
+    "submitting": "Sending request...",
+    "success": "Password reset request sent successfully. Please check your email.",
+    "error": "Failed to send password reset request. Please try again later.",
+    "backToLogin": "Back to login"
+  },
+  "resetPassword": {
+    "title": "Reset password",
+    "description": "Enter the OTP sent to your email and the new password",
+    "otp": "OTP",
+    "otpPlaceholder": "Enter OTP 6 digits",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm password",
+    "submit": "Reset password",
+    "submitting": "Resetting password...",
+    "success": "Password reset successfully. Please login again.",
+    "error": "Failed to reset password. Please check the OTP and try again.",
+    "invalidOtp": "Invalid OTP or expired",
+    "backToLogin": "Back to login"
   }
 }

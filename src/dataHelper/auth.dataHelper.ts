@@ -31,12 +31,6 @@ export type ChangePasswordByToken = {
   password_confirmation: string;
 };
 
-export type ChangePasswordResponse = {
-  status: string;
-  message: string | null;
-  data: boolean;
-};
-
 export type LogoutResponse = {
   status: string;
   message: string;

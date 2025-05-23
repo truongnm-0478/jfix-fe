@@ -213,3 +213,11 @@ export const userCreateFormSchema = (t: (key: string, params?: { field?: string 
     .max(50, t("validation.password.max"))
     .regex(regexPassword, t("validation.password.regex")),
 });
+
+export const forgotPasswordSchema = (t: (key: string) => string) =>
+  z.object({
+    email: z
+      .string()
+      .min(1, t("validation.required"))
+      .email(t("validation.invalid-email")),
+  });

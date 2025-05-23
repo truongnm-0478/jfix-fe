@@ -46,7 +46,10 @@
     "invalid-email": "Email không hợp lệ",
     "invalid-phone": "Số điện thoại không hợp lệ",
     "descriptionRequired": "Mô tả là bắt buộc",
-    "targetLevelRequired": "Trình độ là bắt buộc"
+    "targetLevelRequired": "Trình độ là bắt buộc",
+    "otp": {
+      "length": "Mã OTP phải có đúng 6 ký tự"
+    }
   },
   "nav": {
     "home": "Trang chủ",
@@ -912,5 +915,29 @@
     "streakDaysUnit": "ngày",
     "newAchievement": "Thành tích mới nhất",
     "continue": "Tiếp tục phát huy!"
+  },
+  "forgotPassword": {
+    "title": "Quên mật khẩu",
+    "description": "Nhập email của bạn để nhận liên kết đặt lại mật khẩu",
+    "email": "Email",
+    "submit": "Gửi yêu cầu",
+    "submitting": "Đang gửi yêu cầu...",
+    "success": "Yêu cầu đặt lại mật khẩu đã được gửi thành công. Vui lòng kiểm tra email của bạn.",
+    "error": "Không thể gửi yêu cầu đặt lại mật khẩu. Vui lòng thử lại sau.",
+    "backToLogin": "Quay lại đăng nhập"
+  },
+  "resetPassword": {
+    "title": "Đặt lại mật khẩu",
+    "description": "Nhập mã OTP đã được gửi đến email của bạn và mật khẩu mới",
+    "otp": "Mã OTP",
+    "otpPlaceholder": "Nhập mã OTP 6 số",
+    "newPassword": "Mật khẩu mới",
+    "confirmPassword": "Xác nhận mật khẩu",
+    "submit": "Đặt lại mật khẩu",
+    "submitting": "Đang đặt lại mật khẩu...",
+    "success": "Đặt lại mật khẩu thành công. Vui lòng đăng nhập lại.",
+    "error": "Không thể đặt lại mật khẩu. Vui lòng kiểm tra lại mã OTP và thử lại.",
+    "invalidOtp": "Mã OTP không hợp lệ hoặc đã hết hạn",
+    "backToLogin": "Quay lại đăng nhập"
   }
 }
