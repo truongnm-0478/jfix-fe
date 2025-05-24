@@ -61,7 +61,7 @@ export const AdminNotifications = () => {
 
       <ReportFilterButtons selectedType={filterType} onSelectType={setFilterType} />
 
-        <div>
+        <div className="border-t border-slate-200">
           {reports?.length ? (
             reports.map((report) => (
               <ReportCard

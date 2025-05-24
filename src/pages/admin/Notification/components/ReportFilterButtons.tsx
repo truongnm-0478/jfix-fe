@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 
-const types = ["VOCABULARY", "GRAMMAR", "QUESTION", "SENTENCE", "PARAGRAPH", "FREE_TOPIC"];
+const types = ["VOCABULARY", "GRAMMAR", "SPEAKING_QUESTION", "SENTENCE", "PARAGRAPH", "FREE_TALK_TOPIC"];
 
 export const ReportFilterButtons = ({ selectedType, onSelectType }: {
   selectedType: string | null;

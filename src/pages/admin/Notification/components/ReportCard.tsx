@@ -9,10 +9,10 @@ const getItemTypeBadge = (type: string) => {
   const colors: { [key: string]: string } = {
     VOCABULARY: "bg-blue-500",
     GRAMMAR: "bg-green-500",
-    QUESTION: "bg-yellow-500",
+    SPEAKING_QUESTION: "bg-yellow-500",
     SENTENCE: "bg-purple-500",
     PARAGRAPH: "bg-pink-500",
-    FREE_TOPIC: "bg-orange-500",
+    FREE_TALK_TOPIC: "bg-orange-500",
   };
   return colors[type] || "bg-gray-500";
 };
@@ -23,13 +23,13 @@ const getNavLink = (itemType: string, itemId: number) => {
       return ROUTERS.ADMIN_VOCABULARY_DETAIL.replace(":id", itemId.toString());
     case "GRAMMAR":
       return ROUTERS.ADMIN_GRAMMAR_DETAIL.replace(":id", itemId.toString());
-    case "QUESTION":
+    case "SPEAKING_QUESTION":
       return ROUTERS.ADMIN_QUESTIONS_DETAIL.replace(":id", itemId.toString());
     case "SENTENCE":
       return ROUTERS.ADMIN_SENTENCES_DETAIL.replace(":id", itemId.toString());
     case "PARAGRAPH":
       return ROUTERS.ADMIN_PARAGRAPHS_DETAIL.replace(":id", itemId.toString());
-    case "FREE_TOPIC":
+    case "FREE_TALK_TOPIC":
       return ROUTERS.ADMIN_FREE_TOPICS_DETAIL.replace(":id", itemId.toString());
     default:
       return "#";
