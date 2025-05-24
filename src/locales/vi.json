@@ -119,7 +119,9 @@
     "browse": "Chọn tệp",
     "saving": "Đang lưu...",
     "deleting": "Đang xóa...",
-    "mobile": "Đây là chức năng quản trị không thể sử dụng ở các thiết bị điện thoại với kích thước màn hình nhỏ"
+    "mobile": "Đây là chức năng quản trị không thể sử dụng ở các thiết bị điện thoại với kích thước màn hình nhỏ",
+    "required": "Trường này là bắt buộc",
+    "confirm": "Xác nhận"
   },
   "header": {
     "language": "Ngôn ngữ",
@@ -970,12 +972,19 @@
     "all": "Tất cả",
     "vocabulary": "Từ vựng",
     "grammar": "Ngữ pháp",
-    "question": "Câu hỏi",
+    "speaking_question": "Câu hỏi",
     "sentence": "Câu",
     "paragraph": "Đoạn văn",
-    "free_topic": "Chủ đề tự do",
+    "free_talk_topic": "Chủ đề tự do",
     "noReports": "Danh sách báo cáo trống",
     "viewItem": "Xem item báo cáo",
     "markAsRead": "Đánh dấu đã đọc"
+  },
+  "report": {
+    "reportError": "Báo cáo lỗi",
+    "reportErrorDescription": "Vui lòng mô tả lỗi bạn gặp phải",
+    "content": "Nội dung",
+    "enterReportContent": "Nhập nội dung báo cáo",
+    "reportSuccess": "Báo cáo thành công"
   }
 }

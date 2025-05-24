@@ -119,7 +119,9 @@
     "browse": "選択",
     "saving": "保存中...",
     "deleting": "削除中...",
-    "mobile": "これは管理機能です。携帯電話の小さな画面サイズでは使用できません。"
+    "mobile": "これは管理機能です。携帯電話の小さな画面サイズでは使用できません。",
+    "required": "必須",
+    "confirm": "確認"
   },
   "header": {
     "language": "言語",
@@ -957,12 +959,19 @@
     "all": "すべて",
     "vocabulary": "語彙",
     "grammar": "文法",
-    "question": "問題",
+    "speaking_question": "問題",
     "sentence": "文",
     "paragraph": "段落",
-    "free_topic": "自由トピック",
+    "free_talk_topic": "自由トピック",
     "noReports": "レポートがありません",
     "viewItem": "レポートの項目を表示",
     "markAsRead": "読み取り済みに更新"
+  },
+  "report": {
+    "reportError": "レポートエラー",
+    "reportErrorDescription": "エラーを記述してください",
+    "content": "内容",
+    "enterReportContent": "レポート内容を入力",
+    "reportSuccess": "レポートが送信されました"
   }
 }

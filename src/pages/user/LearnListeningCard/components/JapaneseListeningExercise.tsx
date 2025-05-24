@@ -1,3 +1,4 @@
+import { ReportErrorButton } from "@/components/report/ReportErrorButton";
 import { Content } from "@/dataHelper/study.dataHelper";
 import { useTranslation } from "react-i18next";
 import { AudioPlayer } from "./AudioPlayer";
@@ -25,16 +26,21 @@ export const JapaneseListeningExercise = ({ currentCard, handleNext }: JapaneseL
 
   return (
     <div>
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold text-gray-800 mb-2">{t("learnListeningCard.title")}</h1>
-        <div className="flex items-center space-x-4 text-sm text-gray-600">
-          <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">
-            {t("learnListeningCard.level")}: {level}
-          </span>
-          <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full">
-            {t("learnListeningCard.topic")}: {topic}
-          </span>
+      <div className="mb-6 flex justify-between items-center">
+        <div>
+          <h1 className="text-2xl font-bold text-gray-800 mb-2">{t("learnListeningCard.title")}</h1>
+          <div className="flex items-center space-x-4 text-sm text-gray-600">
+            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">
+              {t("learnListeningCard.level")}: {level}
+            </span>
+            <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full">
+              {t("learnListeningCard.topic")}: {topic}
+            </span>
+          </div>
         </div>
+        <ReportErrorButton
+          cardId={currentCard.cardId}
+        />
       </div>
 
       <AudioPlayer

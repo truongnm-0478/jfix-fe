@@ -114,7 +114,9 @@
     "browse": "Browse",
     "saving": "Saving...",
     "deleting": "Deleting...",
-    "mobile": "This is an admin feature and cannot be used on small screen devices."
+    "mobile": "This is an admin feature and cannot be used on small screen devices.",
+    "required": "Required",
+    "confirm": "Confirm"
   },
   "header": {
     "language": "Language",
@@ -952,12 +954,19 @@
     "all": "All",
     "vocabulary": "Vocabulary",
     "grammar": "Grammar",
-    "question": "Question",
+    "speaking_question": "Speaking question",
     "sentence": "Sentence",
     "paragraph": "Paragraph",
-    "free_topic": "Free topic",
+    "free_talk_topic": "Free talk topic",
     "noReports": "No reports",
     "viewItem": "View report item",
     "markAsRead": "Mark as read"
+  },
+  "report": {
+    "reportError": "Report error",
+    "reportErrorDescription": "Please describe the error you encountered",
+    "content": "Content",
+    "enterReportContent": "Enter report content",
+    "reportSuccess": "Report sent successfully"
   }
 }

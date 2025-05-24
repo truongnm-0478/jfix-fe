@@ -1,3 +1,4 @@
+import { ReportErrorButton } from "@/components/report/ReportErrorButton";
 import { Content } from "@/dataHelper/study.dataHelper";
 import { useTranslation } from "react-i18next";
 import { StudyMode } from "../constant";
@@ -28,10 +29,13 @@ export const Header = ({ mode, data, onModeChange, currentMode }: HeaderProps) =
           </p>
         </div>
       </div>
-      <div className="w-full md:w-auto">
+      <div className="w-full md:w-auto flex items-center gap-2">
         <StudyModeSelector
           currentMode={currentMode}
           onModeChange={onModeChange}
+        />
+        <ReportErrorButton
+          cardId={data.cardId}
         />
       </div>
     </div>

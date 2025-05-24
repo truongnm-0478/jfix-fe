@@ -109,13 +109,6 @@ export const MENU_ITEMS = [
     mobile: true,
   },
   {
-    icon: Bell,
-    label: "sidebar.notifications",
-    path: ROUTERS.NOTIFICATIONS,
-    roles: ["USER"],
-    mobile: false,
-  },
-  {
     icon: User2,
     label: "sidebar.profile",
     path: ROUTERS.USER_SETTING + "/" + ROUTERS.USER_PROFILE,

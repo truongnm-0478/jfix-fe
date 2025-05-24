@@ -8,6 +8,7 @@ import { useMutation } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Card from "./components/Card";
+import { Header } from "./components/Header";
 
 const LearnPronunciationCard = () => {
   const navigate = useNavigate();
@@ -87,18 +88,21 @@ const LearnPronunciationCard = () => {
   if (sentenceLoading) return <Loading />;
 
   return (
-    <Card
-      currentCard={currentCard}
-      isSending={isSending}
-      speechToTextResult={speechToTextResult}
-      setAudioBlob={setAudioBlob}
-      audioBlob={audioBlob}
-      handleSendAudio={handleSendAudio}
-      onNextCard={handleNextCard}
-      isRecording={isRecording}
-      setIsRecording={setIsRecording}
-      isRentryRecorded={isRentryRecorded}
-    />
+    <div className="xl:pb-8 pb-4 xl:px-2 px-4">
+      <Header cardId={currentCard?.cardId ?? 0} />
+      <Card
+        currentCard={currentCard}
+        isSending={isSending}
+        speechToTextResult={speechToTextResult}
+        setAudioBlob={setAudioBlob}
+        audioBlob={audioBlob}
+        handleSendAudio={handleSendAudio}
+        onNextCard={handleNextCard}
+        isRecording={isRecording}
+        setIsRecording={setIsRecording}
+        isRentryRecorded={isRentryRecorded}
+      />
+    </div>
   );
 };
 

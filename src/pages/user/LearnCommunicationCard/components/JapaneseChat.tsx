@@ -1,4 +1,5 @@
 import LoadingDots from '@/components/common/LoadingDots';
+import { ReportErrorButton } from '@/components/report/ReportErrorButton';
 import { MAX_MESSAGES } from '@/constant';
 import { FreeTalkResponse } from '@/dataHelper/ai.dataHelper';
 import { Message, MessageProps } from '@/dataHelper/communication.dateHelper';
@@ -124,19 +125,27 @@ export const JapaneseChat = ({
   return (
     <div className="h-screen flex flex-col bg-gray-50">
       {/* Header */}
-      <div className="bg-primary text-white p-4 shadow-lg">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <MessageSquare size={24} />
-            <h1 className="text-xl font-bold">{t("learn_communication.learn_communication_title")}</h1>
+      <div className="bg-primary text-white p-4 shadow-lg flex justify-between items-center">
+        <div>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-3">
+              <MessageSquare size={24} />
+              <h1 className="text-xl font-bold">{t("learn_communication.learn_communication_title")}</h1>
+            </div>
+            {messages.length > 0 && (
+              <span className="text-sm bg-primary px-2 py-1 rounded-full">
+                {Math.min(messages.length, MAX_MESSAGES * 2)} / {MAX_MESSAGES * 2}
+              </span>
+            )}
           </div>
-          {messages.length > 0 && (
-            <span className="text-sm bg-primary px-2 py-1 rounded-full">
-              {Math.min(messages.length, MAX_MESSAGES * 2)} / {MAX_MESSAGES * 2}
-            </span>
-          )}
+          <p className="text-sm mt-1">{t("learn_communication.learn_communication_topic")}: {currentTopic?.japaneseText}</p>
         </div>
-        <p className="text-sm mt-1">{t("learn_communication.learn_communication_topic")}: {currentTopic?.japaneseText}</p>
+        <ReportErrorButton
+          cardId={currentTopic?.cardId ?? 0}
+          textColor="text-white"
+          hoverBgColor="bg-primary"
+        />
+
       </div>
 
       {/* Messages Container */}

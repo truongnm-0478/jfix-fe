@@ -48,6 +48,9 @@ export default function Card({ currentCard }: CardProps) {
                   </div>
                 )}
               </h1>
+              <div className="mt-3 text-base md:text-lg text-gray-700 pl-3 italic font-light text-primary">
+                {currentCard?.meaning || ""}
+              </div>
               <div className="mt-3 text-base md:text-lg text-gray-700 pl-3 italic font-light">
                 {currentCard?.usage || ""}
               </div>

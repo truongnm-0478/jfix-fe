@@ -9,6 +9,7 @@ import { useMutation } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Card from "./components/Card";
+import { Header } from "./components/Header";
 
 const LearnGrammarCard = () => {
   const navigate = useNavigate();
@@ -60,8 +61,9 @@ const LearnGrammarCard = () => {
   if (grammarLoading) return <Loading />
 
   return (
-    <div className="xl:py-8 py-4 xl:px-2 px-4">
-      <div className="xl:px-5 px-0 grid grid-cols-1 gap-8">
+    <div className="xl:pb-8 pb-4 xl:px-2 px-4">
+      <Header cardId={currentCard?.cardId ?? 0} />
+      <div className="xl:px-5 px-0 grid grid-cols-1 md:gap-8 gap-0">
         <div className="pb-8 md:pb-0">
           {currentCard && <Card currentCard={currentCard} />}
         </div>
