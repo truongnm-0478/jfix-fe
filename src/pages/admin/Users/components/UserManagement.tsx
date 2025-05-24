@@ -93,7 +93,7 @@ const UserManagement = () => {
 
   return (
     <div className="">
-      <div className="flex mb-4 py-4 justify-between">
+      <div className="flex mb-4 py-4 justify-between items-center">
         <div>
           <h1 className="text-2xl font-bold text-primary">{t("adminUsers.userManagement")}</h1>
           <p className="text-muted-foreground font-light">{t("adminUsers.manageAllUsers")}</p>

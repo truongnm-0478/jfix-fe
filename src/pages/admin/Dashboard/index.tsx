@@ -5,8 +5,10 @@ import { useDailyActiveUsers, useDashboard, useQuestionTypeDistribution, useRece
 import { useUserStore } from '@/store/useUserStore';
 import { formatNumberWithCommas } from '@/utils/numberUtils';
 import { useQueryClient } from '@tanstack/react-query';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 import { BarChart3, BookOpen, Calendar, Users } from 'lucide-react';
-import { useMemo } from 'react';
+import { useCallback, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { DashboardHeader } from './components/DashboardHeader';
@@ -20,17 +22,36 @@ const Dashboard = () => {
   const queryClient = useQueryClient();
   const { user } = useUserStore();
   const navigate = useNavigate();
+  const dashboardRef = useRef<HTMLDivElement>(null);
 
   const { data: dashboardData, isLoading: isDashboardLoading } = useDashboard();
   const { data: questionTypeDistribution, isLoading: isQuestionTypeLoading } = useQuestionTypeDistribution();
   const { data: recentUsers, isLoading: isRecentUsersLoading } = useRecentUsers();
   const { data: dailyActiveUsers, isLoading: isDailyActiveUsersLoading } = useDailyActiveUsers();
 
+  const handleExportPDF = useCallback(async () => {
+    if (!dashboardRef.current) return;
 
-  const handleExportData = () => {
-    console.log('Export data clicked');
-    //TODO: Implement export data functionality
-  };
+    try {
+      const canvas = await html2canvas(dashboardRef.current, {
+        scale: 2,
+        useCORS: true,
+        logging: false
+      });
+
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF({
+        orientation: 'landscape',
+        unit: 'px',
+        format: [canvas.width, canvas.height]
+      });
+
+      pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
+      pdf.save('dashboard_report.pdf');
+    } catch (error) {
+      console.error('Error generating PDF:', error);
+    }
+  }, []);
 
   const handleRefresh = () => {
     queryClient.invalidateQueries({ queryKey: ['dashboard'] });
@@ -114,61 +135,62 @@ const Dashboard = () => {
   return (
     <div className="flex bg-gray-100 mb-4">
       <div className="w-full">
-        {/* Content */}
         <main className="flex-1 overflow-y-auto bg-gray-100">
           <DashboardHeader 
             userName={user?.username || 'Admin'}
-            onExportData={handleExportData}
+            onExportPDF={handleExportPDF}
             onRefresh={handleRefresh}
           />
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-            <StatCard
-              title={t('adminDashboard.totalUsers')}
-              value={formatNumberWithCommas(dashboardData?.data?.totalUsers || 0)}
-              icon={<Users size={24} className="text-blue-500" />}
-              iconBgColor="bg-blue-100"
-              trend={dashboardData?.data?.userPercentChange || 0}
-              trendText={t('adminDashboard.comparedToPreviousMonth')}
-            />
-            <StatCard
-              title={t('adminDashboard.newUsers')}
-              value={formatNumberWithCommas(dashboardData?.data?.newUsersThisMonth || 0)}
-              icon={<BookOpen size={24} className="text-green-500" />}
-              iconBgColor="bg-green-100"
-              trend={getCardTrend(
-                dashboardData?.data?.newUsersThisMonth || 0,
-                dashboardData?.data?.prevMonthNewUsers || 0
-              )}
-              trendText={t('adminDashboard.comparedToPreviousMonth')}
-            />
-            <StatCard
-              title={t('adminDashboard.totalLessons')}
-              value={formatNumberWithCommas(dashboardData?.data?.totalLessons || 0)}
-              icon={<BarChart3 size={24} className="text-purple-500" />}
-              iconBgColor="bg-purple-100"
-              trend={dashboardData?.data?.cardPercentChange || 0}
-              trendText={t('adminDashboard.comparedToPreviousMonth')}
-            />
-            <StatCard
-              title={t('adminDashboard.averageCards')}
-              value={formatNumberWithCommas(dashboardData?.data?.averageCardsPerUserThisMonth || 0)}
-              icon={<Calendar size={24} className="text-orange-500" />}
-              iconBgColor="bg-orange-100"
-              trend={averageCardsTrend}
-              trendText={t('adminDashboard.comparedToPreviousMonth')}
-            />
-          </div>
+          <div ref={dashboardRef}>
+            {/* Stats */}
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-6">
+              <StatCard
+                title={t('adminDashboard.totalUsers')}
+                value={formatNumberWithCommas(dashboardData?.data?.totalUsers ?? 0)}
+                icon={<Users size={24} className="text-blue-500" />}
+                iconBgColor="bg-blue-100"
+                trend={dashboardData?.data?.userPercentChange ?? 0}
+                trendText={t('adminDashboard.comparedToPreviousMonth')}
+              />
+              <StatCard
+                title={t('adminDashboard.newUsers')}
+                value={formatNumberWithCommas(dashboardData?.data?.newUsersThisMonth ?? 0)}
+                icon={<BookOpen size={24} className="text-green-500" />}
+                iconBgColor="bg-green-100"
+                trend={getCardTrend(
+                  dashboardData?.data?.newUsersThisMonth ?? 0,
+                  dashboardData?.data?.prevMonthNewUsers ?? 0
+                )}
+                trendText={t('adminDashboard.comparedToPreviousMonth')}
+              />
+              <StatCard
+                title={t('adminDashboard.totalLessons')}
+                value={formatNumberWithCommas(dashboardData?.data?.totalLessons ?? 0)}
+                icon={<BarChart3 size={24} className="text-purple-500" />}
+                iconBgColor="bg-purple-100"
+                trend={dashboardData?.data?.cardPercentChange ?? 0}
+                trendText={t('adminDashboard.comparedToPreviousMonth')}
+              />
+              <StatCard
+                title={t('adminDashboard.averageCards')}
+                value={formatNumberWithCommas(dashboardData?.data?.averageCardsPerUserThisMonth ?? 0)}
+                icon={<Calendar size={24} className="text-orange-500" />}
+                iconBgColor="bg-orange-100"
+                trend={averageCardsTrend}
+                trendText={t('adminDashboard.comparedToPreviousMonth')}
+              />
+            </div>
 
-          {/* Charts */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            <UserActivityChart data={userActivityChartData} />
-            <LessonCompletionChart data={lessonCompletionChartData} />
-          </div>
+            {/* Charts */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+              <UserActivityChart data={userActivityChartData} />
+              <LessonCompletionChart data={lessonCompletionChartData} />
+            </div>
 
-          {/* Recent Students Table */}
-          <RecentStudentsTable students={recentStudentsData} onViewAll={handleViewAllStudents} />
+            {/* Recent Students Table */}
+            <RecentStudentsTable students={recentStudentsData} onViewAll={handleViewAllStudents} />
+          </div>
         </main>
       </div>
     </div>
