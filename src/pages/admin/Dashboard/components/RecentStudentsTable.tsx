@@ -1,8 +1,8 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { formatDistanceToNow } from 'date-fns';
-import { vi } from 'date-fns/locale';
+import { formatDistanceToNow, Locale } from 'date-fns';
+import { enUS, ja, vi } from 'date-fns/locale';
 import { useTranslation } from 'react-i18next';
 
 type User = {
@@ -19,11 +19,18 @@ type RecentStudentsTableProps = {
 };
 
 export const RecentStudentsTable = ({ students, onViewAll }: RecentStudentsTableProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const locale = i18n.language;
+
+  const localeMap: Record<string, Locale> = {
+    en: enUS,
+    vi: vi,
+    ja: ja,
+  };
   
   const formatDate = (date: string) => {
     try {
-      return formatDistanceToNow(new Date(date), { addSuffix: true, locale: vi });
+      return formatDistanceToNow(new Date(date), { addSuffix: true, locale: localeMap[locale] });
     } catch (error) {
       return date;
     }
