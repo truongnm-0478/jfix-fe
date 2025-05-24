@@ -1,6 +1,6 @@
 import { toast } from '@/components/ui/sonner';
+import { NotificationMessage } from '@/dataHelper/report.dataHelper';
 import { socketService } from '@/services/socket/socket.service';
-import { NotificationMessage } from '@/types/notification';
 import { useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 

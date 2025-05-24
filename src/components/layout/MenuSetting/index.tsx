@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { ROUTERS } from "@/constant";
+import { useUserStore } from "@/store/useUserStore";
 import { BookOpen, Edit, Lock, UserCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -8,8 +9,11 @@ export const MenuSetting = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
+  const { user } = useUserStore();
+  const userRole = user?.role?.toUpperCase() || "";
+  const isAdmin = userRole === "ADMIN";
 
-  const menuItems = [
+  const userMenuItems = [
     {
       id: "profile",
       label: t("profile.tabs.userProfile"),
@@ -35,6 +39,29 @@ export const MenuSetting = () => {
       path: ROUTERS.USER_SETTING + "/" + ROUTERS.UPDATE_LEARNING_GOAL,
     },
   ];
+
+  const menuAdminItems = [
+    {
+      id: "profile",
+      label: t("profile.tabs.userProfile"),
+      icon: <UserCircle className="w-5 h-5" />,
+      path: ROUTERS.ADMIN_USER_SETTING + "/" + ROUTERS.USER_PROFILE,
+    },
+    {
+      id: "update",
+      label: t("profile.tabs.updateInfo"),
+      icon: <Edit className="w-5 h-5" />,
+      path: ROUTERS.ADMIN_USER_SETTING + "/" + ROUTERS.UPDATE_PROFILE,
+    },
+    {
+      id: "password",
+      label: t("profile.tabs.changePassword"),
+      icon: <Lock className="w-5 h-5" />,
+      path: ROUTERS.ADMIN_USER_SETTING + "/" + ROUTERS.CHANGE_PASSWORD,
+    }
+  ];
+
+  const menuItems = isAdmin ? menuAdminItems : userMenuItems;
 
   return (
     <Card className="bg-white overflow-hidden">

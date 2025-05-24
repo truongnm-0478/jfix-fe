@@ -87,6 +87,7 @@ export const enum ROUTERS {
 
   // Setting
   USER_SETTING = "/setting",
+  ADMIN_USER_SETTING = "/admin/user-setting",
   USER_PROFILE = "profile",
   UPDATE_PROFILE = "update",
   CHANGE_PASSWORD = "password",

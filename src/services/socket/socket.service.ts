@@ -1,4 +1,4 @@
-import { NotificationMessage as NotificationPayload } from '@/types/notification';
+  import { NotificationMessage as NotificationPayload } from '@/dataHelper/report.dataHelper';
 import { Stomp } from '@stomp/stompjs';
 import SockJS from 'sockjs-client';
 
@@ -10,7 +10,7 @@ class SocketService {
 
   connect(onConnect: () => void, onError: (error: Error) => void) {
     try {
-      const wsUrl = import.meta.env.VITE_WS_URL || 'http://localhost:8080/ws';
+      const wsUrl = import.meta.env.VITE_WS_URL;
       const socket = new SockJS(wsUrl);
       
       this.stompClient = Stomp.over(() => socket);

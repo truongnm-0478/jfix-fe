@@ -162,7 +162,8 @@
     "sentenceManagement": "Sentence Management",
     "paragraphManagement": "Paragraph Management",
     "checkGrammar": "Check errors",
-    "userRanking": "User Ranking"
+    "userRanking": "User Ranking",
+    "adminProfile": "Admin Profile"
   },
   "learningGoalForm": {
     "title": "Enter your learning goal",
@@ -941,6 +942,22 @@
     "reportIsRead": "Report status",
     "reportIsReadDescription": "Read",
     "reportIsReadDescriptionNotRead": "Not read",
-    "reportIsReadDescriptionRead": "Read"
+    "reportIsReadDescriptionRead": "Read",
+    "markAsReadSuccess": "Mark as read successfully",
+    "markAsReadError": "Cannot update report status",
+    "loading": "Loading report...",
+    "description": "Manage report errors from users",
+    "noReport": "No report",
+    "unread": "Unread",
+    "all": "All",
+    "vocabulary": "Vocabulary",
+    "grammar": "Grammar",
+    "question": "Question",
+    "sentence": "Sentence",
+    "paragraph": "Paragraph",
+    "free_topic": "Free topic",
+    "noReports": "No reports",
+    "viewItem": "View report item",
+    "markAsRead": "Mark as read"
   }
 }

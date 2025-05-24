@@ -167,7 +167,8 @@
     "sentenceManagement": "文法管理",
     "paragraphManagement": "段落管理",
     "checkGrammar": "エラーチェック",
-    "userRanking": "ユーザーランキング"
+    "userRanking": "ユーザーランキング",
+    "adminProfile": "管理者プロフィール"
   },
   "learningGoalForm": {
     "title": "学習目標を入力",
@@ -946,6 +947,22 @@
     "reportIsRead": "レポートの読み取り状態",
     "reportIsReadDescription": "読み取り済み",
     "reportIsReadDescriptionNotRead": "未読",
-    "reportIsReadDescriptionRead": "読み取り済み"
+    "reportIsReadDescriptionRead": "読み取り済み",
+    "markAsReadSuccess": "読み取り済みに更新しました",
+    "markAsReadError": "レポートの読み取り状態を更新できませんでした",
+    "loading": "レポートを読み込んでいます...",
+    "description": "ユーザーからのレポートを管理します",
+    "noReport": "レポートがありません",
+    "unread": "未読",
+    "all": "すべて",
+    "vocabulary": "語彙",
+    "grammar": "文法",
+    "question": "問題",
+    "sentence": "文",
+    "paragraph": "段落",
+    "free_topic": "自由トピック",
+    "noReports": "レポートがありません",
+    "viewItem": "レポートの項目を表示",
+    "markAsRead": "読み取り済みに更新"
   }
 }

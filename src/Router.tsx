@@ -19,6 +19,7 @@ import AdminGrammar from "./pages/admin/Grammar";
 import AdminGrammarCreate from "./pages/admin/GrammarCreate";
 import AdminGrammarDetail from "./pages/admin/GrammarDetail";
 import AdminGrammarUpdate from "./pages/admin/GrammarUpdate";
+import NotificationPage from "./pages/admin/Notification";
 import AdminParagraph from "./pages/admin/Paragraph";
 import AdminParagraphCreate from "./pages/admin/ParagraphCreate";
 import AdminParagraphDetail from "./pages/admin/ParagraphDetail";
@@ -141,6 +142,12 @@ const Router = () => {
         <Route path={ROUTERS.ADMIN_PARAGRAPHS_CREATE} element={<AdminParagraphCreate />} />
         <Route path={ROUTERS.ADMIN_PARAGRAPHS_DETAIL} element={<AdminParagraphDetail />} />
         <Route path={ROUTERS.ADMIN_PARAGRAPHS_EDIT} element={<AdminParagraphUpdate />} />
+        <Route path={ROUTERS.ADMIN_NOTIFICATIONS} element={<NotificationPage />} />
+        <Route path={ROUTERS.ADMIN_USER_SETTING} element={<SettingLayout />}>
+          <Route path={ROUTERS.USER_PROFILE} element={<UserProfile />} />
+          <Route path={ROUTERS.UPDATE_PROFILE} element={<UpdateProfile />} />
+          <Route path={ROUTERS.CHANGE_PASSWORD} element={<ChangePassword />} />
+        </Route>
       </Route>
 
       {/* User routes */}

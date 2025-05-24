@@ -144,7 +144,7 @@
     "button": "Quay về trang chủ"
   },
   "sidebar": {
-    "description": "J-Fixer",
+    "description": "Học đúng, tiến xa",
     "dashboard": "Bảng điều khiển",
     "profile": "Hồ sơ",
     "settings": "Cài đặt",
@@ -167,7 +167,8 @@
     "sentenceManagement": "Quản lý câu phát âm",
     "paragraphManagement": "Quản lý đoạn văn nghe hiểu",
     "checkGrammar": "Kiểm tra lỗi",
-    "userRanking": "Bảng xếp hạng"
+    "userRanking": "Bảng xếp hạng",
+    "adminProfile": "Hồ sơ quản trị viên"
   },
   "learningGoalForm": {
     "title": "Nhập mục tiêu học tập",
@@ -382,7 +383,7 @@
     "averageCards": "Số bài học trung bình",
     "comparedToPreviousMonth": "so với tháng trước",
     "userActivity": "Hoạt động người dùng",
-    "lessonCompletion": "Hoàn thành bài học",
+    "lessonCompletion": "Tổng số bài học",
     "emailLabel": "Email",
     "registrationDate": "Ngày đăng ký",
     "speakingQuestion": "Nói",
@@ -392,7 +393,7 @@
     "sentence": "Câu",
     "freeTalkTopic": "Hội thoại",
     "userActivityDescription": "Số lượng người dùng hoạt động theo ngày",
-    "lessonCompletionDescription": "Tỷ lệ hoàn thành theo loại bài học",
+    "lessonCompletionDescription": "Số lượng bài học phân bổ theo kĩ năng",
     "hello": "Xin chào, {{userName}}!",
     "refresh": "Cập nhật",
     "exportData": "Xuất dữ liệu"
@@ -959,6 +960,22 @@
     "reportIsRead": "Trạng thái báo cáo",
     "reportIsReadDescription": "Đã đọc",
     "reportIsReadDescriptionNotRead": "Chưa đọc",
-    "reportIsReadDescriptionRead": "Đã đọc"
+    "reportIsReadDescriptionRead": "Đã đọc",
+    "markAsReadSuccess": "Đã đánh dấu là đã đọc",
+    "markAsReadError": "Không thể cập nhật trạng thái báo cáo",
+    "loading": "Đang tải báo cáo...",
+    "description": "Quản lý các báo cáo lỗi từ người dùng",
+    "noReport": "Chưa có báo cáo nào",
+    "unread": "Chưa đọc",
+    "all": "Tất cả",
+    "vocabulary": "Từ vựng",
+    "grammar": "Ngữ pháp",
+    "question": "Câu hỏi",
+    "sentence": "Câu",
+    "paragraph": "Đoạn văn",
+    "free_topic": "Chủ đề tự do",
+    "noReports": "Danh sách báo cáo trống",
+    "viewItem": "Xem item báo cáo",
+    "markAsRead": "Đánh dấu đã đọc"
   }
 }
