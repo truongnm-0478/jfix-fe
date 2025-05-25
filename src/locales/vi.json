@@ -121,7 +121,18 @@
     "deleting": "Đang xóa...",
     "mobile": "Đây là chức năng quản trị không thể sử dụng ở các thiết bị điện thoại với kích thước màn hình nhỏ",
     "required": "Trường này là bắt buộc",
-    "confirm": "Xác nhận"
+    "confirm": "Xác nhận",
+    "play_audio": "Phát âm",
+    "loadingData": "Đang tải dữ liệu...",
+    "found": "Tìm thấy",
+    "result": "kết quả",
+    "filter": "Bộ lọc",
+    "choose_page": "Chọn trang học",
+    "section": "Mục",
+    "error": "Có lỗi xảy ra, vui lòng thử lại sau.",
+    "settingLearnGoal": "Thiết lập mục tiêu học tập",
+    "learnGoalDescription": "Thiết lập mục tiêu để cá nhân hóa lộ trình học của bạn.",
+    "setNow": "Thiết lập ngay"
   },
   "header": {
     "language": "Ngôn ngữ",
@@ -170,7 +181,8 @@
     "paragraphManagement": "Quản lý đoạn văn nghe hiểu",
     "checkGrammar": "Kiểm tra lỗi",
     "userRanking": "Bảng xếp hạng",
-    "adminProfile": "Hồ sơ quản trị viên"
+    "adminProfile": "Hồ sơ quản trị viên",
+    "learningResources": "Tài nguyên học tập"
   },
   "learningGoalForm": {
     "title": "Nhập mục tiêu học tập",
@@ -230,11 +242,14 @@
     "new_cards": "Thẻ chưa học"
   },
   "learn_vocabulary": {
+    "example": "Ví dụ",
+    "vocabulary_title": "Danh sách từ vựng",
     "title": "Bộ từ vựng hôm nay",
     "complete": "Hoàn thành xuất sắc!",
     "complete_description": "Bộ thẻ đã xong! Tiếp tục cày bộ khác hoặc đứng dậy nhảy múa ăn mừng đi!"
   },
   "learn_grammar": {
+    "gammar_title": "Danh sách ngữ pháp",
     "title": "Bộ ngữ pháp hôm nay",
     "usage": "Cách sử dụng",
     "example": "Ví dụ",

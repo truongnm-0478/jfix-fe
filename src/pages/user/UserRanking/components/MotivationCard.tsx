@@ -90,7 +90,7 @@ const MotivationCard: React.FC = () => {
       animate="visible"
       className="mb-8"
     >
-      <Card className="relative flex items-center justify-between overflow-hidden p-6 bg-gradient-to-br from-indigo-50 via-white to-blue-50 border-0 transition-all duration-500 group">
+      <Card className="relative flex items-center justify-between overflow-hidden p-6 bg-gradient-to-br from-indigo-50 via-white to-blue-50 transition-all duration-500 group border border-gray-100 border-b-4">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5"></div>
@@ -233,14 +233,6 @@ const MotivationCard: React.FC = () => {
             className="absolute -bottom-2 -left-4 w-6 h-6 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full opacity-60 blur-sm"
           />
         </motion.div>
-
-        {/* Bottom Gradient Line */}
-        <motion.div
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ delay: 1, duration: 1.2, ease: "easeOut" }}
-          className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-30"
-        />
       </Card>
     </motion.div>
   );

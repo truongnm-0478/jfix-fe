@@ -1,4 +1,7 @@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { ROUTERS } from "@/constant";
+import { LearningGoalResponse } from "@/dataHelper/learningGoal.dataHelper";
+import { useLearningGoal } from "@/hooks/useAchievement";
 import { cn } from "@/lib/utils";
 import { useUserStore } from "@/store/useUserStore";
 import { useTranslation } from "react-i18next";
@@ -11,15 +14,25 @@ import { MenuItem } from "./type";
 export const Sidebar = () => {
   const { t } = useTranslation();
   const { user } = useUserStore();
+  const { data: learningGoalData } = useLearningGoal();
+  const learningGoal: LearningGoalResponse | null = learningGoalData?.data ?? null;
+  const isLearningGoal = learningGoal?.targetLevel !== "FREE";
 
   const userRole = user?.role?.toUpperCase() || "";
   const isAdmin = userRole === "ADMIN";
 
   const menuItems: MenuItem[] = MENU_ITEMS;
 
+  const adminMenuItems = menuItems.filter(item => item.roles && item.roles.includes("ADMIN"));
+  const userMenuItems = menuItems.filter(item => item.roles && item.roles.includes("USER"));
+  const userNoLearningGoalMenuItems = userMenuItems.filter(item => item.path !== ROUTERS.LEARN );
+  const userLearningGoalMenuItems = userMenuItems.filter(item => item.path !== ROUTERS.LEARNING_RESOURCES);
+
   const filteredMenuItems = isAdmin
-    ? menuItems.filter(item => item.roles && item.roles.includes("ADMIN"))
-    : menuItems.filter(item => item.roles && item.roles.includes("USER"));
+    ? adminMenuItems
+    : isLearningGoal
+      ? userLearningGoalMenuItems
+      : userNoLearningGoalMenuItems;
   
   const filteredMenuItemsMobile = filteredMenuItems.filter(item => item.mobile);
 

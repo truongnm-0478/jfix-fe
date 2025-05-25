@@ -104,3 +104,30 @@ export interface ExerciseListeningData {
   topic: string;
   level: string;
 }
+
+export interface VocabularyItem {
+  id: number;
+  word: string;
+  reading: string;
+  meaning: string;
+  exampleWithReading: string | null;
+  exampleWithoutReading: string | null;
+  exampleMeaning: string | null;
+  audio: string;
+  level: string;
+  chapter: string;
+  section: string;
+}
+
+export interface GrammarItem {
+  id: number;
+  romaji: string;
+  structure: string;
+  usage: string;
+  meaning: string;
+  example: string;
+  exampleMeaning: string;
+  level: string;
+}
+
+export type PageType = 'grammar' | 'vocabulary';

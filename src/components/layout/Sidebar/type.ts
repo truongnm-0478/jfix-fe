@@ -6,4 +6,5 @@ export interface MenuItem {
   path: string;
   roles?: string[];
   mobile?: boolean;
+  isLearningGoal?: boolean;
 }

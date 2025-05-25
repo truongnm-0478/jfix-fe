@@ -53,9 +53,13 @@ const AddLearningGoal = () => {
     mutationFn: async (payload: any) => {
       return learningGoalApi.createLearningGoal(payload);
     },
-    onSuccess: () => {
+    onSuccess: (response: any) => {
       toast.success(t("learningGoalForm.success"));
-      navigate(ROUTERS.LEARN);
+      if (response.targetLevel === "FREE") {
+        navigate(ROUTERS.LEARN);
+      } else {
+        navigate(ROUTERS.LEARNING_RESOURCES);
+      }
     },
     onError: (error: any) => {
       toast.error(error.response.data.message);

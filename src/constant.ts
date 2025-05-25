@@ -64,6 +64,7 @@ export const enum ROUTERS {
   LEARN_LISTENING = "/learn/listening",
   LEARN_PRONUNCIATION = "/learn/pronunciation",
   LEARN_QUESTION = "/learn/question",
+  LEARNING_RESOURCES = "/learning-resources",
 
   // Learning Goal
   LEARNING_GOAL = "/learning-goal",
@@ -87,7 +88,7 @@ export const enum ROUTERS {
 
   // Setting
   USER_SETTING = "/setting",
-  ADMIN_USER_SETTING = "/admin/user-setting",
+  ADMIN_USER_SETTING = "/admin/setting",
   USER_PROFILE = "profile",
   UPDATE_PROFILE = "update",
   CHANGE_PASSWORD = "password",

@@ -82,6 +82,14 @@ export const MENU_ITEMS = [
   },
   {
     icon: Book,
+    label: "sidebar.learningResources",
+    path: ROUTERS.LEARNING_RESOURCES,
+    roles: ["USER"],
+    mobile: true,
+    isLearningGoal: false
+  },
+  {
+    icon: Book,
     label: "sidebar.study",
     path: ROUTERS.LEARN,
     roles: ["USER"],

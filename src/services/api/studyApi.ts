@@ -1,5 +1,6 @@
-import { SpeechToTextRequest, SpeechToTextResponse, StudyContentData, StudyRequest } from "@/dataHelper/study.dataHelper";
+import { GrammarItem, SpeechToTextRequest, SpeechToTextResponse, StudyContentData, StudyRequest, VocabularyItem } from "@/dataHelper/study.dataHelper";
 import axiosClient from "./axiosClient";
+import { ApiResponse } from "./type";
 
 export const studyApi = {  
   getStudyVocabulary: (date: string): Promise<StudyContentData[]> => 
@@ -28,4 +29,8 @@ export const studyApi = {
     axiosClient.put('/study/free-talk-topic', data),
   reviewQuestion: (data: StudyRequest): Promise<StudyContentData[]> =>
     axiosClient.put('/study/speaking-question', data),
+  getGrammarByLevel: (level: string): Promise<ApiResponse<GrammarItem[]>> => 
+    axiosClient.get(`/grammars/level/${level}`),
+  getVocabularyByLevel: (level: string): Promise<ApiResponse<VocabularyItem[]>> =>
+    axiosClient.get(`/vocabularies/level/${level}`),
 };

@@ -48,6 +48,7 @@ import LearnCommunication from "./pages/user/LearnCommunication";
 import LearnCommunicationCard from "./pages/user/LearnCommunicationCard";
 import LearnGrammar from "./pages/user/LearnGrammar";
 import LearnGrammarCard from "./pages/user/LearnGrammarCard";
+import LearningResources from "./pages/user/LearningResources";
 import LearnListening from "./pages/user/LearnListening";
 import LearnListeningCard from "./pages/user/LearnListeningCard";
 import LearnPronunciation from "./pages/user/LearnPronunciation";
@@ -175,6 +176,7 @@ const Router = () => {
         <Route path={ROUTERS.PROGRESS} element={<UserProgress />} />
         <Route path={ROUTERS.CHECK_GRAMMAR} element={<CheckGrammar />} />
         <Route path={ROUTERS.USER_RANKING} element={<UserRanking />} />
+        <Route path={ROUTERS.LEARNING_RESOURCES} element={<LearningResources />} />
         <Route path={ROUTERS.USER_SETTING} element={<SettingLayout />}>
           <Route path={ROUTERS.USER_PROFILE} element={<UserProfile />} />
           <Route path={ROUTERS.UPDATE_PROFILE} element={<UpdateProfile />} />
