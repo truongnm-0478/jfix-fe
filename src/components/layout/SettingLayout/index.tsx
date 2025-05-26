@@ -13,7 +13,7 @@ export const SettingLayout = () => {
               <div className="xl:col-span-4 order-1 xl:order-2 flex flex-col gap-4">
                 <MenuSetting />
               </div>
-              <div className="xl:col-span-8 order-2 xl:order-1 pb-8 md:pb-0">
+              <div className="xl:col-span-8 order-2 xl:order-1 pb-14 md:pb-0">
               <Outlet />
             </div>
             </div>

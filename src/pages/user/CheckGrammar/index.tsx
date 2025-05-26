@@ -59,19 +59,22 @@ const GrammarChecker = () => {
     <div className="md:p-8 p-4">
       <Card>
         <CardHeader>
-          <CardTitle>{t("checkGrammar.title")}</CardTitle>
-          <CardDescription>
-            {t("checkGrammar.description")}
-          </CardDescription>
+            <CardTitle>{t("checkGrammar.title")}</CardTitle>
+            <CardDescription>
+              {t("checkGrammar.description")}
+            </CardDescription>
         </CardHeader>
         
         <CardContent className="space-y-4">
-          <Textarea
-            value={inputText}
-            onChange={(e) => setInputText(e.target.value)}
-            placeholder={t("checkGrammar.placeholder")}
-            className="min-h-32"
-          />
+          <div className="relative">
+            <img src="/app/images/bg/cat-face.png" alt="cat" className="w-28 h-auto -mb-1 absolute -top-[58px] right-2" />
+            <Textarea
+              value={inputText}
+              onChange={(e) => setInputText(e.target.value)}
+              placeholder={t("checkGrammar.placeholder")}
+              className="min-h-40"
+            />
+          </div>
           
           <Button 
             onClick={handleSubmit} 

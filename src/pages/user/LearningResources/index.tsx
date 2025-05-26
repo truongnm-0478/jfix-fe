@@ -2,10 +2,10 @@ import { PageType } from '@/dataHelper/study.dataHelper';
 import { useGrammarByLevel } from '@/hooks/useGrammar';
 import { useVocabularyByLevel } from '@/hooks/useVocabulary';
 import { useEffect, useMemo, useState } from 'react';
-import WelcomeBackCard from '../Learn/components/WelcomeBackCard';
 import GrammarHeader from './components/GrammarHeader';
 import { LearningResourcesContent } from './components/LearningResourcesContent';
 import { LearningResourcesSidebar } from './components/LearningResourcesSidebar';
+import VocabularyHeader from './components/VocabularyHeader';
 
 const LearningResources: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<PageType>('vocabulary');
@@ -81,7 +81,7 @@ const LearningResources: React.FC = () => {
         </div>
         
         <div className="xl:col-span-8 order-2 xl:order-1">
-          {currentPage === 'vocabulary' && <WelcomeBackCard />}
+          {currentPage === 'vocabulary' && <VocabularyHeader />}
           {currentPage === 'grammar' && <GrammarHeader />}
           <LearningResourcesContent
             currentPage={currentPage}

@@ -58,7 +58,7 @@ export const ChangePassword = () => {
   };
 
   return (
-    <Card className="bg-white overflow-hidden">
+    <Card className="bg-white overflow-hidden relative">
       <div className="p-6">
         <h3 className="text-lg font-semibold text-gray-800 mb-6">
           {t("profile.changePassword")}
@@ -194,6 +194,7 @@ export const ChangePassword = () => {
           </form>
         </Form>
       </div>
+      <img src="/app/images/bg/cat-4.png" alt="cat" className="md:w-80 w-full h-auto md:absolute md:left-0 md:bottom-0" />
     </Card>
   );
 };

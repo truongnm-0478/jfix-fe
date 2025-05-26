@@ -95,7 +95,7 @@ export const UpdateProfile = () => {
   };
 
   return (
-    <Card className="bg-white overflow-hidden">
+    <Card className="bg-white overflow-hidden relative">
       <div className="p-6">
         <h3 className="text-lg font-semibold text-gray-800 mb-6">
           {t("profile.updateProfile")}
@@ -243,6 +243,7 @@ export const UpdateProfile = () => {
           </form>
         </Form>
       </div>
+      <img src="/app/images/bg/cat-3.png" alt="cat" className="md:w-44 w-full h-auto md:absolute md:left-6 md:bottom-0" />
     </Card>
   );
 };

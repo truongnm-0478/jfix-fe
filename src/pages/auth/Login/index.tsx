@@ -9,8 +9,9 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/sonner";
-import { ROUTERS } from "@/constant";
+import { levels, ROUTERS } from "@/constant";
 import { User } from "@/dataHelper/auth.dataHelper";
+import { useLearningGoal } from "@/hooks/useAchievement";
 import { authApi } from "@/services/api/authApi";
 import { learningGoalApi } from "@/services/api/learningGoalApi";
 import { useUserStore } from "@/store/useUserStore";
@@ -43,6 +44,8 @@ const Login: React.FC = () => {
     onError: () => navigate(ROUTERS.LEARNING_GOAL),
   });
 
+  const { data: learningGoal } = useLearningGoal();
+
   const loginMutation = useMutation({
     mutationFn: authApi.login,
     onSuccess: async ({ data }) => {
@@ -55,22 +58,36 @@ const Login: React.FC = () => {
         avatar: data?.avatar ?? null,
         id: data?.id ?? null,
       };
-
+  
       login(user, data?.accessToken ?? null, data?.refreshToken ?? null);
       toast.success(t("login.success"));
-
+  
       if (user.role === "ADMIN") {
         navigate(ROUTERS.ADMIN_DASHBOARD);
         return;
       }
+  
+      try {
+        const { data: hasGoal } = await checkGoalMutation.mutateAsync();
+        if (!hasGoal) {
+          navigate(ROUTERS.LEARNING_GOAL);
+          return;
+        }
+        const targetLevel = learningGoal?.data?.targetLevel as "N1" | "N2" | "N3" | "N4" | "N5";
 
-      const { data: hasGoal } = await checkGoalMutation.mutateAsync();
-      navigate(hasGoal ? ROUTERS.LEARN : ROUTERS.LEARNING_GOAL);
+        if (user.role === "USER" && targetLevel && levels.includes(targetLevel)) {
+          navigate(ROUTERS.LEARNING_RESOURCES);
+        } else {
+          navigate(ROUTERS.LEARN);
+        }
+      } catch (error) {
+        navigate(ROUTERS.LEARNING_GOAL);
+      }
     },
     onError: () => {
       toast.error(t("login.failed"));
     },
-  });
+  });  
 
   const handleSubmit = (values: LoginFormData) => {
     if (!values.username || !values.password) return;

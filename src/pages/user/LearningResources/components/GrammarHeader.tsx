@@ -6,7 +6,7 @@ const GrammarHeader: React.FC = () => {
   
   return (
     <div
-      className="relative flex flex-col md:flex-row items-center justify-between text-white bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-[40px] p-8 md:p-12 min-h-[260px] overflow-hidden mb-8 "
+      className="relative flex flex-col md:flex-row items-center justify-between text-white bg-gradient-to-r from-teal-400 to-blue-500 rounded-[40px] p-8 md:p-12 min-h-[260px] overflow-hidden mb-8 "
       tabIndex={0}
     >
       
@@ -29,13 +29,13 @@ const GrammarHeader: React.FC = () => {
           transform transition-all duration-600 ease-out
           animate-slide-in-left
           group-hover:scale-105">
-          {t("learn.welcomeBack")}
+          {t("learn.grammarTitle")}
         </h3>
         <p className="text-white text-md md:text-md
           transform transition-all duration-700 ease-out
           animate-slide-in-left opacity-90 group-hover:opacity-100"
           style={{animationDelay: '0.2s'}}>
-          {t("learn.motivation")}
+          {t("learn.grammarContent")}
         </p>
       </div>
 
@@ -44,7 +44,7 @@ const GrammarHeader: React.FC = () => {
         transform transition-all duration-500 ease-out
         group-hover:scale-110 group-hover:rotate-1">
         <img
-          src="/app/images/bg/3.png"
+          src="/app/images/bg/cat-5.png"
           alt=""
           className="w-[220px] md:w-[320px] h-auto object-contain
             transform transition-all duration-700 ease-out

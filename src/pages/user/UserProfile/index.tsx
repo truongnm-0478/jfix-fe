@@ -24,7 +24,8 @@ export const UserProfile = () => {
   }
 
   return (
-    <Card className="overflow-hidden">
+    <Card className="overflow-hidden relative">
+      <img src="/app/images/bg/cat-foot.png" alt="cat" className="w-12 md:w-20 h-auto absolute right-5 top-5" />
       <CardContent className="p-6">
         <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
           <div className="relative">

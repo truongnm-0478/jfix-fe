@@ -122,7 +122,7 @@ export const UpdateLearningGoal = () => {
   }
 
   return (
-    <Card className="bg-white overflow-hidden">
+    <Card className="bg-white overflow-hidden relative">
       <div className="p-6">
         <h3 className="text-lg font-semibold text-gray-800 mb-6">
           {t("learningGoalForm.update")}
@@ -253,6 +253,7 @@ export const UpdateLearningGoal = () => {
           </form>
         </Form>
       </div>
+      <img src="/app/images/bg/cat-6.png" alt="cat" className="md:w-96 w-full h-auto md:absolute md:left-5 md:bottom-5" />
     </Card>
   );
 };
