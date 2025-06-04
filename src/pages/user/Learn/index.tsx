@@ -36,7 +36,7 @@ const Learn = () => {
             <WelcomeBackCard />
           </div>
           <h2 className="font-extrabold text-2xl mb-6 text-center lg:text-left">
-            {t("learn_grammar.title")}
+            {t("learn.title")}
           </h2>
           <div className="grid grid-cols-1 gap-4">
             {LEARN_CARDS.map((card, idx) => (

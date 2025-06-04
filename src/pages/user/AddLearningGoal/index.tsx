@@ -14,7 +14,7 @@ import { LEVELS, MIN_DAYS, ROUTERS, TOTAL_VOCAB } from "@/constant";
 import { learningGoalApi } from "@/services/api/learningGoalApi";
 import { learningGoalSchema } from "@/utils/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { CalendarCheck2, Sparkles, Target } from "lucide-react";
 import { useMemo } from "react";
 import { useForm } from "react-hook-form";
@@ -27,6 +27,7 @@ type LearningGoalFormData = z.infer<ReturnType<typeof learningGoalSchema>>;
 const AddLearningGoal = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
 
   const form = useForm<LearningGoalFormData>({
     resolver: zodResolver(learningGoalSchema(t)),
@@ -55,10 +56,12 @@ const AddLearningGoal = () => {
     },
     onSuccess: (response: any) => {
       toast.success(t("learningGoalForm.success"));
-      if (response.targetLevel === "FREE") {
-        navigate(ROUTERS.LEARN);
-      } else {
+      queryClient.invalidateQueries({ queryKey: ['learningGoal'] });
+      
+      if (response.data.targetLevel === "FREE") {
         navigate(ROUTERS.LEARNING_RESOURCES);
+      } else {
+        navigate(ROUTERS.LEARN);
       }
     },
     onError: (error: any) => {

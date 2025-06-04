@@ -16,7 +16,7 @@ import { useLearningGoal } from "@/hooks/useAchievement";
 import { learningGoalApi } from "@/services/api/learningGoalApi";
 import { learningGoalSchema } from "@/utils/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Loader2, Save, ShieldCheck } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -27,6 +27,7 @@ type LearningGoalFormData = z.infer<ReturnType<typeof learningGoalSchema>>;
 
 export const UpdateLearningGoal = () => {
   const { t } = useTranslation();
+  const queryClient = useQueryClient();
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
 
@@ -35,7 +36,7 @@ export const UpdateLearningGoal = () => {
   const form = useForm<LearningGoalFormData>({
     resolver: zodResolver(learningGoalSchema(t)),
     defaultValues: {
-      targetLevel: "FREE", // fallback ban đầu
+      targetLevel: "FREE",
       description: "",
       targetDate: "",
     },
@@ -87,6 +88,16 @@ export const UpdateLearningGoal = () => {
     onSuccess: () => {
       setSuccess(true);
       setError(null);
+      queryClient.invalidateQueries({ queryKey: ["learningGoal"] });
+      queryClient.invalidateQueries({ queryKey: ["userStats"] });
+      queryClient.invalidateQueries({ queryKey: ["achievements"] });
+      queryClient.invalidateQueries({ queryKey: ["all-achievements"] });
+      queryClient.invalidateQueries({ queryKey: ["vocabulary"] });
+      queryClient.invalidateQueries({ queryKey: ["grammar"] });
+      queryClient.invalidateQueries({ queryKey: ["freeTalkTopic"] });
+      queryClient.invalidateQueries({ queryKey: ["paragraph"] });
+      queryClient.invalidateQueries({ queryKey: ["sentence"] });
+      queryClient.invalidateQueries({ queryKey: ["question"] });
     },
     onError: (error: any) => {
       setError(error.response?.data?.message || "Update failed");
