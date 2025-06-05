@@ -121,7 +121,18 @@
     "deleting": "削除中...",
     "mobile": "これは管理機能です。携帯電話の小さな画面サイズでは使用できません。",
     "required": "必須",
-    "confirm": "確認"
+    "confirm": "確認",
+    "play_audio": "音声再生",
+    "loadingData": "データを読み込んでいます...",
+    "found": "見つかりました",
+    "result": "結果",
+    "filter": "フィルター",
+    "choose_page": "ページを選択",
+    "section": "セクション",
+    "error": "エラーが発生しました。もう一度お試しください。",
+    "settingLearnGoal": "学習目標を設定",
+    "learnGoalDescription": "学習目標を設定して、日本語を習得しよう！適切なレベルを選択し、学習の旅を始めましょう。",
+    "setNow": "今すぐ設定"
   },
   "header": {
     "language": "言語",
@@ -170,7 +181,9 @@
     "paragraphManagement": "段落管理",
     "checkGrammar": "エラーチェック",
     "userRanking": "ユーザーランキング",
-    "adminProfile": "管理者プロフィール"
+    "adminProfile": "管理者プロフィール",
+    "learningResources": "学習資料",
+    "alphabet": "アルファベット"
   },
   "learningGoalForm": {
     "title": "学習目標を入力",
@@ -973,5 +986,44 @@
     "content": "内容",
     "enterReportContent": "レポート内容を入力",
     "reportSuccess": "レポートが送信されました"
+  },
+  "alphabet": {
+    "title": "日本語の文字",
+    "subtitle": "書き方ガイドと発音で平仮名とカタカナを学ぶ",
+    "hiragana": "ひらがな",
+    "katakana": "カタカナ",
+    "basic": "基本",
+    "dakuon": "濁音 - ゛",
+    "handakuon": "半濁音 - ゜",
+    "yoon": "拗音 - ょ",
+    "hideRomaji": "ローマ字を隠す",
+    "showRomaji": "ローマ字を表示",
+    "characterDetail": "文字の詳細",
+    "romaji": "ローマ字",
+    "playSound": "発音を聞く",
+    "writingPractice": "書き方練習",
+    "writing": "書いています...",
+    "write": "書く",
+    "hide": "隠す",
+    "show": "表示",
+    "writingInfo": "書き方情報",
+    "strokeCount": "画数",
+    "strokeOrder": "書き順",
+    "strokeGuideNotAvailable": "書き方ガイドは準備中です",
+    "tip": "ヒント",
+    "tipContent": "常に上から下、左から右の順で書きましょう。正しい書き順を覚えるために何度も練習してください。",
+    "instructions": {
+      "title": "使い方ガイド",
+      "howToStudy": "効果的な学習方法：",
+      "clickCharacter": "文字をクリックして詳細を見る",
+      "listenAndRepeat": "発音を聞いて繰り返す",
+      "practiceWriting": "書き順に従って練習する",
+      "hideShowRomaji": "ローマ字を隠して/表示して自己テスト",
+      "info": "情報：",
+      "hiraganaUsage": "ひらがな：日本語の単語に使用",
+      "katakanaUsage": "カタカナ：外来語に使用",
+      "characterCount": "各セット46文字の基本文字",
+      "soundButton": "スピーカーボタンをクリックして発音を聞く"
+    }
   }
 }

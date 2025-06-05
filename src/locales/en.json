@@ -116,7 +116,18 @@
     "deleting": "Deleting...",
     "mobile": "This is an admin feature and cannot be used on small screen devices.",
     "required": "Required",
-    "confirm": "Confirm"
+    "confirm": "Confirm",
+    "play_audio": "Play audio",
+    "loadingData": "Loading data...",
+    "found": "Found",
+    "result": "結果",
+    "filter": "Filter",
+    "choose_page": "Choose page",
+    "section": "Section",
+    "error": "An error occurred. Please try again.",
+    "settingLearnGoal": "Setting learning goal",
+    "learnGoalDescription": "Set a learning goal to learn Japanese! Choose the appropriate level and start your learning journey.",
+    "setNow": "Set now"
   },
   "header": {
     "language": "Language",
@@ -165,7 +176,9 @@
     "paragraphManagement": "Paragraph Management",
     "checkGrammar": "Check errors",
     "userRanking": "User Ranking",
-    "adminProfile": "Admin Profile"
+    "adminProfile": "Admin Profile",
+    "learningResources": "Learning Resources",
+    "alphabet": "Alphabet"
   },
   "learningGoalForm": {
     "title": "Enter your learning goal",
@@ -968,5 +981,44 @@
     "content": "Content",
     "enterReportContent": "Enter report content",
     "reportSuccess": "Report sent successfully"
+  },
+  "alphabet": {
+    "title": "Japanese Alphabet",
+    "subtitle": "Learn Hiragana and Katakana with writing guides and pronunciation",
+    "hiragana": "Hiragana (ひらがな)",
+    "katakana": "Katakana (カタカナ)",
+    "basic": "Basic",
+    "dakuon": "Dakuon - ゛",
+    "handakuon": "Handakuon - ゜",
+    "yoon": "Yōon - ょ",
+    "hideRomaji": "Hide Romaji",
+    "showRomaji": "Show Romaji",
+    "characterDetail": "Character Detail",
+    "romaji": "Romaji",
+    "playSound": "Play Sound",
+    "writingPractice": "Writing Practice",
+    "writing": "Writing...",
+    "write": "Write",
+    "hide": "Hide",
+    "show": "Show",
+    "writingInfo": "Writing Information",
+    "strokeCount": "Stroke Count",
+    "strokeOrder": "Stroke Order",
+    "strokeGuideNotAvailable": "Stroke guide not available",
+    "tip": "Tip",
+    "tipContent": "Always write strokes from top to bottom, left to right. Practice multiple times to memorize the correct writing order.",
+    "instructions": {
+      "title": "Instructions",
+      "howToStudy": "How to Study Effectively:",
+      "clickCharacter": "Click each character to view details",
+      "listenAndRepeat": "Listen to pronunciation and repeat",
+      "practiceWriting": "Practice writing following stroke order",
+      "hideShowRomaji": "Hide/show Romaji for self-testing",
+      "info": "Information:",
+      "hiraganaUsage": "Hiragana: used for native Japanese words",
+      "katakanaUsage": "Katakana: used for foreign words",
+      "characterCount": "Each set has 46 basic characters",
+      "soundButton": "Click speaker button to hear pronunciation"
+    }
   }
 }

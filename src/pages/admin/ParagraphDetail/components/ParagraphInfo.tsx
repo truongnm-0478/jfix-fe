@@ -21,12 +21,12 @@ const ParagraphInfo: React.FC<ParagraphInfoProps> = ({ paragraph }) => {
     <>
       <div className="grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4 border-b border-blue-100 py-4">
         <p className={labelClass + " sm:col-span-3 font-bold sm:font-semibold text-gray-700 sm:text-gray-500"}>{t("adminParagraph.japaneseText")}</p>
-        <p className={valueClass + " sm:col-span-9"}>{paragraph.japaneseText}</p>
+        <p className={valueClass + " sm:col-span-9 text-justify"}>{paragraph.japaneseText}</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4 border-b border-blue-100 py-4">
         <p className={labelClass + " sm:col-span-3 font-bold sm:font-semibold text-gray-700 sm:text-gray-500"}>{t("adminParagraph.vietnameseText")}</p>
-        <p className={valueClass + " sm:col-span-9"}>{paragraph.vietnameseText}</p>
+        <p className={valueClass + " sm:col-span-9 text-justify"}>{paragraph.vietnameseText}</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4 border-b border-blue-100 py-4">

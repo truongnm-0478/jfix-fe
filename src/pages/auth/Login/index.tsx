@@ -76,9 +76,9 @@ const Login: React.FC = () => {
         const targetLevel = learningGoal?.data?.targetLevel as "N1" | "N2" | "N3" | "N4" | "N5";
 
         if (user.role === "USER" && targetLevel && levels.includes(targetLevel)) {
-          navigate(ROUTERS.LEARNING_RESOURCES);
-        } else {
           navigate(ROUTERS.LEARN);
+        } else {
+          navigate(ROUTERS.LEARNING_RESOURCES);
         }
       } catch (error) {
         navigate(ROUTERS.LEARNING_GOAL);

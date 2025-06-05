@@ -65,6 +65,8 @@ export const enum ROUTERS {
   LEARN_PRONUNCIATION = "/learn/pronunciation",
   LEARN_QUESTION = "/learn/question",
   LEARNING_RESOURCES = "/learning-resources",
+  ALPHABET = "/alphabet",
+  ALPHABET_PAGE = "/alphabet/page",
 
   // Learning Goal
   LEARNING_GOAL = "/learning-goal",

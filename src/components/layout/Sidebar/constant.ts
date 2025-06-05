@@ -96,6 +96,13 @@ export const MENU_ITEMS = [
     mobile: true,
   },
   {
+    icon: Book,
+    label: "sidebar.alphabet",
+    path: ROUTERS.ALPHABET,
+    roles: ["USER"],
+    mobile: false,
+  },
+  {
     icon: CheckCheck,
     label: "sidebar.checkGrammar",
     path: ROUTERS.CHECK_GRAMMAR,

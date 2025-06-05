@@ -42,6 +42,7 @@ import ForgotPassword from "./pages/auth/ForgotPassword";
 import ResetPassword from "./pages/auth/ResetPassword";
 import LandingPage from "./pages/Landing";
 import NotFoundPage from "./pages/NotFound";
+import Alphabet from "./pages/user/Alphabet";
 import ChangePassword from "./pages/user/ChangePassword";
 import CheckGrammar from "./pages/user/CheckGrammar";
 import LearnCommunication from "./pages/user/LearnCommunication";
@@ -177,6 +178,7 @@ const Router = () => {
         <Route path={ROUTERS.CHECK_GRAMMAR} element={<CheckGrammar />} />
         <Route path={ROUTERS.USER_RANKING} element={<UserRanking />} />
         <Route path={ROUTERS.LEARNING_RESOURCES} element={<LearningResources />} />
+        <Route path={ROUTERS.ALPHABET} element={<Alphabet />} />
         <Route path={ROUTERS.USER_SETTING} element={<SettingLayout />}>
           <Route path={ROUTERS.USER_PROFILE} element={<UserProfile />} />
           <Route path={ROUTERS.UPDATE_PROFILE} element={<UpdateProfile />} />

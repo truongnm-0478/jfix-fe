@@ -182,7 +182,8 @@
     "checkGrammar": "Kiểm tra lỗi",
     "userRanking": "Bảng xếp hạng",
     "adminProfile": "Hồ sơ quản trị viên",
-    "learningResources": "Tài nguyên học tập"
+    "learningResources": "Tài nguyên học tập",
+    "alphabet": "Bảng chữ cái"
   },
   "learningGoalForm": {
     "title": "Nhập mục tiêu học tập",
@@ -1005,5 +1006,44 @@
     "content": "Nội dung",
     "enterReportContent": "Nhập nội dung báo cáo",
     "reportSuccess": "Báo cáo thành công"
+  },
+  "alphabet": {
+    "title": "Bảng chữ cái tiếng Nhật",
+    "subtitle": "Học Hiragana và Katakana với hướng dẫn viết và phát âm",
+    "hiragana": "Hiragana (ひらがな)",
+    "katakana": "Katakana (カタカナ)",
+    "basic": "Cơ bản",
+    "dakuon": "Dakuon - ゛",
+    "handakuon": "Handakuon - ゜",
+    "yoon": "Yōon - ょ",
+    "hideRomaji": "Ẩn Romaji",
+    "showRomaji": "Hiện Romaji",
+    "characterDetail": "Chi tiết ký tự",
+    "romaji": "Romaji",
+    "playSound": "Phát âm",
+    "writingPractice": "Luyện viết",
+    "writing": "Đang viết...",
+    "write": "Viết",
+    "hide": "Ẩn",
+    "show": "Hiện",
+    "writingInfo": "Thông tin viết",
+    "strokeCount": "Số nét",
+    "strokeOrder": "Hướng dẫn viết (Stroke Order)",
+    "strokeGuideNotAvailable": "Hướng dẫn viết chưa có sẵn",
+    "tip": "Mẹo",
+    "tipContent": "Luôn viết theo thứ tự nét từ trên xuống dưới, từ trái sang phải. Luyện tập nhiều lần để ghi nhớ cách viết chính xác.",
+    "instructions": {
+      "title": "Hướng dẫn sử dụng",
+      "howToStudy": "Cách học hiệu quả:",
+      "clickCharacter": "Click vào từng ký tự để xem chi tiết",
+      "listenAndRepeat": "Nghe phát âm và lặp lại nhiều lần",
+      "practiceWriting": "Luyện viết theo hướng dẫn stroke order",
+      "hideShowRomaji": "Ẩn/hiện Romaji để tự kiểm tra",
+      "info": "Thông tin:",
+      "hiraganaUsage": "Hiragana: dùng cho từ tiếng Nhật gốc",
+      "katakanaUsage": "Katakana: dùng cho từ ngoại lai",
+      "characterCount": "Mỗi bảng có 46 ký tự cơ bản",
+      "soundButton": "Click nút loa để nghe phát âm"
+    }
   }
 }
